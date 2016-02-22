@@ -10,7 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.string :sex
-      t.integer :athlete_type
+      t.integer :athlete_type, default: 0
       t.float :weight
       t.float :shoes
       t.string :follower_count

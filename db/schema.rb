@@ -26,13 +26,13 @@ ActiveRecord::Schema.define(version: 20160222032328) do
     t.string   "city"
     t.string   "state"
     t.string   "sex"
-    t.integer  "athlete_type"
+    t.integer  "athlete_type",    default: 1
     t.float    "weight"
     t.float    "shoes"
     t.string   "follower_count"
     t.string   "friend_count"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end
