@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'omniauth-strava'
+gem 'figaro'
 
 gem 'rails', '4.2.5'
 gem 'pg', '~> 0.15'
