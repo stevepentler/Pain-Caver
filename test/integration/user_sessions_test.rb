@@ -10,7 +10,7 @@ class UserSessionsTestTest < ActionDispatch::IntegrationTest
     visit root_path
     click_on "Login with Strava"
     
-    visit dashboard_path
+    assert_equal dashboard_path, current_path
     assert page.has_content?(user.name)
     assert page.has_content?(user.email)
   end
@@ -25,6 +25,11 @@ class UserSessionsTestTest < ActionDispatch::IntegrationTest
     click_on "Logout"
     assert_equal root_path, current_path
     assert page.has_content?("Tempo")
+
+    visit dashboard_path
+    assert page.has_content?("Please login to access your data")
+    assert_equal root_path, current_path
+    assert page.has_content?("Login with Strava")
   end
 
 end
