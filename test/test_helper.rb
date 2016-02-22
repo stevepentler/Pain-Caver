@@ -1,10 +1,52 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require 'capybara/rails'
+
+SimpleCov.start
 
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+  class ActiveSupport::TestCase
+    include Capybara::DSL
+  end
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  OmniAuth.config.test_mode = true
+  omniauth_hash = 
+  {"provider"=>"strava",
+   "uid"=>"13541251",
+   "info"=>{"name"=>"Steve Pentler", "first_name"=>"Steve", "last_name"=>"Pentler", "email"=>"stevepentler@gmail.com", "location"=>" "},
+   "credentials"=>{"token"=>"76d702a1cb0bcd86e7a85a8dde8f06c891edbd62", "expires"=>false},
+   "extra"=>
+    {"raw_info"=>
+      {"id"=>13541251,
+       "username"=>"spentler",
+       "resource_state"=>3,
+       "firstname"=>"Steve",
+       "lastname"=>"Pentler",
+       "profile_medium"=>"https://lh4.googleusercontent.com/-xXqkgEoPVCc/AAAAAAAAAAI/AAAAAAAAA1M/_EEbUWVP6jY/photo.jpg",
+       "profile"=>"https://lh4.googleusercontent.com/-xXqkgEoPVCc/AAAAAAAAAAI/AAAAAAAAA1M/_EEbUWVP6jY/photo.jpg",
+       "city"=>"Denver",
+       "state"=>"Colorado",
+       "country"=>"USA",
+       "sex"=>"M",
+       "premium"=>false,
+       "created_at"=>"2016-02-21T06:22:41Z",
+       "updated_at"=>"2016-02-22T04:16:28Z",
+       "follower_count"=>0,
+       "friend_count"=>3,
+       "athlete_type"=>1,
+       "measurement_preference"=>"feet",
+       "email"=>"stevepentler@gmail.com",
+       "weight"=>77.1107,
+       "bikes"=>[{"id"=>"b2647226", "primary"=>true, "name"=>"LeMond", "resource_state"=>2, "distance"=>0.0}],
+       "shoes"=>
+        [{"id"=>"g1261219", "primary"=>false, "name"=>"ASICS Gel Nimbus 17 Asics", "resource_state"=>2, "distance"=>0.0},
+         {"id"=>"g1261218", "primary"=>true, "name"=>"Saucony Peregrine Peregrine 4", "resource_state"=>2, "distance"=>9688.0}]
+      }
+    }
+  }
+
+  OmniAuth.config.add_mock(:strava, omniauth_hash)
+
 end

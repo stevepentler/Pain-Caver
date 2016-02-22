@@ -20,3 +20,9 @@ group :development do
   gem 'spring'
 end
 
+group :test do 
+  gem 'capybara'
+  gem 'launchy'
+  gem 'simplecov'
+end
+
