@@ -15,4 +15,16 @@ class UserSessionsTestTest < ActionDispatch::IntegrationTest
     assert page.has_content?(user.email)
   end
 
+  test "sucessful user logout" do
+    login
+    user = users(:steve)
+    visit dashboard_path
+    assert page.has_content?(user.name)
+    assert page.has_content?(user.email)
+
+    click_on "Logout"
+    assert_equal root_path, current_path
+    assert page.has_content?("Tempo")
+  end
+
 end

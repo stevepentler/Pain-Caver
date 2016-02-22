@@ -2,3 +2,4 @@
 <%= current_user.name %>
 <%= current_user.email %>
 <%= image_tag(current_user.profile_picture) %>
+<%= link_to "Logout", logout_path, method: :delete %>
