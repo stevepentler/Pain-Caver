@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   root "home#show"
+  get '/dashboard', to: 'dashboard#show'
 end

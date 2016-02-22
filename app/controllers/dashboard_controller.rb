@@ -1,4 +1,4 @@
-class DashboardController
+class DashboardController <ApplicationController
   def show
   end
 end

@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160222032328) do
 
   create_table "users", force: :cascade do |t|
     t.string   "user_id"
+    t.string   "provider"
     t.string   "token"
     t.string   "first_name"
     t.string   "last_name"
@@ -26,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160222032328) do
     t.string   "city"
     t.string   "state"
     t.string   "sex"
-    t.integer  "athlete_type",    default: 1
+    t.integer  "athlete_type",    default: 0
     t.float    "weight"
     t.float    "shoes"
     t.string   "follower_count"
