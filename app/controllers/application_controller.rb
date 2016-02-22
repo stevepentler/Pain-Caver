@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize!
-    redirect_to root_path unless current_user
+    redirect_to root_path, notice: "Please login to access your data" unless current_user
   end
 end
