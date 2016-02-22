@@ -5,7 +5,7 @@ class UserSessionsTestTest < ActionDispatch::IntegrationTest
     OmniAuth.config.mock_auth[:strava]
   end
 
-  test "succesful user login" do 
+  test "successful user login" do 
     user = users(:steve)
     visit root_path
     click_on "Login with Strava"
@@ -14,4 +14,5 @@ class UserSessionsTestTest < ActionDispatch::IntegrationTest
     assert page.has_content?(user.name)
     assert page.has_content?(user.email)
   end
+
 end
