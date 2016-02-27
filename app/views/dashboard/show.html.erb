@@ -5,7 +5,15 @@
 <%= link_to "Logout", logout_path, method: :delete %>
 
 <% @activities.list_athlete_activities.each do |activity| %>
-  <%= activity["name"] %>
-  <%#= binding.pry %>
+  <%= @activities.name(activity) %> 
+  <%= @activities.type(activity) %> 
+  <%= @activities.start_date(activity) %> 
+  <%= @activities.distance(activity) %>
+  <%= @activities.duration(activity) %>
+  <%= @activities.total_elevation_gain(activity) %>  
+  <%= @activities.elev_high(activity) %>
+  <%= @activities.elev_low(activity) %>
+  <%= @activities.total_elevation_gain(activity) %>
+  <%= @activities.total_elevation_gain(activity) %>
   <%= @activities.total_elevation_gain(activity) %>
 <% end %> 
