@@ -1,11 +1,19 @@
 class StravaService
-  attr_reader :client
+  attr_reader :client, 
+              :retrieve_current_athlete,
+              :list_athlete_activities
+
   def initialize(current_user)
     @client = Strava::Api::V3::Client.new(:access_token => ENV['MY_ACCESS_TOKEN'])
+    # @athlete = @client.retrieve_current_athlete
   end
 
-  def segment_effort(current_user)
-    client.retrieve_a_segment_effort(id: current_user.user_id)
-      binding.pry
+  def retrieve_current_athlete
+    client.retrieve_current_athlete
   end
+
+  def list_athlete_activities
+    client.list_athlete_activities
+  end
+
 end

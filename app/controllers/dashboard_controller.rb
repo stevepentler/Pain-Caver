@@ -1,7 +1,8 @@
 class DashboardController <ApplicationController
   before_action :authorize!
+  
   def show
-    binding.pry
-    @segment_effort = StravaService.new(current_user)
+    @athlete = StravaService.new(current_user).retrieve_current_athlete
+    @activities = StravaService.new(current_user).list_athlete_activities
   end
 end
