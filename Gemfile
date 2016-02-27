@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'strava-api-v3'
 gem 'omniauth-strava'
 gem 'figaro'
 
