@@ -5,7 +5,6 @@ class StravaService
 
   def initialize(current_user)
     @client = Strava::Api::V3::Client.new(:access_token => ENV['MY_ACCESS_TOKEN'])
-    # @athlete = @client.retrieve_current_athlete
   end
 
   def retrieve_current_athlete
@@ -15,5 +14,13 @@ class StravaService
   def list_athlete_activities
     client.list_athlete_activities
   end
+
+  def total_elevation_gain(activity)
+    activity["total_elevation_gain"]
+  end
+
+  # def total_elevation_gain
+  #   client.list_athlete_activities["total_elevation_gain"]
+  # end
 
 end

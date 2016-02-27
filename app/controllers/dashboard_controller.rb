@@ -3,6 +3,6 @@ class DashboardController <ApplicationController
   
   def show
     @athlete = StravaService.new(current_user).retrieve_current_athlete
-    @activities = StravaService.new(current_user).list_athlete_activities
+    @activities = StravaService.new(current_user)
   end
 end
