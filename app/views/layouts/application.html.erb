@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tempo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="container">
-    <% flash.each do |type, msg| %>
-      <div class="card">
-        <p><center><%= content_tag :div, msg.html_safe %></center></p>
-      </div>
-    <% end %>
-  </div>
+  <head>
+    <title>Run Rater</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <% flash.each do |type, msg| %>
+        <div class="card">
+          <p><center><%= content_tag :div, msg.html_safe %></center></p>
+        </div>
+      <% end %>
+    </div>
 
-<%= yield %>
-
-</body>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
 </html>

@@ -1,2 +1,22 @@
-<h1>Tempo</h1>
-<%= link_to "Login with Strava", "/auth/strava", class: "btn" %>
+<div class="anton">
+  <div class="row center opaque white-text">
+    <div class="col s12 m5 l5 offset-m6 offset-l6">
+      <h1 class="home">PAINCAVER</h1>
+      <%= link_to "Login with Strava", "/auth/strava", class: "btn btn-lg btn-default btn-home" %> 
+      <p id='home-description'>Calculate your trail difficulty rating using:</p>
+      <div class="row center white-text">
+        <div class="col s12 m4 l4">
+          <i class="medium material-icons">navigation</i>
+          <h5>elevation</h5>
+        </div>
+        <div class="col s12 m4 l4">
+          <i class="medium material-icons">trending_up</i>
+           <h5>heartrate</h5>
+        </div>
+        <div class="col s12 m4 l4">
+          <i class="medium material-icons">query_builder</i>
+           <h5>duration</h5>
+        </div>
+    </div>
+  </div>
+</div>
