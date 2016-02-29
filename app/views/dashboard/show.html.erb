@@ -4,16 +4,47 @@
 <%= image_tag(current_user.profile_picture) %>
 <%= link_to "Logout", logout_path, method: :delete %>
 
-<% @activities.list_athlete_activities.each do |activity| %>
-  <%= @activities.name(activity) %> 
-  <%= @activities.type(activity) %> 
-  <%= @activities.start_date(activity) %> 
-  <%= @activities.distance(activity) %>
-  <%= @activities.duration(activity) %>
-  <%= @activities.total_elevation_gain(activity) %>  
-  <%= @activities.elev_high(activity) %>
-  <%= @activities.elev_low(activity) %>
-  <%= @activities.total_elevation_gain(activity) %>
-  <%= @activities.total_elevation_gain(activity) %>
-  <%= @activities.total_elevation_gain(activity) %>
-<% end %> 
+<table class="bordered highlight centered responsive-table font-color font-outline">
+  <thead>
+    <tr>
+        <th data-field="Name">Name</th>
+        <th data-field="Type">Type</th>
+        <th data-field="Start-Date">Start Date</th>
+        <th data-field="Distance">Distance</th>
+        <th data-field="Duration">Duration</th>
+        <th data-field="Elapsed-Tme">Elapsed Time</th>
+        <th data-field="Total-Elelvation-Gain">Total Elevation Gain</th>
+        <th data-field="Max-Elevation">Max Elevation</th>
+        <th data-field="Min-Elevation">Min Elevation</th>
+        <th data-field="Average-Heartrate">Average Heartrate</th>
+        <th data-field="Max-Heartrate">Max Heartrate</th>
+        <th data-field="Average-Speed">Average Speed</th>
+        <th data-field="Max-Speed">Max Speed</th>
+        <th data-field="Starting-Location">Starting Location</th>
+    </tr>
+  </thead>
+
+          <tbody>
+            <% @activities.list_athlete_activities.each do |activity| %>
+              <tr>
+                <td><%= @activities.name(activity) %></td> 
+                <td><%= @activities.type(activity) %></td> 
+                <td><%= @activities.start_date(activity) %></td>  
+                <td><%= @activities.distance(activity) %></td> 
+                <td><%= @activities.duration(activity) %></td> 
+                <td><%= @activities.elapsed_time(activity) %></td> 
+                <td><%= @activities.total_elevation_gain(activity) %></td>   
+                <td><%= @activities.elev_high(activity) %></td> 
+                <td><%= @activities.elev_low(activity) %></td> 
+                <td><%= @activities.average_heartrate(activity) %></td> 
+                <td><%= @activities.max_heartrate(activity) %></td> 
+                <td><%= @activities.average_speed(activity) %></td> 
+                <td><%= @activities.max_speed(activity) %></td> 
+                <td><%= @activities.start_location(activity) %></td> 
+              </tr>
+            <% end %> 
+          </tbody>
+        </table>
+      </div>
+  </div>
+
