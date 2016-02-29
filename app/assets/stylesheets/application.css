@@ -14,10 +14,23 @@
  *= require_self
  */
 
-/*Home Root Page*/
+/*Universal*/
 .titillium {
   font-family: 'Titillium Web', sans-serif;
 }
+
+.btn {
+  color: black;
+  background-color: #A9B184;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.btn-lg {
+  font-size: 1.75em;
+}
+
+
+/*Home Root Page*/
 
 .anton {
   background-image: url("Anton.jpg");
@@ -32,16 +45,25 @@
   opacity: 0.6;
  }
 
- .btn {
-  color: black;
-  background-color: #A9B184;
-  font-family: 'Titillium Web', sans-serif;
-}
-
-.btn-lg {
-  font-size: 1.75em;
-}
 
 #home-description {
   font-size: 2em;
 }
+
+/*Dashboard*/
+.profile-pic {
+  height: 100px;
+  width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,6 @@
-<h1>You did it!</h1>
 <%= current_user.name %>
 <%= current_user.email %>
-<%= image_tag(current_user.profile_picture) %>
+<%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
 <%= link_to "Logout", logout_path, method: :delete %>
 
 <table class="bordered highlight centered responsive-table font-color font-outline">
