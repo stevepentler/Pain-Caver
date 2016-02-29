@@ -1,11 +1,8 @@
 class StravaService
-  attr_reader :client, 
-              :retrieve_current_athlete,
-              :list_athlete_activities
+  attr_reader :client
 
   def initialize(current_user)
-    @client = Strava::Api::V3::Client.new(:access_token => ENV['MY_ACCESS_TOKEN'], 
-                                          :authorization => "Bearer #{current_user.token}")
+    @client = Strava::Api::V3::Client.new(:access_token => "#{current_user.token}")
   end
 
   def list_athlete_activities
