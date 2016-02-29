@@ -4,35 +4,16 @@ class StravaService
               :list_athlete_activities
 
   def initialize(current_user)
-    @client = Strava::Api::V3::Client.new(:access_token => ENV['MY_ACCESS_TOKEN'])
+    @client = Strava::Api::V3::Client.new(:access_token => ENV['MY_ACCESS_TOKEN'], 
+                                          :authorization => "Bearer #{current_user.token}")
   end
 
   def list_athlete_activities
     client.list_athlete_activities
   end
 
-  def total_elevation_gain(activity)
-    activity["total_elevation_gain"]
-  end
-
   def name(activity)
     activity["name"]
-  end
-
-  def distance(activity)
-    activity["distance"]
-  end
-
-  def duration(activity)
-    activity["time"]
-  end
-
-  def elev_high(activity)
-    activity["elev_high"]
-  end
-
-  def elev_low(activity)
-    activity["elevation_low"]
   end
 
   def type(activity)
@@ -43,6 +24,30 @@ class StravaService
     activity["start_date"]
   end  
 
+  def distance(activity)
+    activity["distance"]
+  end
+
+  def duration(activity)
+    activity["moving_time"]
+  end  
+
+  def elapsed_time(activity)
+    activity["elapsed_time"]
+  end
+
+  def total_elevation_gain(activity)
+    activity["total_elevation_gain"]
+  end
+
+  def elev_high(activity)
+    activity["elev_high"]
+  end
+
+  def elev_low(activity)
+    activity["elev_low"]
+  end
+
   def average_speed(activity)
     activity["average_speed"]
   end  
@@ -51,8 +56,16 @@ class StravaService
     activity["max_speed"]
   end  
 
-  def calories(activity)
-    activity["calories"]
+  def average_heartrate(activity)
+    activity["average_heartrate"]
+  end  
+
+  def max_heartrate(activity)
+    activity["max_heartrate"]
+  end
+
+  def start_location(activity)
+    activity["start_latlng"]
   end
 
 end
