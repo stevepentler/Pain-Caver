@@ -3,9 +3,9 @@
     <a href="/" class="brand-logo">PAINCAVER</a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="/workouts">View Workouts</a></li>
-      <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="/logout">Logout</a></li>
+      <li><%= link_to "View Workouts", workouts_path %></li>
+      <li><%= link_to "Dashboard", dashboard_path %></li>
+      <li><%= link_to "Logout", logout_path, method: :delete %></li>
     </ul>
   </div>
 </nav>

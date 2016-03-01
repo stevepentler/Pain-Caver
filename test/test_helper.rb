@@ -1,8 +1,10 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require 'minitest/autorun'
 require 'capybara/rails'
 require 'vcr'
+require 'minitest-vcr'
 require 'webmock'
 require 'database_cleaner'
 require 'minitest/pride'
@@ -10,10 +12,11 @@ require 'minitest/pride'
 SimpleCov.start 'rails'
 
 class ActiveSupport::TestCase
-  class ActiveDispatch::IntegrationTest
+  include FactoryGirl::Syntax::Methods
+  
+  class ActionDispatch::IntegrationTest
     include Capybara::DSL
   end
-  fixtures :all
 
   VCR.configure do |config|
     config.cassette_library_dir = 'test/cassettes'
