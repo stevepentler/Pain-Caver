@@ -71,8 +71,8 @@ nav ul a {
   width: auto;
 }
 
-#dashboard-name {
-  font-size: 2.5em;
+.dashboard-large {
+  font-size: 1.5em;
 }
 
 

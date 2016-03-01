@@ -1,12 +1,21 @@
 <%= render partial: "/navbar/navbar" %> 
 
 <div class="row">
-  <div class="col s12 m5">
+  <div class="col s12 m6">
     <div class="card blue-grey darken-1">
       <div class="card-content white-text">
-        <span class="card-title">
+        <div class="card-title">
           <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
-        </span>
+        </div>
+        <div class="dashboard-large"><%= current_user.name %></div>
+        <span><%= current_user.city %>,  <%= current_user.state %></span>
+      </div>
+    </div>
+
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <h5 class="center dashboard-large">Upcoming Races/Goals</h5>
         <p id="dashboard-name"><%= current_user.name %></p>
         <p><%= current_user.city %>,  <%= current_user.state %></p>
       </div>
@@ -14,48 +23,28 @@
   </div>
 </div>
 
-
-<table class="bordered highlight centered responsive-table font-color font-outline">
-  <thead>
-    <tr>
-        <th data-field="Name">Name</th>
-        <th data-field="Type">Type</th>
-        <th data-field="Start-Date">Start Date</th>
-        <th data-field="Distance">Distance</th>
-        <th data-field="Duration">Duration</th>
-        <th data-field="Elapsed-Tme">Elapsed Time</th>
-        <th data-field="Total-Elelvation-Gain">Total Elevation Gain</th>
-        <th data-field="Max-Elevation">Max Elevation</th>
-        <th data-field="Min-Elevation">Min Elevation</th>
-        <th data-field="Average-Heartrate">Average Heartrate</th>
-        <th data-field="Max-Heartrate">Max Heartrate</th>
-        <th data-field="Average-Speed">Average Speed</th>
-        <th data-field="Max-Speed">Max Speed</th>
-        <th data-field="Starting-Location">Starting Location</th>
-    </tr>
-  </thead>
-
-          <tbody>
-            <% @activities.list_athlete_activities.each do |activity| %>
-              <tr>
-                <td><%= @activities.name(activity) %></td> 
-                <td><%= @activities.type(activity) %></td> 
-                <td><%= @activities.start_date(activity) %></td>  
-                <td><%= @activities.distance(activity) %></td> 
-                <td><%= @activities.duration(activity) %></td> 
-                <td><%= @activities.elapsed_time(activity) %></td> 
-                <td><%= @activities.total_elevation_gain(activity) %></td>   
-                <td><%= @activities.elev_high(activity) %></td> 
-                <td><%= @activities.elev_low(activity) %></td> 
-                <td><%= @activities.average_heartrate(activity) %></td> 
-                <td><%= @activities.max_heartrate(activity) %></td> 
-                <td><%= @activities.average_speed(activity) %></td> 
-                <td><%= @activities.max_speed(activity) %></td> 
-                <td><%= @activities.start_location(activity) %></td> 
-              </tr>
-            <% end %> 
-          </tbody>
-        </table>
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <div class="card-title">
+          <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
+        </div>
+        <div class="dashboard-large"><%= current_user.name %></div>
+        <span><%= current_user.city %>,  <%= current_user.state %></span>
       </div>
+    </div>
   </div>
+
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <h5 class="center dashboard-large">Upcoming Races/Goals</h5>
+        <p id="dashboard-name"><%= current_user.name %></p>
+        <p><%= current_user.city %>,  <%= current_user.state %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
