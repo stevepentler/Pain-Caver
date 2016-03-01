@@ -65,4 +65,6 @@ class StravaService
     activity["start_latlng"]
   end
 
+  
+
 end
