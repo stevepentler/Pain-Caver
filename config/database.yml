@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: Tempo_production
-  username: Tempo
-  password: <%= ENV['TEMPO_DATABASE_PASSWORD'] %>
