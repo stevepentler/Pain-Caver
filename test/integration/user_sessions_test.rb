@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class UserSessionsTest < ActionDispatch::IntegrationTest
+  
   def login
     OmniAuth.config.mock_auth[:strava]
   end
@@ -14,16 +15,22 @@ class UserSessionsTest < ActionDispatch::IntegrationTest
       
       assert_equal dashboard_path, current_path
       assert page.has_content?(user.name)
-      assert page.has_content?(user.email)
+      assert page.has_content?(user.city)
+      assert page.has_content?(user.state)
     end
   end
 
-  test "sucessful user logout with" do
+  test "sucessful user logout" do
+    login
     VCR.use_cassette('user') do 
       user = create(:user)
-      visit dashboard_path
-      assert page.has_content?(user.name)
-      assert page.has_content?(user.email)
+      visit root_path
+      click_on "Login with Strava"
+      
+      assert dashboard_path, current_path
+      assert page.has_content?(user.first_name)
+      assert page.has_content?(user.city)
+      assert page.has_content?(user.state)
 
       click_on "Logout"
       assert_equal root_path, current_path
