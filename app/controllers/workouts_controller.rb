@@ -1,8 +1,9 @@
 class WorkoutsController < ApplicationController
   def index
-    @activities = StravaService.new(current_user)
+    @activities = ActivityService.new(current_user)
   end
 
   def show
+    @activities = ActivityService.new(current_user)
   end
 end

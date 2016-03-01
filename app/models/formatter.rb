@@ -12,8 +12,29 @@ module Formatter
     (0.01666667)
   end
 
-  def miles_per_hour_conversion
+  def mph_conversion
     (2.23694)
+  end
+
+  def time_converter(total_seconds)
+    total_minutes = (total_seconds * second_to_minute)
+    hours = (total_minutes / 60).to_i
+    minutes = (total_minutes % 60).to_i
+    time_formatter(hours, minutes)
+  end
+
+  def time_formatter(hours, minutes)
+    if hours == 0
+      "#{minutes} mins"
+    else 
+      "#{hours}hr #{minutes}m"
+    end
+  end
+
+  def pace_converter(activity)
+    minutes = (60.0 / average_speed(activity)).to_i
+    seconds = ((60.0 / average_speed(activity) - minutes) * 60).to_i
+    format_pace(minutes, seconds)
   end
 
   def format_pace(minutes, seconds)
@@ -24,11 +45,16 @@ module Formatter
     end
   end
 
-  def time_converter(total_seconds)
-      total_minutes = (total_seconds * second_to_minute)
-      hours = (total_minutes / 60).to_i
-      minutes = (total_minutes % 60).to_i
-      return "#{hours}hr #{minutes}mins"
+  def format_year(activity)
+    activity["start_date_local"].split("-").first
+  end
+
+  def format_date(activity)
+    activity["start_date_local"].split("T").first[5..-1]
+  end
+
+  def format_time(activity)
+    activity["start_date_local"].split("T").last.chop
   end
 
   # def format_year(workout)

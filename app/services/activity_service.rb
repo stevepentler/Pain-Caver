@@ -1,4 +1,5 @@
-class StravaService
+class ActivityService
+  include Formatter
   attr_reader :client
 
   def initialize(current_user)
@@ -18,15 +19,25 @@ class StravaService
   end
 
   def start_date(activity)
-    activity["start_date"]
-  end  
+    format_date(activity)
+  end
+
+  def start_year(activity)
+    format_year(activity)
+  end 
+
+  def start_time(activity)
+    activity["start_date_local"].split("T").last.chop
+  end 
 
   def distance(activity)
-    activity["distance"]
+    meters = activity["distance"] 
+    miles = (meters * meter_to_mile).round(2)
   end
 
   def duration(activity)
-    activity["moving_time"]
+    total_seconds = activity["moving_time"]
+    time_converter(total_seconds)
   end  
 
   def elapsed_time(activity)
@@ -45,12 +56,18 @@ class StravaService
     activity["elev_low"]
   end
 
+  def average_pace(activity)
+    pace_converter(activity)
+  end
+
   def average_speed(activity)
-    activity["average_speed"]
+    mps = activity["average_speed"]
+    mph = (mps * mph_conversion).round(2)
   end  
 
   def max_speed(activity)
-    activity["max_speed"]
+    mps = activity["max_speed"]
+    mph = (mps * mph_conversion).round(2)
   end  
 
   def average_heartrate(activity)
