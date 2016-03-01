@@ -1,16 +1,15 @@
-# require 'test_helper'
+require 'test_helper'
 
-# class UserDashboardTest < ActionDispatch::IntegrationTest
-#   def login
-#     OmniAuth.config.mock_auth[:strava]
-#   end
+class UserDashboardTest < ActionDispatch::IntegrationTest
 
-#   test 'user views dashboard' do
-#     user = create(:user)
+  test 'user views dashboard' do
+    VCR.use_cassette('user') do
+      user = create(:user)
     
-#     visit dashboard_path
-#     assert_equal dashboard_path, current_path
+      visit dashboard_path
+      assert_equal dashboard_path, current_path
+      assert page.has_content?()
+    end
+  end
 
-#     assert page.has_content?()
-
-#   end
+end

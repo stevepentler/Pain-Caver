@@ -19,7 +19,6 @@ class UserSessionsTest < ActionDispatch::IntegrationTest
   end
 
   test "sucessful user logout with" do
-    login
     VCR.use_cassette('user') do 
       user = create(:user)
       visit dashboard_path
