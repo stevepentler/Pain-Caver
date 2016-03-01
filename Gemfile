@@ -3,6 +3,7 @@ gem 'strava-api-v3'
 gem 'omniauth-strava'
 gem 'figaro'
 gem 'rails_12factor'
+gem 'faraday'
 
 gem 'rails', '4.2.5'
 gem 'pg', '~> 0.15'
