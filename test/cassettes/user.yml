@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.strava.com/api/v3//athlete/activities?access_token=76d702a1cb0bcd86e7a85a8dde8f06c891edbd62
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 01 Mar 2016 01:13:18 GMT
+      Etag:
+      - W/"83c3fc106adf1d0ead873c779f110ee5"
+      Set-Cookie:
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWJkMDAzYjlmMzhiZTNiMTA4OWQzMTUzMzgwNDlhYWZiBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--2135fd81517849c13848227d180d14f77b23455a;
+        domain=strava.com; path=/; HttpOnly
+      Status:
+      - 200 OK
+      Strava-Athlete-Upload-Version:
+      - 1cf1168504915c23d755b3fca68ae6dd
+      X-Frame-Options:
+      - DENY
+      X-Ratelimit-Limit:
+      - '600,30000'
+      X-Ratelimit-Usage:
+      - '1,13'
+      X-Request-Id:
+      - 7ee24112715aa688244375b408b07ada
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '3025'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":505114539,"resource_state":2,"external_id":"2016-02-29T00:05:42Z","upload_id":556936277,"athlete":{"id":13541251,"resource_state":1},"name":"Afternoon
+        Run","distance":5826.7,"moving_time":1483,"elapsed_time":1722,"total_elevation_gain":18.2,"type":"Run","start_date":"2016-02-29T00:05:44Z","start_date_local":"2016-02-28T17:05:44Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.692556,-104.983673],"end_latlng":[39.692744,-104.983906],"location_city":null,"location_state":null,"location_country":"","start_latitude":39.692556,"start_longitude":-104.983673,"achievement_count":11,"kudos_count":0,"comment_count":0,"athlete_count":1,"photo_count":0,"map":{"id":"a505114539","summary_polyline":"mmgqF~rw_SyAUMcEYm{AuGO_AbFyeA@gF`EhBxSjuAz@Dx|@v@lB","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":"g1261218","average_speed":3.929,"max_speed":5.3,"average_heartrate":174.2,"max_heartrate":185.0,"elev_high":1625.3,"elev_low":1603.7,"total_photo_count":0,"has_kudoed":false,"workout_type":null},{"id":505114529,"resource_state":2,"external_id":"2016-02-28T18:54:55Z","upload_id":556936271,"athlete":{"id":13541251,"resource_state":1},"name":"Lunch
+        Run","distance":647.7,"moving_time":136,"elapsed_time":140,"total_elevation_gain":0.0,"type":"Run","start_date":"2016-02-28T18:54:56Z","start_date_local":"2016-02-28T11:54:56Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[40.004742,-105.293177],"end_latlng":[39.999925,-105.290537],"location_city":null,"location_state":null,"location_country":"","start_latitude":40.004742,"start_longitude":-105.293177,"achievement_count":1,"kudos_count":0,"comment_count":0,"athlete_count":1,"photo_count":0,"map":{"id":"a505114529","summary_polyline":"sldsFjataSnBmEjFVlKqJxEV","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":"g1261218","average_speed":4.763,"max_speed":5.3,"average_heartrate":155.9,"max_heartrate":161.0,"elev_high":1808.2,"elev_low":1745.1,"total_photo_count":0,"has_kudoed":false,"workout_type":null},{"id":505114540,"resource_state":2,"external_id":"2016-02-28T17:38:22Z","upload_id":556936270,"athlete":{"id":13541251,"resource_state":1},"name":"Morning
+        Run","distance":6993.8,"moving_time":2911,"elapsed_time":4584,"total_elevation_gain":461.1,"type":"Run","start_date":"2016-02-28T17:38:22Z","start_date_local":"2016-02-28T10:38:22Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.999133,-105.290421],"end_latlng":[40.004933,-105.293079],"location_city":null,"location_state":null,"location_country":"","start_latitude":39.999133,"start_longitude":-105.290421,"achievement_count":0,"kudos_count":0,"comment_count":0,"athlete_count":2,"photo_count":0,"map":{"id":"a505114540","summary_polyline":"qicsFdpsaSrCc@jEpL[fKgEfLhBfBb@vKw@jClArCm@vEtC~Ds@j@rCjAPfGnBl@wGpEbDhJw@pB|@pCn@fA|FiFjIWlJiMfEkBkPlQuHJ_HhFyAaE]}HiBqEbGyDcCe@CeFuDoCv@e@eCsCt@qGoAsBNgO}AkBrD{Jp@oJoK{K{F{AiMvJoFKuAvD}DSq@aBCvAhER","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":"g1261218","average_speed":2.403,"max_speed":19.9,"average_heartrate":162.6,"max_heartrate":179.0,"elev_high":2121.2,"elev_low":1743.5,"total_photo_count":0,"has_kudoed":false,"workout_type":null},{"id":503635304,"resource_state":2,"external_id":"2016-02-27T02:56:16Z","upload_id":555418572,"athlete":{"id":13541251,"resource_state":1},"name":"Evening
+        Run","distance":5955.4,"moving_time":1613,"elapsed_time":1847,"total_elevation_gain":18.2,"type":"Run","start_date":"2016-02-27T02:56:16Z","start_date_local":"2016-02-26T19:56:16Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.692475,-104.983719],"end_latlng":[39.692601,-104.983871],"location_city":null,"location_state":null,"location_country":"","start_latitude":39.692475,"start_longitude":-104.983719,"achievement_count":7,"kudos_count":0,"comment_count":0,"athlete_count":1,"photo_count":0,"map":{"id":"a503635304","summary_polyline":"}lgqFfsw_S_BNJyt@iA}K{sARgAoAq@_RlFkEhdASrAQ`@wD`GEp@z|A^rFv@B","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":"g1261218","average_speed":3.692,"max_speed":4.6,"average_heartrate":166.5,"max_heartrate":182.0,"elev_high":1624.7,"elev_low":1603.7,"total_photo_count":0,"has_kudoed":false,"workout_type":null},{"id":503635294,"resource_state":2,"external_id":"2016-02-26T15:27:33Z","upload_id":555418557,"athlete":{"id":13541251,"resource_state":1},"name":"Morning
+        Commute","distance":10343.1,"moving_time":2172,"elapsed_time":35904,"total_elevation_gain":30.4,"type":"Ride","start_date":"2016-02-26T15:27:33Z","start_date_local":"2016-02-26T08:27:33Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.692524,-104.983948],"end_latlng":[39.724733,-104.986401],"location_city":null,"location_state":null,"location_country":"","start_latitude":39.692524,"start_longitude":-104.983948,"achievement_count":0,"kudos_count":0,"comment_count":0,"athlete_count":1,"photo_count":0,"map":{"id":"a503635294","summary_polyline":"gmgqFttw_SaB_@Gwi@g}CO_IhBnA_CiVte@gRpScIrPsIzIqeA|r@w[xGcIyBaHhGeEmDj~Ake@bb@iYnOoUxEn@j@mCb@`BKyAwArAnAOs@oEt@~E","resource_state":2},"trainer":false,"commute":true,"manual":false,"private":false,"flagged":false,"gear_id":"b2647226","average_speed":4.762,"max_speed":10.0,"average_watts":75.0,"kilojoules":162.9,"device_watts":false,"average_heartrate":126.5,"max_heartrate":166.0,"elev_high":1615.9,"elev_low":1581.9,"total_photo_count":0,"has_kudoed":false,"workout_type":10},{"id":499384986,"resource_state":2,"external_id":"2016-02-21T19:23:31Z","upload_id":551114721,"athlete":{"id":13541251,"resource_state":1},"name":"Lunch
+        Run","distance":9687.9,"moving_time":3222,"elapsed_time":3476,"total_elevation_gain":339.8,"type":"Run","start_date":"2016-02-21T19:23:33Z","start_date_local":"2016-02-21T12:23:33Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.818724,-105.29248],"end_latlng":[39.818677,-105.291789],"location_city":null,"location_state":null,"location_country":"","start_latitude":39.818724,"start_longitude":-105.29248,"achievement_count":3,"kudos_count":0,"comment_count":0,"athlete_count":2,"photo_count":0,"map":{"id":"a499384986","summary_polyline":"_b`rF~|saS}@q@{@fFsCgIoDCS}E_EeA{BfTqFIaGaQgFfRcCiIuAGeHwJY_HeIvMgHgGyJq@qHeMkIbDyFpNbMnIjJj@|IcIzAoEmJk@{GsLzDyESwMjG_M^wEbVsD|FkD|@uGvAqAtAn@w@rI|@tEhBp@~@~DPxRyBlGv@tInBk@sAiEhB}B~DhExCM}@{Bp@}GxDlGLwEnQr@lHdJn@lV}AzE","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":"g1261218","average_speed":3.007,"max_speed":4.4,"average_heartrate":165.2,"max_heartrate":185.0,"elev_high":2332.4,"elev_low":2156.8,"total_photo_count":0,"has_kudoed":false,"workout_type":3},{"id":498404815,"resource_state":2,"external_id":"2016-02-20T20:01:02Z","upload_id":550040639,"athlete":{"id":13541251,"resource_state":1},"name":"Afternoon
+        Run","distance":6881.0,"moving_time":2131,"elapsed_time":2862,"total_elevation_gain":171.6,"type":"Run","start_date":"2016-02-20T20:01:04Z","start_date_local":"2016-02-20T13:01:04Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.694276,-105.204854],"end_latlng":[39.692964,-105.20628],"location_city":null,"location_state":null,"location_country":null,"start_latitude":39.694276,"start_longitude":-105.204854,"achievement_count":7,"kudos_count":0,"comment_count":0,"athlete_count":1,"photo_count":0,"map":{"id":"a498404815","summary_polyline":"exgqFjybaSzF`G_@pHrEhDxMiA~IfGrK^jBnAnAhIpAuC|FhFPgJ~AiE_@lDfBoBk@rCtAxDQtC~AcDf@x@i@oGjJHdD}G|Js@bCbHj@sHfA`D~BUgBqBSiHaHiDoFAgT`GiFfEqAtIr@vJcGwFwAjCeAmHmBeB{K[wI}FeMbAyE_Ed@qF","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":null,"average_speed":3.229,"max_speed":5.0,"elev_high":2071.7,"elev_low":1921.4,"total_photo_count":0,"has_kudoed":false,"workout_type":3},{"id":498404708,"resource_state":2,"external_id":"2016-02-18T01:06:39Z","upload_id":550040634,"athlete":{"id":13541251,"resource_state":1},"name":"Evening
+        Run","distance":5894.2,"moving_time":1480,"elapsed_time":1609,"total_elevation_gain":18.6,"type":"Run","start_date":"2016-02-18T01:06:41Z","start_date_local":"2016-02-17T18:06:41Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.692937,-104.983646],"end_latlng":[39.692879,-104.983598],"location_city":null,"location_state":null,"location_country":null,"start_latitude":39.692937,"start_longitude":-104.983646,"achievement_count":6,"kudos_count":0,"comment_count":0,"athlete_count":2,"photo_count":0,"map":{"id":"a498404708","summary_polyline":"yogqFxrw_SeAsA}AwQbCgAd@kEm@mdAyGEu@zE{eA@mF`ErAnSvkAJ`IdC^f|@","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":null,"average_speed":3.983,"max_speed":7.4,"elev_high":1625.2,"elev_low":1603.7,"total_photo_count":0,"has_kudoed":false,"workout_type":null},{"id":498404704,"resource_state":2,"external_id":"2016-02-15T23:17:53Z","upload_id":550040629,"athlete":{"id":13541251,"resource_state":1},"name":"Afternoon
+        Run","distance":5890.1,"moving_time":1421,"elapsed_time":1663,"total_elevation_gain":18.9,"type":"Run","start_date":"2016-02-15T23:17:53Z","start_date_local":"2016-02-15T16:17:53Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.692617,-104.983936],"end_latlng":[39.692427,-104.983876],"location_city":null,"location_state":null,"location_country":null,"start_latitude":39.692617,"start_longitude":-104.983936,"achievement_count":6,"kudos_count":0,"comment_count":0,"athlete_count":1,"photo_count":0,"map":{"id":"a498404704","summary_polyline":"ymgqFrtw_SaByAI}_AutAFsBqShBaDfDy@vdA?hAuEdGLVbcBhCT","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":null,"average_speed":4.145,"max_speed":6.0,"elev_high":1625.2,"elev_low":1603.6,"total_photo_count":0,"has_kudoed":false,"workout_type":null},{"id":498404701,"resource_state":2,"external_id":"2016-02-14T19:19:41Z","upload_id":550040625,"athlete":{"id":13541251,"resource_state":1},"name":"Lunch
+        Run","distance":10338.0,"moving_time":3233,"elapsed_time":4132,"total_elevation_gain":372.0,"type":"Run","start_date":"2016-02-14T19:19:42Z","start_date_local":"2016-02-14T12:19:42Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.694032,-105.204556],"end_latlng":[39.694537,-105.204421],"location_city":null,"location_state":null,"location_country":null,"start_latitude":39.694032,"start_longitude":-105.204556,"achievement_count":7,"kudos_count":0,"comment_count":0,"athlete_count":1,"photo_count":0,"map":{"id":"a498404701","summary_polyline":"uvgqFnwbaSdF~He@dHnE|DnMiBnInGfLJjB|AnAlItA}CtGjGa@qGvBmHe@rE`BsCo@pCbAnI`BkDn@pAi@cHnJAhDyGfJi@hCpHr@uHz@xCjCY{AwAIwDtB~@k@mB`BgEbAeOfL}LiSxDiCwDyAiOaMyB}BcCWsD`MsOpJkGUkCqFg@dErAi]`Pqi@jMcGhDgKm@oU~LwU|DuE|Cl]xM","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":null,"average_speed":3.198,"max_speed":5.8,"elev_high":2071.5,"elev_low":1856.2,"total_photo_count":0,"has_kudoed":false,"workout_type":null}]'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 01:13:18 GMT
+recorded_with: VCR 3.0.1

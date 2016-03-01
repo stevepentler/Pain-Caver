@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'pry'
+  gem 'launchy'
 end
 
 group :development do
@@ -22,8 +23,12 @@ group :development do
 end
 
 group :test do 
+  gem 'factory_girl_rails', "~> 4.0"
+  gem 'database_cleaner'
+  gem 'vcr'
+  gem 'minitest-vcr'
+  gem 'webmock'
   gem 'capybara'
-  gem 'launchy'
   gem 'simplecov'
 end
 
