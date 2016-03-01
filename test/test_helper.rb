@@ -31,7 +31,7 @@ class ActiveSupport::TestCase
   {"provider"=>"strava",
    "uid"=>"13541251",
    "info"=>{"name"=>"Steve Pentler", "first_name"=>"Steve", "last_name"=>"Pentler", "email"=>"stevepentler@gmail.com", "location"=>" "},
-   "credentials"=>{"token"=>"76d702a1cb0bcd86e7a85a8dde8f06c891edbd62", "expires"=>false},
+   "credentials"=>{"token"=> ENV['USER_TOKEN'], "expires"=>false},
    "extra"=>
     {"raw_info"=>
       {"id"=>13541251,
