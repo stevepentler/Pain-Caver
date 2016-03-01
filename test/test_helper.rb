@@ -2,14 +2,26 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'capybara/rails'
+require 'vcr'
+require 'webmock'
+require 'database_cleaner'
+require 'minitest/pride'
 
-SimpleCov.start
+SimpleCov.start 'rails'
 
 class ActiveSupport::TestCase
-  class ActiveSupport::TestCase
+  class ActiveDispatch::IntegrationTest
     include Capybara::DSL
   end
   fixtures :all
+
+  VCR.configure do |config|
+    config.cassette_library_dir = 'test/cassettes'
+    config.hook_into :webmock
+    config.allow_http_connections_when_no_cassette = true
+  end
+  
+  MinitestVcr::Spec.configure!
 
   OmniAuth.config.test_mode = true
   omniauth_hash = 
