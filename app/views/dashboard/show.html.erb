@@ -1,9 +1,16 @@
 <%= render partial: "/navbar/navbar" %> 
-
+Monthly Stats
 <%= @stats.sessions("recent") %> sessions
 <%= @stats.distance("recent") %> miles
 <%= @stats.duration("recent") %>
 <%= @stats.elevation_gain("recent") %> feet
+
+Yearly Stats
+
+<%= @stats.sessions("ytd") %> sessions
+<%= @stats.distance("ytd") %> miles
+<%= @stats.duration("ytd") %>
+<%= @stats.elevation_gain("ytd") %> feet
 
 <div class="row">
   <div class="col s12 m6">
