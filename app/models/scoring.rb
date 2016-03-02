@@ -21,4 +21,5 @@ module Scoring
   def distance_factor
     factor = race.distance / 20.0
   end
+
 end

@@ -50,7 +50,7 @@
 
 
     <h5 class="center">Difficulty Rating vs <%= @race.title %> </h5>
-    <h5 class="center"><%= @service.difficulty_rating(@activity) %>/30</h5>
+    <h5 class="center"><%= @service.difficulty_rating(@activity) %>/<%= @service.difficulty_range(@activity) %> </h5>
 
 
 
@@ -77,7 +77,7 @@
             <td><%= @service.elev_low(@activity) %> ft<br>
               min</td> 
             <td><%= @service.score_elevation(@activity) %><br>
-              rating/10<td>
+              rating/20<td>
           </tr>
 
     <!--   <thead>
@@ -124,7 +124,7 @@
             <td><%= @service.elapsed_time(@activity) %><br>
               elapsed</td> 
             <td><%= @service.score_duration(@activity) %><br>
-              rating/10<td>
+              rating/20<td>
           </tr>
       </tbody>
 

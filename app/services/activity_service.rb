@@ -83,11 +83,11 @@ class ActivityService
   end  
 
   def average_heartrate(activity)
-    activity["average_heartrate"].round(0)
+    activity["average_heartrate"] ? activity["average_heartrate"].round(0) : "N/A"
   end  
 
   def max_heartrate(activity)
-    activity["max_heartrate"].round(0)
+    activity["max_heartrate"] ? activity["max_heartrate"].round(0) : "N/A" 
   end
 
   # def start_location(activity)
@@ -117,8 +117,12 @@ class ActivityService
   end
 
   def score_heartrate(activity)
-    heartrate_score = score_heartrate_average(activity) + score_heartrate_max(activity)
-    heartrate_score.round(2)
+    if average_heartrate(activity) == "N/A"
+      "N/A"
+    else
+      heartrate_score = score_heartrate_average(activity) + score_heartrate_max(activity)
+      heartrate_score.round(2)
+    end
   end
 
   def score_duration(activity)
@@ -127,8 +131,19 @@ class ActivityService
   end
 
   def difficulty_rating(activity)
-    difficulty = score_duration(activity) + score_heartrate(activity) + score_elevation(activity)
-    difficulty.round(2)
+    if score_heartrate(activity) == "N/A"
+      difficulty = score_duration(activity) + score_elevation(activity)
+    else 
+      difficulty = score_duration(activity) + score_heartrate(activity) + score_elevation(activity)
+    end.round(2)
+  end
+
+  def difficulty_range(activity)
+    if score_heartrate(activity) == "N/A"
+      40
+    else
+      50
+    end
   end
 
 end
