@@ -4,7 +4,7 @@ class ScoringTest < ActiveSupport::TestCase
   include Scoring
 
   test "elevation scoring" do 
-    assert_equal 22.625, elevation_gain_factor
+    assert_equal 22.71, elevation_gain_factor
     assert_equal 6300.0, max_elevation_factor
   end
 
