@@ -23,7 +23,7 @@
         <td><%= @service.distance(@activity) %> mi</td>  
         <td><%= @service.duration(@activity) %></td>
         <td><%= @service.average_pace(@activity) %></td>
-        <td>DIFFICULTY</td>
+        <td><%= @service.difficulty_rating(@activity) %></td>
       </tr> 
     </tbody>
   </table>
@@ -36,7 +36,7 @@
 
 
 <h5 class="center">Difficulty Rating</h5>
-<h5 class="center">4.5</h5>
+<h5 class="center"><%= @service.difficulty_rating(@activity) %>/30</h5>
 
 
 
@@ -63,7 +63,7 @@
         <td><%= @service.elev_low(@activity) %> ft<br>
           min</td> 
         <td><%= @service.score_elevation(@activity) %><br>
-          rating<td>
+          rating/10<td>
       </tr>
 
 <!--   <thead>
@@ -86,7 +86,7 @@
         <td>190 bpm<br>
           100%</td> 
         <td><%= @service.score_heartrate(@activity) %> <br>
-          rating<td>
+          rating/10<td>
       </tr>
   </tbody>
 
@@ -109,8 +109,8 @@
           duration</td> 
         <td><%= @service.elapsed_time(@activity) %><br>
           elapsed</td> 
-        <td>3.7<br>
-          rating<td>
+        <td><%= @service.score_duration(@activity) %><br>
+          rating/10<td>
       </tr>
   </tbody>
 

@@ -5,7 +5,8 @@ module Scoring
   end
 
   def max_elevation_factor
-    (12600 / 2.0)                       #Max elevation of Leadville 100
+    elevation = (12600)                     #Max elevation of Leadville 100
+    elevation / 2.0                         #20% of elevation score
   end
 
   def possible_heartrate               #Average 100% heartrate for 30 year old
@@ -17,4 +18,9 @@ module Scoring
     factor = aerobic_zone / 9.0                        #90% of heartrate score
   end
 
+  def distance_factor
+    distance = (100.0)
+    factor = distance / 10.0
+  end
+  
 end

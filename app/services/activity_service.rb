@@ -119,4 +119,14 @@ class ActivityService
     heartrate_score.round(2)
   end
 
+  def score_duration(activity)
+    duration_score = distance(activity) / distance_factor
+    duration_score.round(2)
+  end
+
+  def difficulty_rating(activity)
+    difficulty = score_duration(activity) + score_heartrate(activity) + score_elevation(activity)
+    difficulty.round(2)
+  end
+
 end
