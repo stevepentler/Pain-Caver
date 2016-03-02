@@ -1,5 +1,6 @@
 class ActivityService
   include Formatter
+  include Scoring
   attr_reader :client
 
   def initialize(current_user)
@@ -91,6 +92,31 @@ class ActivityService
     activity["start_latlng"]
   end
 
-  
+  def score_elevation_gain(activity)
+    gain_per_mile = total_elevation_gain(activity) / distance(activity)
+    rating = gain_per_mile / elevation_gain_factor
+  end
+
+  def score_elevation_max(activity)
+    elev_high(activity) / max_elevation_factor
+  end
+
+  def score_elevation(activity)
+    elevation_score = score_elevation_gain(activity) + score_elevation_max(activity)
+    elevation_score.round(2)
+  end
+
+  def score_heartrate_average(activity)
+    avg_percentage = average_heartrate(activity) / heartrate_factor
+  end
+
+  def score_heartrate_max(activity)
+    max_percentage = max_heartrate(activity) / possible_heartrate
+  end
+
+  def score_heartrate(activity)
+    heartrate_score = score_heartrate_average(activity) + score_heartrate_max(activity)
+    heartrate_score.round(2)
+  end
 
 end

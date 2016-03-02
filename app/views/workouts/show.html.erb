@@ -62,7 +62,8 @@
           max</td> 
         <td><%= @service.elev_low(@activity) %> ft<br>
           min</td> 
-        <td>3.7<td>
+        <td><%= @service.score_elevation(@activity) %><br>
+          rating<td>
       </tr>
 
 <!--   <thead>
@@ -84,7 +85,8 @@
           max</td> 
         <td>190 bpm<br>
           100%</td> 
-        <td>3.7<td>
+        <td><%= @service.score_heartrate(@activity) %> <br>
+          rating<td>
       </tr>
   </tbody>
 
@@ -103,11 +105,12 @@
         <td><i class="medium material-icons">query_builder</i><br>Duration</td>
         <td><%= @service.distance(@activity) %> miles<br>
           distance</td>   
-        <td><%= @service.duration(@activity) %><bd>
+        <td><%= @service.duration(@activity) %><br>
           duration</td> 
         <td><%= @service.elapsed_time(@activity) %><br>
           elapsed</td> 
-        <td>3.7<td>
+        <td>3.7<br>
+          rating<td>
       </tr>
   </tbody>
 
@@ -131,7 +134,8 @@
           average</td> 
         <td><%= @service.max_speed(@activity) %> mph<br>
           max</td> 
-        <td>3.7<td>
+        <td><br>
+          not rated<td>
       </tr>
   </tbody>
 </table>
