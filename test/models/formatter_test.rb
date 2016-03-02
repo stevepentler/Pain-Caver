@@ -28,9 +28,16 @@ class FormatterTest < ActiveSupport::TestCase
     assert_equal "1hr 15m", time_formatter(1, 15)
   end
 
-  test "pace converter" do 
-    activity = create(:activity)
-    assert_equal 5, pace_converter(activity)
+  test "format pace" do 
+    assert_equal "6:13", format_pace(6, 13)
+    assert_equal "6:00", format_pace(6, 0)
+    assert_equal "6:05", format_pace(6, 5)
+  end
+
+  test "format datetime" do 
+    activity = {"start_date_local" => "2016-02-28T10:38:22Z"}
+    assert_equal "02-28", format_date(activity)
+    assert_equal "10:38:22", format_time(activity)
   end
 
   # test "datetime formatter" do
