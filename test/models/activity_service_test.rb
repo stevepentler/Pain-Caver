@@ -2,7 +2,7 @@ require "test_helper"
 
 class ActivityServiceTest < ActiveSupport::TestCase
 
-  test "#data" do
+  test "#activity_service" do
     VCR.use_cassette('activity') do
       current_user = create(:user)
       service = ActivityService.new(current_user)
