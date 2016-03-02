@@ -58,27 +58,4 @@ module Formatter
     activity["start_date_local"].split("T").last.chop
   end
 
-  # def format_year(workout)
-  #   datetime(workout).split("-")[0]
-  # end
-
-  # def format_month(workout)
-  #   datetime(workout).split("-")[1]
-  # end
-
-  # def format_day(workout)
-  #   datetime(workout)[8..9]
-  # end
-
-  # def format_hour(workout)
-  #   hour = (datetime(workout).split("T")[1].split(":")[0])
-  # end
-
-  # def format_minute(workout)
-  #   datetime(workout).split("T")[1].split(":")[1]
-  # end
-
-  # def datetime(workout)
-  #   workout["start_datetime"]
-  # end
 end

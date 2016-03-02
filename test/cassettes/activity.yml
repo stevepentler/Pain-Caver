@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.strava.com/api/v3//activities/505114540?access_token=76d702a1cb0bcd86e7a85a8dde8f06c891edbd62
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 02 Mar 2016 16:22:22 GMT
+      Etag:
+      - W/"197d45c3e7204753c434e6d6bcc0b97a"
+      Set-Cookie:
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTE0ZjE2MDlhMzk4MDZmMzJmZjUyYjJmODgwZDIxMzljBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--11b1758d88ae471f18b0d3236edd04df4a461af5;
+        domain=strava.com; path=/; HttpOnly
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - DENY
+      X-Ratelimit-Limit:
+      - '600,30000'
+      X-Ratelimit-Usage:
+      - '49,573'
+      X-Request-Id:
+      - ec54d92e55f2c27a7e5c663ce8d29f7d
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '3489'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":505114540,"resource_state":3,"external_id":"2016-02-28T17:38:22Z","upload_id":556936270,"athlete":{"id":13541251,"resource_state":1},"name":"Morning
+        Run","distance":6993.8,"moving_time":2911,"elapsed_time":4584,"total_elevation_gain":461.1,"type":"Run","start_date":"2016-02-28T17:38:22Z","start_date_local":"2016-02-28T10:38:22Z","timezone":"(GMT-07:00)
+        America/Denver","start_latlng":[39.999133,-105.290421],"end_latlng":[40.004933,-105.293079],"location_city":null,"location_state":null,"location_country":"","start_latitude":39.999133,"start_longitude":-105.290421,"achievement_count":0,"kudos_count":0,"comment_count":0,"athlete_count":2,"photo_count":0,"map":{"id":"a505114540","polyline":"qicsFdpsaSF?RMTAXEJG`@MN?HFb@|@l@bAh@fAZXDJ?ZB|@Xp@Nt@AlBF`@?JMb@CVBPAt@EXK\\?n@IFKb@]^QXOhAY`@CXMl@GVGHQr@CJUJI^JV^JN?THLJFT@VBfBDZIz@B^G^X|@BTCRJ\\@P?NIHBLAJ_@^KTC`@J`@Tj@PNDG?BJ?DNA^BHEZIJCRLPGTCT@FGP@B?JG?MLAP@JAFZr@NlAT^PDTLj@H?FEFKFYFGJZ?NFDJRLb@@PLBJRLDNAPLn@?XDR?x@GVDJCh@DFPBr@TRANLIXIHo@b@Yd@ONINQF[Bc@LI@g@KKDOl@DRTJTPb@dAPR@RDPFdALZDZVx@BNc@bAW\\DLTZFNRXDZAL@RHRJj@LHJAZs@Lk@HO\\Yv@a@h@Ej@SNYLIn@BDCBGn@J^@ZCx@?PCPE`@ARCPId@]t@w@JG^g@h@g@Vs@PQJUr@YDS?SF]j@u@HWLQhA}@|Bm@QBSL}A~AgLzMsBb@_@?m@MSMKC]Vu@O[P]\\g@Fo@Bs@f@SPs@`BEHKFe@yAWg@[_AL][yCEsAGSA]KSEYUk@MMUMQQG[Cm@PIb@DZSXITAf@aANSTQRCROJYMIo@Iw@AMOL{AIw@?q@G_@GMUUMO_@WGIu@s@MEUDGEJM\\ALUMEo@Ia@WUgAOc@Ei@@KJKJAIKFa@Rg@CKII@CTm@Do@OAEKGLY]Ss@Ca@Bg@\\]@Y?g@IYBo@CO[e@Ay@BmAFU@YFIA}@Gm@QU[GQIUU@g@LQFCP[Ry@JSJOH_@JCZsAVq@RYPeAD_@Lo@RgCBGAc@E_@CEw@i@aAaAk@_AeA{AQOw@c@_@Yy@eA]Qe@E{@YWMIS_@Gy@?o@Zw@lAUXWNmA\\YLe@Xq@f@QP_@`@Yh@g@VKDmA@[CgA[S?]JSNW`@[xBMJQ@m@QcBBYGGEG]IYWc@CvAZHd@FV@nAG^F","resource_state":3,"summary_polyline":"qicsFdpsaSrCc@jEpL[fKgEfLhBfBb@vKw@jClArCm@vEtC~Ds@j@rCjAPfGnBl@wGpEbDhJw@pB|@pCn@fA|FiFjIWlJiMfEkBkPlQuHJ_HhFyAaE]}HiBqEbGyDcCe@CeFuDoCv@e@eCsCt@qGoAsBNgO}AkBrD{Jp@oJoK{K{F{AiMvJoFKuAvD}DSq@aBCvAhER"},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":"g1261218","average_speed":2.403,"max_speed":19.9,"average_heartrate":162.6,"max_heartrate":179.0,"elev_high":2121.2,"elev_low":1743.5,"total_photo_count":0,"has_kudoed":false,"workout_type":null,"description":null,"calories":884.4,"segment_efforts":[{"id":12135952534,"resource_state":2,"name":"Gregory
+        Canyon to Green Mountain Lodge","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":1270,"moving_time":1259,"start_date":"2016-02-28T17:43:08Z","start_date_local":"2016-02-28T10:43:08Z","distance":2266.1,"start_index":46,"end_index":358,"average_heartrate":167.3,"max_heartrate":178.0,"segment":{"id":1240584,"resource_state":2,"name":"Gregory
+        Canyon to Green Mountain Lodge","activity_type":"Run","distance":2105.9,"average_grade":12.8,"maximum_grade":116.1,"elevation_high":2047.6,"elevation_low":1777.6,"start_latlng":[39.9974569,-105.2927827],"end_latlng":[39.9936044,-105.3081648],"start_latitude":39.9974569,"start_longitude":-105.2927827,"end_latitude":39.9936044,"end_longitude":-105.3081648,"climb_category":2,"city":"Boulder","state":"CO","country":"United
+        States","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[],"hidden":false},{"id":12135952523,"resource_state":2,"name":"Flagstaff
+        Rd Climb","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":166,"moving_time":166,"start_date":"2016-02-28T17:50:09Z","start_date_local":"2016-02-28T10:50:09Z","distance":216.3,"start_index":158,"end_index":196,"average_heartrate":171.5,"max_heartrate":175.0,"segment":{"id":2693007,"resource_state":2,"name":"Flagstaff
+        Rd Climb","activity_type":"Run","distance":394.28,"average_grade":18.0,"maximum_grade":40.4,"elevation_high":1935.4,"elevation_low":1862.3,"start_latlng":[39.99749596,-105.29971165],"end_latlng":[39.9975826,-105.3024343],"start_latitude":39.99749596,"start_longitude":-105.29971165,"end_latitude":39.9975826,"end_longitude":-105.3024343,"climb_category":0,"city":"Boulder","state":"CO","country":"United
+        States","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[],"hidden":false},{"id":12135952541,"resource_state":2,"name":"Down
+        Gregory Canyon","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":860,"moving_time":723,"start_date":"2016-02-28T18:20:05Z","start_date_local":"2016-02-28T11:20:05Z","distance":1973.4,"start_index":466,"end_index":670,"average_heartrate":156.6,"max_heartrate":172.0,"segment":{"id":4626988,"resource_state":2,"name":"Down
+        Gregory Canyon","activity_type":"Run","distance":1931.4,"average_grade":-13.7,"maximum_grade":36.7,"elevation_high":2039.8,"elevation_low":1768.0,"start_latlng":[39.99584,-105.30816],"end_latlng":[39.997402,-105.29286],"start_latitude":39.99584,"start_longitude":-105.30816,"end_latitude":39.997402,"end_longitude":-105.29286,"climb_category":0,"city":"Boulder","state":"CO","country":"United
+        States","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[],"hidden":false},{"id":12135952560,"resource_state":2,"name":"Marshall
+        St Climb","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":1067,"moving_time":296,"start_date":"2016-02-28T18:36:32Z","start_date_local":"2016-02-28T11:36:32Z","distance":812.2,"start_index":691,"end_index":757,"average_heartrate":172.0,"max_heartrate":179.0,"segment":{"id":1550051,"resource_state":2,"name":"Marshall
+        St Climb","activity_type":"Run","distance":875.529,"average_grade":8.9,"maximum_grade":39.2,"elevation_high":1838.8,"elevation_low":1761.0,"start_latlng":[40.0001616,-105.2904756],"end_latlng":[40.0063004,-105.2930697],"start_latitude":40.0001616,"start_longitude":-105.2904756,"end_latitude":40.0063004,"end_longitude":-105.2930697,"climb_category":0,"city":"Boulder","state":"CO","country":"United
+        States","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[],"hidden":false}],"splits_metric":[{"distance":1005.9,"elapsed_time":641,"elevation_difference":123.3,"moving_time":498,"split":1,"average_heartrate":156.39558232931728},{"distance":1000.5,"elapsed_time":654,"elevation_difference":168.6,"moving_time":643,"split":2,"average_heartrate":173.56609642301711},{"distance":997.3,"elapsed_time":502,"elevation_difference":75.3,"moving_time":502,"split":3,"average_heartrate":166.3},{"distance":1009.0,"elapsed_time":881,"elevation_difference":-86.6,"moving_time":226,"split":4,"average_heartrate":150.50892857142858},{"distance":1000.5,"elapsed_time":394,"elevation_difference":-137.0,"moving_time":394,"split":5,"average_heartrate":154.76142131979697},{"distance":998.5,"elapsed_time":402,"elevation_difference":-138.9,"moving_time":309,"split":6,"average_heartrate":156.68284789644014},{"distance":982.1,"elapsed_time":1110,"elevation_difference":59.7,"moving_time":339,"split":7,"average_heartrate":168.12426035502958}],"splits_standard":[{"distance":1612.6,"elapsed_time":1081,"elevation_difference":245.1,"moving_time":927,"split":1,"average_heartrate":163.95361380798275},{"distance":1650.2,"elapsed_time":1080,"elevation_difference":102.9,"moving_time":769,"split":2,"average_heartrate":167.79400260756194},{"distance":1567.5,"elapsed_time":822,"elevation_difference":-190.1,"moving_time":478,"split":3,"average_heartrate":152.39915966386553},{"distance":1619.2,"elapsed_time":697,"elevation_difference":-119.5,"moving_time":552,"split":4,"average_heartrate":159.58876811594203},{"distance":544.3,"elapsed_time":904,"elevation_difference":26.0,"moving_time":185,"split":5,"average_heartrate":169.8423913043478}],"best_efforts":[{"id":1256935459,"resource_state":2,"name":"400m","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":127,"moving_time":128,"start_date":"2016-02-28T18:23:49Z","start_date_local":"2016-02-28T11:23:49Z","distance":400,"start_index":509,"end_index":541,"pr_rank":null,"achievements":[]},{"id":1256935460,"resource_state":2,"name":"1/2
+        mile","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":296,"moving_time":297,"start_date":"2016-02-28T18:24:02Z","start_date_local":"2016-02-28T11:24:02Z","distance":805,"start_index":512,"end_index":590,"pr_rank":null,"achievements":[]},{"id":1256935461,"resource_state":2,"name":"1k","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":373,"moving_time":374,"start_date":"2016-02-28T18:23:44Z","start_date_local":"2016-02-28T11:23:44Z","distance":1000,"start_index":508,"end_index":608,"pr_rank":null,"achievements":[]},{"id":1256935462,"resource_state":2,"name":"1
+        mile","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":866,"moving_time":856,"start_date":"2016-02-28T17:52:24Z","start_date_local":"2016-02-28T10:52:24Z","distance":1609,"start_index":189,"end_index":394,"pr_rank":null,"achievements":[]},{"id":1256935463,"resource_state":2,"name":"5k","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":2618,"moving_time":1820,"start_date":"2016-02-28T17:58:37Z","start_date_local":"2016-02-28T10:58:37Z","distance":5000,"start_index":278,"end_index":752,"pr_rank":null,"achievements":[]}],"gear":{"id":"g1261218","primary":true,"name":"Saucony
+        Peregrine Peregrine 4","resource_state":2,"distance":34133.0},"partner_logo_url":null,"photos":{"primary":null,"count":0},"similar_activities":{"effort_count":1,"average_speed":2.402542081758846,"min_average_speed":2.402542081758846,"mid_average_speed":2.402542081758846,"max_average_speed":2.402542081758846,"pr_rank":null,"frequency_milestone":null,"trend":{"speeds":[2.402542081758846],"current_activity_index":0,"min_speed":2.402542081758846,"mid_speed":2.402542081758846,"max_speed":2.402542081758846,"direction":0},"resource_state":2},"embed_token":"a7e49ed36df6f0e2a31dfbc5fd8aed7a7b748276"}'
+    http_version: 
+  recorded_at: Wed, 02 Mar 2016 16:22:22 GMT
+recorded_with: VCR 3.0.1

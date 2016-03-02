@@ -40,12 +40,4 @@ class FormatterTest < ActiveSupport::TestCase
     assert_equal "10:38:22", format_time(activity)
   end
 
-  # test "datetime formatter" do
-  #   assert_equal "2012-09-19T13:31:41+00:00", datetime(workout)
-  #   assert_equal "2012", format_year(workout)
-  #   assert_equal "09", format_month(workout)
-  #   assert_equal "19", format_day(workout)
-  #   assert_equal "13", format_hour(workout)
-  #   assert_equal "31", format_minute(workout)
-  # end
 end
