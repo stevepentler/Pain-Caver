@@ -19,6 +19,16 @@ FactoryGirl.define do
     friend_count 3
   end
 
+  factory :race do 
+    title "Leadville 100"
+    title_id "leadville"
+    elevation_gain 18168.0
+    max_elevation 12600.0
+    distance 100.0
+    description "The legendary \"Race Across The Sky\" 100-mile run is where it all started back in 1983. This is it. The race where legends are created and limits are tested. One hundred miles of extreme Colorado Rockies terrain — from elevations of 9,200 to 12,600 feet. You will give the mountain respect, and earn respect from all"
+    website "http://www.leadvilleraceseries.com/run/leadvilletrail100run/"
+  end
+
   # factory :activity do 
   #   activity {"id"=>505114540,
   #    "resource_state"=>3,

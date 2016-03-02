@@ -4,7 +4,8 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    @service = ActivityService.new(current_user)
+    @race = Race.find_by(title_id: params[:race]) || Race.first
+    @service = ActivityService.new(current_user, @race)
     @activity = @service.single_activity(params[:id])
   end
 end
