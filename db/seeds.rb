@@ -24,3 +24,12 @@ boston_marathon = Race.create(title: "Boston Marathon",
                               description: "The Boston Marathon is the world's oldest annual marathon and ranks as one of the world's best-known road racing events. It is one of six World Marathon Majors.",
                               website: "http://www.baa.org/"
                               )
+
+badwater = Race.create(title: "Badwater 135",
+                       title_id: "badwater",
+                       elevation_gain: 14600.0,
+                       max_elevation: 8300.0,
+                       distance: 135.0,
+                       description: "Covering 135 miles (217km) non-stop from Death Valley to Mt. Whitney, CA, the STYR Labs Badwater® 135 is the most demanding and extreme running race offered anywhere on the planet. The start line is at Badwater, Death Valley, which marks the lowest elevation in North America at 280’ (85m) below sea level. The race finishes at Whitney Portal at 8,300’ (2530m).",
+                       website: "http://www.badwater.com/event/badwater-135/"
+                      )
