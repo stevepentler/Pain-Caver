@@ -8,7 +8,7 @@ class ActivityService
   end
 
   def list_athlete_activities
-    client.list_athlete_activities
+    client.list_athlete_activities.select {|activity| activity["type"] == "Run"}
   end
 
   def single_activity(id)
@@ -31,9 +31,9 @@ class ActivityService
     format_date(activity)
   end
 
-  def start_year(activity)
-    format_year(activity)
-  end 
+  # def start_year(activity)
+  #   format_year(activity)
+  # end 
 
   def start_time(activity)
     activity["start_date_local"].split("T").last.chop
@@ -59,11 +59,11 @@ class ActivityService
   end
 
   def elev_high(activity)
-    activity["elev_high"].to_i
+    activity["elev_high"].round(0)
   end
 
   def elev_low(activity)
-    activity["elev_low"].to_i
+    activity["elev_low"].round(0)
   end
 
   def average_pace(activity)
@@ -81,16 +81,16 @@ class ActivityService
   end  
 
   def average_heartrate(activity)
-    activity["average_heartrate"].to_i
+    activity["average_heartrate"].round(0)
   end  
 
   def max_heartrate(activity)
-    activity["max_heartrate"].to_i
+    activity["max_heartrate"].round(0)
   end
 
-  def start_location(activity)
-    activity["start_latlng"]
-  end
+  # def start_location(activity)
+  #   activity["start_latlng"]
+  # end
 
   def score_elevation_gain(activity)
     gain_per_mile = total_elevation_gain(activity) / distance(activity)

@@ -21,7 +21,7 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
       assert page.has_content?("sessions")
       assert page.has_content?("miles")
       assert page.has_content?("hr")
-      assert page.has_content?("mins")
+      assert page.has_content?("m")
       assert page.has_content?("feet")
     end
   end
