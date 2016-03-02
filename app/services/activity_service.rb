@@ -10,6 +10,14 @@ class ActivityService
     client.list_athlete_activities
   end
 
+  def single_activity(id)
+    client.retrieve_an_activity(id)
+  end
+
+  def activity_id(activity)
+    activity["id"]
+  end
+
   def name(activity)
     activity["name"]
   end

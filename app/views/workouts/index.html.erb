@@ -17,7 +17,7 @@
 
     <tbody>
       <% @activities.list_athlete_activities.each do |activity| %>
-        <tr>
+        <tr class="clickable-row" data-href="<%= workout_path(activity["id"]) %>">
           <td><%= @activities.start_date(activity) %></td> 
           <td><%= @activities.start_time(activity) %></td> 
           <td><%= @activities.name(activity) %></td> 

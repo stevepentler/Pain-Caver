@@ -1,3 +1,46 @@
+<%= render partial: "/navbar/navbar" %> 
+
+<h5 class="center">Snapshot</h5>
+<div class="container">
+  <table class="bordered highlight centered responsive-table font-color font-outline">
+    <thead>
+      <tr>
+          <th data-field="Date">Date</th>
+          <th data-field="Time">Start Time</th>
+          <th data-field="Title">Title</th>
+          <th data-field="Distance">Distance</th>
+          <th data-field="Duration">Duration</th>
+          <th data-field="Pace">Pace</th>
+          <th data-field="Difficulty">Difficulty</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><%= @service.start_date(@activity) %></td> 
+        <td><%= @service.start_time(@activity) %></td> 
+        <td><%= @service.name(@activity) %></td> 
+        <td><%= @service.distance(@activity) %> mi</td>  
+        <td><%= @service.duration(@activity) %></td>
+        <td><%= @service.average_pace(@activity) %></td>
+        <td>DIFFICULTY</td>
+      </tr> 
+    </tbody>
+  </table>
+
+
+
+
+
+<hr>
+
+
+<h5 class="center">Ratings</h5>
+
+
+
+
+
 <table class="bordered highlight centered responsive-table font-color font-outline">
   <thead>
     <tr>
@@ -19,23 +62,21 @@
   </thead>
 
   <tbody>
-    <% @activities.list_athlete_activities.each do |activity| %>
       <tr>
-        <td><%= @activities.name(activity) %></td> 
-        <td><%= @activities.type(activity) %></td> 
-        <td><%= @activities.start_date(activity) %></td>  
-        <td><%= @activities.distance(activity) %></td> 
-        <td><%= @activities.duration(activity) %></td> 
-        <td><%= @activities.elapsed_time(activity) %></td> 
-        <td><%= @activities.total_elevation_gain(activity) %></td>   
-        <td><%= @activities.elev_high(activity) %></td> 
-        <td><%= @activities.elev_low(activity) %></td> 
-        <td><%= @activities.average_heartrate(activity) %></td> 
-        <td><%= @activities.max_heartrate(activity) %></td> 
-        <td><%= @activities.average_speed(activity) %></td> 
-        <td><%= @activities.max_speed(activity) %></td> 
-        <td><%= @activities.start_location(activity) %></td> 
+        <td><%= @service.name(@activity) %></td> 
+        <td><%= @service.type(@activity) %></td> 
+        <td><%= @service.start_date(@activity) %></td>  
+        <td><%= @service.distance(@activity) %></td> 
+        <td><%= @service.duration(@activity) %></td> 
+        <td><%= @service.elapsed_time(@activity) %></td> 
+        <td><%= @service.total_elevation_gain(@activity) %></td>   
+        <td><%= @service.elev_high(@activity) %></td> 
+        <td><%= @service.elev_low(@activity) %></td> 
+        <td><%= @service.average_heartrate(@activity) %></td> 
+        <td><%= @service.max_heartrate(@activity) %></td> 
+        <td><%= @service.average_speed(@activity) %></td> 
+        <td><%= @service.max_speed(@activity) %></td> 
+        <td><%= @service.start_location(@activity) %></td> 
       </tr>
-    <% end %> 
   </tbody>
 </table>
