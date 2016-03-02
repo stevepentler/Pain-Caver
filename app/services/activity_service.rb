@@ -8,7 +8,7 @@ class ActivityService
   end
 
   def list_athlete_activities
-    client.list_athlete_activities
+    client.list_athlete_activities.select {|activity| activity["type"] == "Run"}
   end
 
   def single_activity(id)
