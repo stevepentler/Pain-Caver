@@ -1,10 +1,12 @@
 class ActivityService
   include Formatter
   include Scoring
-  attr_reader :client
+  attr_reader :client,
+              :race
 
-  def initialize(current_user)
+  def initialize(current_user, race=nil)
     @client = Strava::Api::V3::Client.new(:access_token => "#{current_user.token}")
+    @race = race ||= Race.find(1)
   end
 
   def list_athlete_activities

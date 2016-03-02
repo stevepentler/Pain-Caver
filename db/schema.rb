@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20160302182319) do
   enable_extension "plpgsql"
 
   create_table "races", force: :cascade do |t|
-    t.string   "name"
+    t.string   "title"
+    t.string   "title_id"
     t.float    "elevation_gain"
     t.float    "max_elevation"
     t.float    "distance"
