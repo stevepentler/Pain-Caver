@@ -26,4 +26,21 @@ class ActivityServiceTest < ActiveSupport::TestCase
       assert_equal 179, service.max_heartrate(activity)
     end
   end
+
+  test "#activity_service scoring" do 
+    VCR.use_cassette('activity') do
+      current_user = create(:user)
+      service = ActivityService.new(current_user)
+      activity = service.single_activity(505114540)
+
+      assert_equal 16.04, service.difficulty_rating(activity)
+      assert_equal 4.685082872928177, service.score_elevation_gain(activity)
+      assert_equal 0.33666666666666667, service.score_elevation_max(activity)
+      assert_equal 5.02, service.score_elevation(activity)
+      assert_equal 9.651315789473683, service.score_heartrate_average(activity)
+      assert_equal 0.9421052631578948, service.score_heartrate_max(activity)
+      assert_equal 10.59, service.score_heartrate(activity)
+      assert_equal 0.43, service.score_duration(activity)
+    end
+  end 
 end
