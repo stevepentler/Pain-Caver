@@ -49,7 +49,8 @@ class ActivityService
   end  
 
   def elapsed_time(activity)
-    activity["elapsed_time"]
+    total_seconds = activity["elapsed_time"]
+    time_converter(total_seconds)
   end
 
   def total_elevation_gain(activity)
@@ -57,11 +58,11 @@ class ActivityService
   end
 
   def elev_high(activity)
-    activity["elev_high"]
+    activity["elev_high"].to_i
   end
 
   def elev_low(activity)
-    activity["elev_low"]
+    activity["elev_low"].to_i
   end
 
   def average_pace(activity)
@@ -79,11 +80,11 @@ class ActivityService
   end  
 
   def average_heartrate(activity)
-    activity["average_heartrate"]
+    activity["average_heartrate"].to_i
   end  
 
   def max_heartrate(activity)
-    activity["max_heartrate"]
+    activity["max_heartrate"].to_i
   end
 
   def start_location(activity)
