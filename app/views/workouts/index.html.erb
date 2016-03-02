@@ -1,41 +1,31 @@
-<table class="bordered highlight centered responsive-table font-color font-outline">
-  <thead>
-    <tr>
-        <th data-field="Name">Name</th>
-        <th data-field="Type">Type</th>
-        <th data-field="Start-Date">Start Date</th>
-        <th data-field="Distance">Distance</th>
-        <th data-field="Duration">Duration</th>
-        <th data-field="Elapsed-Tme">Elapsed Time</th>
-        <th data-field="Total-Elelvation-Gain">Total Elevation Gain</th>
-        <th data-field="Max-Elevation">Max Elevation</th>
-        <th data-field="Min-Elevation">Min Elevation</th>
-        <th data-field="Average-Heartrate">Average Heartrate</th>
-        <th data-field="Max-Heartrate">Max Heartrate</th>
-        <th data-field="Average-Speed">Average Speed</th>
-        <th data-field="Max-Speed">Max Speed</th>
-        <th data-field="Starting-Location">Starting Location</th>
-    </tr>
-  </thead>
+<%= render partial: "/navbar/navbar" %> 
 
-  <tbody>
-    <% @activities.list_athlete_activities.each do |activity| %>
+<div class="container">
+  <table class="bordered highlight centered responsive-table font-color font-outline">
+    <thead>
       <tr>
-        <td><%= @activities.name(activity) %></td> 
-        <td><%= @activities.type(activity) %></td> 
-        <td><%= @activities.start_date(activity) %></td>  
-        <td><%= @activities.distance(activity) %></td> 
-        <td><%= @activities.duration(activity) %></td> 
-        <td><%= @activities.elapsed_time(activity) %></td> 
-        <td><%= @activities.total_elevation_gain(activity) %></td>   
-        <td><%= @activities.elev_high(activity) %></td> 
-        <td><%= @activities.elev_low(activity) %></td> 
-        <td><%= @activities.average_heartrate(activity) %></td> 
-        <td><%= @activities.max_heartrate(activity) %></td> 
-        <td><%= @activities.average_speed(activity) %></td> 
-        <td><%= @activities.max_speed(activity) %></td> 
-        <td><%= @activities.start_location(activity) %></td> 
+          <th data-field="Date">Date</th>
+          <th data-field="Time">Start Time</th>
+          <th data-field="Title">Title</th>
+          <th data-field="Distance">Distance</th>
+          <th data-field="Duration">Duration</th>
+          <th data-field="Pace">Pace</th>
+          <th data-field="Difficulty">Difficulty</th>
+          <th data-field="Details">View Details</th>
       </tr>
-    <% end %> 
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @activities.list_athlete_activities.each do |activity| %>
+        <tr class="clickable-row" data-href="<%= workout_path(activity["id"]) %>">
+          <td><%= @activities.start_date(activity) %></td> 
+          <td><%= @activities.start_time(activity) %></td> 
+          <td><%= @activities.name(activity) %></td> 
+          <td><%= @activities.distance(activity) %> mi</td>  
+          <td><%= @activities.duration(activity) %></td>
+          <td><%= @activities.average_pace(activity) %></td>
+        </tr>
+      <% end %> 
+    </tbody>
+  </table>
+</div>

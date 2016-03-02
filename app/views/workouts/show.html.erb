@@ -1,0 +1,141 @@
+<%= render partial: "/navbar/navbar" %> 
+
+<h5 class="center">Snapshot</h5>
+<div class="container">
+  <table class="bordered highlight centered responsive-table font-color font-outline">
+    <thead>
+      <tr>
+          <th data-field="Date">Date</th>
+          <th data-field="Time">Start Time</th>
+          <th data-field="Title">Title</th>
+          <th data-field="Distance">Distance</th>
+          <th data-field="Duration">Duration</th>
+          <th data-field="Pace">Pace</th>
+          <th data-field="Difficulty">Difficulty</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><%= @service.start_date(@activity) %></td> 
+        <td><%= @service.start_time(@activity) %></td> 
+        <td><%= @service.name(@activity) %></td> 
+        <td><%= @service.distance(@activity) %> mi</td>  
+        <td><%= @service.duration(@activity) %></td>
+        <td><%= @service.average_pace(@activity) %></td>
+        <td><%= @service.difficulty_rating(@activity) %></td>
+      </tr> 
+    </tbody>
+  </table>
+
+
+
+
+
+<hr>
+
+
+<h5 class="center">Difficulty Rating</h5>
+<h5 class="center"><%= @service.difficulty_rating(@activity) %>/30</h5>
+
+
+
+
+
+<table class="bordered highlight centered responsive-table font-color font-outline">
+<!--   <thead>
+    <tr>
+      <th data-field="Category">Category</th>
+      <th data-field="Total-Elevation-Gain">Total Elevation Gain</th>
+      <th data-field="Max-Elevation">Max Elevation</th>
+      <th data-field="Min-Elevation">Min Elevation</th>
+      <th data-field="Score">Score</th>
+    </tr>
+  </thead> -->
+
+  <tbody>
+      <tr>
+        <td><i class="medium material-icons">navigation</i><br>Elevation</td>
+        <td><%= @service.total_elevation_gain(@activity) %> ft<br>
+          total gain</td>   
+        <td><%= @service.elev_high(@activity) %> ft<br>
+          max</td> 
+        <td><%= @service.elev_low(@activity) %> ft<br>
+          min</td> 
+        <td><%= @service.score_elevation(@activity) %><br>
+          rating/10<td>
+      </tr>
+
+<!--   <thead>
+    <tr>
+      <th data-field="Category">Category</th>
+      <th data-field="Average-Heartrate">Average Heartrate</th>
+      <th data-field="Max-Heartrate">Max Heartrate</th>
+      <th data-field="100">100% effort</th>
+      <th data-field="Score">Score</th>
+    </tr>
+  </thead> -->
+
+  <tbody>
+      <tr>
+        <td><i class="medium material-icons">trending_up</i><br>Heartrate</td>
+        <td><%= @service.average_heartrate(@activity) %> bpm<br>
+          average</td>   
+        <td><%= @service.max_heartrate(@activity) %> bpm<br>
+          max</td> 
+        <td>190 bpm<br>
+          100%</td> 
+        <td><%= @service.score_heartrate(@activity) %> <br>
+          rating/10<td>
+      </tr>
+  </tbody>
+
+<!--   <thead>
+    <tr>
+      <th data-field="Category">Category</th>
+      <th data-field="Distance">Distance</th>
+      <th data-field="Duration">Duration</th>
+      <th data-field="Elapsed-Time">Elapsed</th>
+      <th data-field="Score">Score</th>
+    </tr>
+  </thead> -->
+
+  <tbody>
+      <tr>
+        <td><i class="medium material-icons">query_builder</i><br>Duration</td>
+        <td><%= @service.distance(@activity) %> miles<br>
+          distance</td>   
+        <td><%= @service.duration(@activity) %><br>
+          duration</td> 
+        <td><%= @service.elapsed_time(@activity) %><br>
+          elapsed</td> 
+        <td><%= @service.score_duration(@activity) %><br>
+          rating/10<td>
+      </tr>
+  </tbody>
+
+
+<!--   <thead>
+    <tr>
+      <th data-field="Category">Category</th>
+      <th data-field="Average-Pace">Average Pace</th>
+      <th data-field="Average-Speed">Average Speed</th>
+      <th data-field="Max-Speed">Max Speed</th>
+      <th data-field="Score">Score</th>
+    </tr>
+  </thead> -->
+
+  <tbody>
+      <tr>
+        <td><i class="medium material-icons">trending_flat</i><br>Speed</td>
+        <td><%= @service.average_pace(@activity) %><br>
+          pace</td>   
+        <td><%= @service.average_speed(@activity) %> mph<br>
+          average</td> 
+        <td><%= @service.max_speed(@activity) %> mph<br>
+          max</td> 
+        <td><br>
+          not rated<td>
+      </tr>
+  </tbody>
+</table>
