@@ -6,14 +6,14 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
     @user = create(:user)
     visit root_path
     click_on "Login with Strava"
+    visit dashboard_path
   end
 
   test 'user views monthly stats on dashboard' do
     login
     VCR.use_cassette('stats') do
-      visit dashboard_path
-      assert_equal dashboard_path, current_path
       
+      assert_equal dashboard_path, current_path
       assert page.has_content?(@user.name)
       assert page.has_content?("Year to Date")
       assert page.has_content?("miles")
@@ -26,9 +26,8 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
 
   test 'user views elite runner options' do
     login
-    visit dashboard_path
+    
     assert_equal dashboard_path, current_path
-
     assert page.has_content?("Elite Runner")
     assert page.has_content?("Anton Krupicka")
     assert page.has_content?("Killian Jornet")
@@ -44,9 +43,8 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
   end
 
   test 'user views upcoming races on dashboard' do
-    login
     user_race = create(:user_race)
-    visit dashboard_path
+    login
     assert_equal dashboard_path, current_path
 
     assert page.has_content?("Upcoming Races")
@@ -69,9 +67,8 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
   test 'user views dashboard navbar' do 
     login
     VCR.use_cassette('stats') do
-      visit dashboard_path
+      
       assert_equal dashboard_path, current_path
-
       within("nav") do 
         assert page.has_content?("PAINCAVER")
         assert page.has_content?("View Workouts")

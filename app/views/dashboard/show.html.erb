@@ -48,7 +48,7 @@
             <th data-field="Target">Target Time</th>
             <th data-field="Location">Location</th>
             <th data-field="Time">Start Time</th>
-            <th data-field="Edit">edit/remove</th>
+            <th data-field="Edit">Update</th>
         </tr>
       </thead>
 
@@ -61,7 +61,7 @@
             <td><%= race.target_time %> mi</td>  
             <td><%= race.location %></td>
             <td><%= race.start_time %></td>
-            <td><%= link_to("edit", edit_user_race_path(race.id)) %>/<%=link_to("remove", user_race_path(race.id), method: :delete) %></td>
+            <td><%= link_to("edit", edit_user_race_path(race.id), class: "edit-button") %>/<%=link_to("remove", user_race_path(race.id), method: :delete, class: "remove-button") %></td>
           </tr>
         <% end %> 
       </tbody>
