@@ -35,13 +35,13 @@ class ActivityServiceTest < ActiveSupport::TestCase
       service = ActivityService.new(current_user, leadville)
       activity = service.single_activity(505114540)
 
-      assert_equal 21.47, service.difficulty_rating(activity)
+      assert_equal 22.73, service.difficulty_rating(activity)
       assert_equal 9.335094671950683, service.score_elevation_gain(activity)
       assert_equal 0.6733333333333333, service.score_elevation_max(activity)
       assert_equal 10.01, service.score_elevation(activity)
-      assert_equal 9.651315789473683, service.score_heartrate_average(activity)
+      assert_equal 10.903846153846153, service.score_heartrate_average(activity)
       assert_equal 0.9421052631578948, service.score_heartrate_max(activity)
-      assert_equal 10.59, service.score_heartrate(activity)
+      assert_equal 11.85, service.score_heartrate(activity)
       assert_equal 0.87, service.score_duration(activity)
     end
   end 

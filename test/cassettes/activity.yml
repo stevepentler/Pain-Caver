@@ -23,11 +23,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 02 Mar 2016 16:22:22 GMT
+      - Thu, 03 Mar 2016 21:37:04 GMT
       Etag:
-      - W/"197d45c3e7204753c434e6d6bcc0b97a"
+      - W/"f772b07a2754ecc9440c52bd19009dea"
       Set-Cookie:
-      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTE0ZjE2MDlhMzk4MDZmMzJmZjUyYjJmODgwZDIxMzljBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--11b1758d88ae471f18b0d3236edd04df4a461af5;
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWUxN2M3NmU3NDhhMmJjMjU3YTFlNjM5NDMxYWVhNzJhBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--95afbb53262f818f9cbaaf0a9a43fde482761085;
         domain=strava.com; path=/; HttpOnly
       Status:
       - 200 OK
@@ -36,13 +36,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600,30000'
       X-Ratelimit-Usage:
-      - '49,573'
+      - '211,2800'
       X-Request-Id:
-      - ec54d92e55f2c27a7e5c663ce8d29f7d
+      - 7211dd132bcea171df1748576c84f2bf
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '3489'
+      - '3488'
       Connection:
       - keep-alive
     body:
@@ -64,7 +64,7 @@ http_interactions:
         States","private":false,"hazardous":false,"starred":false},"kom_rank":null,"pr_rank":null,"achievements":[],"hidden":false}],"splits_metric":[{"distance":1005.9,"elapsed_time":641,"elevation_difference":123.3,"moving_time":498,"split":1,"average_heartrate":156.39558232931728},{"distance":1000.5,"elapsed_time":654,"elevation_difference":168.6,"moving_time":643,"split":2,"average_heartrate":173.56609642301711},{"distance":997.3,"elapsed_time":502,"elevation_difference":75.3,"moving_time":502,"split":3,"average_heartrate":166.3},{"distance":1009.0,"elapsed_time":881,"elevation_difference":-86.6,"moving_time":226,"split":4,"average_heartrate":150.50892857142858},{"distance":1000.5,"elapsed_time":394,"elevation_difference":-137.0,"moving_time":394,"split":5,"average_heartrate":154.76142131979697},{"distance":998.5,"elapsed_time":402,"elevation_difference":-138.9,"moving_time":309,"split":6,"average_heartrate":156.68284789644014},{"distance":982.1,"elapsed_time":1110,"elevation_difference":59.7,"moving_time":339,"split":7,"average_heartrate":168.12426035502958}],"splits_standard":[{"distance":1612.6,"elapsed_time":1081,"elevation_difference":245.1,"moving_time":927,"split":1,"average_heartrate":163.95361380798275},{"distance":1650.2,"elapsed_time":1080,"elevation_difference":102.9,"moving_time":769,"split":2,"average_heartrate":167.79400260756194},{"distance":1567.5,"elapsed_time":822,"elevation_difference":-190.1,"moving_time":478,"split":3,"average_heartrate":152.39915966386553},{"distance":1619.2,"elapsed_time":697,"elevation_difference":-119.5,"moving_time":552,"split":4,"average_heartrate":159.58876811594203},{"distance":544.3,"elapsed_time":904,"elevation_difference":26.0,"moving_time":185,"split":5,"average_heartrate":169.8423913043478}],"best_efforts":[{"id":1256935459,"resource_state":2,"name":"400m","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":127,"moving_time":128,"start_date":"2016-02-28T18:23:49Z","start_date_local":"2016-02-28T11:23:49Z","distance":400,"start_index":509,"end_index":541,"pr_rank":null,"achievements":[]},{"id":1256935460,"resource_state":2,"name":"1/2
         mile","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":296,"moving_time":297,"start_date":"2016-02-28T18:24:02Z","start_date_local":"2016-02-28T11:24:02Z","distance":805,"start_index":512,"end_index":590,"pr_rank":null,"achievements":[]},{"id":1256935461,"resource_state":2,"name":"1k","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":373,"moving_time":374,"start_date":"2016-02-28T18:23:44Z","start_date_local":"2016-02-28T11:23:44Z","distance":1000,"start_index":508,"end_index":608,"pr_rank":null,"achievements":[]},{"id":1256935462,"resource_state":2,"name":"1
         mile","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":866,"moving_time":856,"start_date":"2016-02-28T17:52:24Z","start_date_local":"2016-02-28T10:52:24Z","distance":1609,"start_index":189,"end_index":394,"pr_rank":null,"achievements":[]},{"id":1256935463,"resource_state":2,"name":"5k","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":2618,"moving_time":1820,"start_date":"2016-02-28T17:58:37Z","start_date_local":"2016-02-28T10:58:37Z","distance":5000,"start_index":278,"end_index":752,"pr_rank":null,"achievements":[]}],"gear":{"id":"g1261218","primary":true,"name":"Saucony
-        Peregrine Peregrine 4","resource_state":2,"distance":34133.0},"partner_logo_url":null,"photos":{"primary":null,"count":0},"similar_activities":{"effort_count":1,"average_speed":2.402542081758846,"min_average_speed":2.402542081758846,"mid_average_speed":2.402542081758846,"max_average_speed":2.402542081758846,"pr_rank":null,"frequency_milestone":null,"trend":{"speeds":[2.402542081758846],"current_activity_index":0,"min_speed":2.402542081758846,"mid_speed":2.402542081758846,"max_speed":2.402542081758846,"direction":0},"resource_state":2},"embed_token":"a7e49ed36df6f0e2a31dfbc5fd8aed7a7b748276"}'
+        Peregrine Peregrine 4","resource_state":2,"distance":44196.0},"partner_logo_url":null,"photos":{"primary":null,"count":0},"similar_activities":{"effort_count":1,"average_speed":2.402542081758846,"min_average_speed":2.402542081758846,"mid_average_speed":2.402542081758846,"max_average_speed":2.402542081758846,"pr_rank":null,"frequency_milestone":null,"trend":{"speeds":[2.402542081758846],"current_activity_index":0,"min_speed":2.402542081758846,"mid_speed":2.402542081758846,"max_speed":2.402542081758846,"direction":0},"resource_state":2},"embed_token":"a7e49ed36df6f0e2a31dfbc5fd8aed7a7b748276"}'
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 16:22:22 GMT
+  recorded_at: Thu, 03 Mar 2016 21:37:03 GMT
 recorded_with: VCR 3.0.1

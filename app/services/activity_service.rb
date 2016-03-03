@@ -13,6 +13,10 @@ class ActivityService
     client.list_athlete_activities.select {|activity| activity["type"] == "Run"}
   end
 
+  def count_activity_services #for caching
+    list_athlete_activities.count
+  end
+
   def single_activity(id)
     client.retrieve_an_activity(id)
   end
@@ -28,6 +32,10 @@ class ActivityService
   def type(activity)
     activity["type"]
   end
+
+  # def most_recent(activity)
+  #   activity["start_date_local"]
+  # end
 
   def start_date(activity)
     format_date(activity)
@@ -109,7 +117,7 @@ class ActivityService
   end
 
   def score_heartrate_average(activity)
-    avg_percentage = average_heartrate(activity) / heartrate_factor
+    avg_percentage = (average_heartrate(activity) - 100) / heartrate_factor #subtract 100 to intensify range, already done for heartrate factor in scoring
   end
 
   def score_heartrate_max(activity)
