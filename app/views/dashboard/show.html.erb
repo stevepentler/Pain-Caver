@@ -36,8 +36,9 @@
 
   </div>
 
-    <div class="col s8 custom-padding">
+  <div class="col s8 custom-padding">
     <h4 class="titillium center black-text grey-shadow">Upcoming Races</h4>
+    <p class="center"><%= link_to("Add a Race", new_user_race_path) %></p> 
     <table class="bordered highlight centered responsive-table font-color font-outline">
       <thead>
         <tr>
@@ -47,23 +48,29 @@
             <th data-field="Target">Target Time</th>
             <th data-field="Location">Location</th>
             <th data-field="Time">Start Time</th>
+            <th data-field="Edit">edit/remove</th>
         </tr>
       </thead>
 
       <tbody>
-        <%# @activities.each do |activity| %>
-          <tr class="clickable-row" data-href="<%#= workout_path(activity["id"]) %>">
-            <td><%#= @service.start_date(activity) %></td> 
-            <td><%#= @service.start_time(activity) %></td> 
-            <td><%#= @service.name(activity) %></td> 
-            <td><%#= @service.distance(activity) %> mi</td>  
-            <td><%#= @service.duration(activity) %></td>
-            <td><%#= @service.average_pace(activity) %></td>
-            <td><%#= link_to("details", workout_path(activity["id"]))%></td>
+        <% @upcoming_races.each do |race| %>
+          <tr>
+            <td><%= race.date %></td> 
+            <td><%= race.title %></td> 
+            <td><%= race.distance %></td> 
+            <td><%= race.target_time %> mi</td>  
+            <td><%= race.location %></td>
+            <td><%= race.start_time %></td>
+            <td><%= link_to("edit", edit_user_race_path(race.id)) %>/<%=link_to("remove", user_race_path(race.id), method: :delete) %></td>
           </tr>
-        <%# end %> 
+        <% end %> 
       </tbody>
     </table>
+
+
+
+
+
   </div>
 
   <div class="col s2 center">
