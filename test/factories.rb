@@ -29,6 +29,16 @@ FactoryGirl.define do
     website "http://www.leadvilleraceseries.com/run/leadvilletrail100run/"
   end
 
+  factory :user_race do 
+    user
+    date "06-12-2016"
+    title "Revel Rockies"
+    distance 26.2
+    target_time "3:00"
+    location "Morrison, CO"
+    start_time "7AM"
+  end
+
   # factory :activity do 
   #   activity {"id"=>505114540,
   #    "resource_state"=>3,
