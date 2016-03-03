@@ -9,13 +9,16 @@ module Scoring
     race.max_elevation / 4.0  #20% of elevation score
   end
 
-  def possible_heartrate               #Average 100% heartrate for 30 year old
-    190.0
+  def possible_heartrate               
+    190.0                       #Average 100% heartrate for 30 year old
   end
 
-  def heartrate_factor
-    aerobic_zone = (possible_heartrate * 0.80)       #Aerobic Zone is 70-80% of heartrate
-    factor = aerobic_zone / 9.0                        #90% of heartrate score
+  def ideal_heartrate
+    (possible_heartrate * 0.80).to_i       #Aerobic Zone is 70-80% of heartrate
+  end
+
+  def heartrate_factor                                    
+    factor = (ideal_heartrate - 100) / 9.0                        #90% of heartrate score
   end
 
   def distance_factor

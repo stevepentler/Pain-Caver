@@ -117,7 +117,7 @@ class ActivityService
   end
 
   def score_heartrate_average(activity)
-    avg_percentage = average_heartrate(activity) / heartrate_factor
+    avg_percentage = (average_heartrate(activity) - 100) / heartrate_factor #subtract 100 to intensify range, already done for heartrate factor in scoring
   end
 
   def score_heartrate_max(activity)

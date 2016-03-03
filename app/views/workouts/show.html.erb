@@ -120,8 +120,8 @@
                 average</td>   
               <td><span><%= @service.max_heartrate(@activity) %></span> bpm<br>
                 max</td> 
-              <td><span>190</span> bpm<br>
-                100%</td> 
+              <td><span><%= @service.ideal_heartrate %> </span> bpm<br>
+                target</td> 
               <td><span><%= @service.score_heartrate(@activity) %></span> <br>
                 rating/10<td>
             </tr>
