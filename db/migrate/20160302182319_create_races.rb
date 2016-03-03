@@ -8,6 +8,9 @@ class CreateRaces < ActiveRecord::Migration
       t.float :distance
       t.string :description
       t.string :website
+      t.string :course_record
+      t.string :city
+      t.string :state
 
       t.timestamps null: false
     end

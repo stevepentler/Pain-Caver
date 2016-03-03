@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 20160302182319) do
     t.float    "distance"
     t.string   "description"
     t.string   "website"
+    t.string   "course_record"
+    t.string   "city"
+    t.string   "state"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

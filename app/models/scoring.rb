@@ -6,7 +6,7 @@ module Scoring
   end
 
   def max_elevation_factor
-    race.max_elevation / 4.0                    #Max elevation of Leadville 100/ 2.0                         #20% of elevation score
+    race.max_elevation / 4.0  #20% of elevation score
   end
 
   def possible_heartrate               #Average 100% heartrate for 30 year old
