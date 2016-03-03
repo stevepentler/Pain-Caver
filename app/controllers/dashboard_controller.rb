@@ -3,6 +3,6 @@ class DashboardController <ApplicationController
   
   def show
     @stats = UserStatsService.new(current_user)
-    @upcoming_races = UserRace.all
+    @upcoming_races = current_user.user_races.order(:date)
   end
 end

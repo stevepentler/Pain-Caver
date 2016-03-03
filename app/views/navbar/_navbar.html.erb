@@ -1,11 +1,13 @@
-<nav>
-  <div class="nav-wrapper green-background titillium">
-    <a href="/" class="brand-logo">PAINCAVER</a>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><%= link_to "View Workouts", workouts_path %></li>
-      <li><%= link_to "Dashboard", dashboard_path %></li>
-      <li><%= link_to "Logout", logout_path, method: :delete %></li>
-    </ul>
-  </div>
-</nav>
+<% cache "navabar" do %>
+  <nav>
+    <div class="nav-wrapper dirt-texture titillium">
+      <a href="/" class="brand-logo">PAINCAVER</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to "View Workouts", workouts_path %></li>
+        <li><%= link_to "Dashboard", dashboard_path %></li>
+        <li><%= link_to "Logout", logout_path, method: :delete %></li>
+      </ul>
+    </div>
+  </nav>
+<% end %>
