@@ -15,8 +15,8 @@ class UserSessionsTest < ActionDispatch::IntegrationTest
       
       assert_equal dashboard_path, current_path
       assert page.has_content?(user.name)
-      assert page.has_content?(user.city)
-      assert page.has_content?(user.state)
+      assert page.has_content?("Year to Date")
+      assert page.has_content?("Upcoming Races")
     end
   end
 
@@ -28,9 +28,9 @@ class UserSessionsTest < ActionDispatch::IntegrationTest
       click_on "Login with Strava"
       
       assert dashboard_path, current_path
-      assert page.has_content?(user.first_name)
-      assert page.has_content?(user.city)
-      assert page.has_content?(user.state)
+      assert page.has_content?(user.name)
+      assert page.has_content?("Year to Date")
+      assert page.has_content?("Upcoming Races")
 
       click_on "Logout"
       assert_equal root_path, current_path
