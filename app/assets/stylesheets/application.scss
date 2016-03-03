@@ -76,6 +76,22 @@ nav ul a {
   text-shadow: 0 1px black; 
 }
 
+.round-opaque {
+  background-color: black;
+  height: 100vh;
+  width: auto;
+  opacity: 0.6;
+  border-radius: 50px;
+ }
+
+.edit_user_race {
+  margin-top: 25px;
+ }
+
+.new_user_race {
+  margin-top: 25px;
+ }
+
 /*Home Root Page*/
 
 .anton {
