@@ -1,62 +1,98 @@
 <%= render partial: "/navbar/navbar" %> 
-Monthly Stats
-<%= @stats.sessions("recent") %> sessions
-<%= @stats.distance("recent") %> miles
-<%= @stats.duration("recent") %>
-<%= @stats.elevation_gain("recent") %> feet
+<div class="row background-color">
+  <div class="col s2 center">
+    <br><br>
+    <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
+    <br>
+    <%= current_user.name %>
 
-Yearly Stats
-
-<%= @stats.sessions("ytd") %> sessions
-<%= @stats.distance("ytd") %> miles
-<%= @stats.duration("ytd") %>
-<%= @stats.elevation_gain("ytd") %> feet
-
-<div class="row">
-  <div class="col s12 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <div class="card-title">
-          <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
+      <div class="card background-color">
+        <div class="card-content">
+          <span class="card-title">Year to Date</span>
+          <hr>
+          <p><i class="tiny material-icons">trending_flat</i> <%= number_with_delimiter(@stats.distance("ytd")) %> miles</p>
+          <p><i class="tiny material-icons">query_builder</i> <%= @stats.sessions("ytd") %> sessions</p>
+          <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@stats.duration("ytd")) %></p>
+          <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@stats.elevation_gain("ytd").to_i) %> ft gain</p>
         </div>
-        <div class="dashboard-large"><%= current_user.name %></div>
-        <span><%= current_user.city %>,  <%= current_user.state %></span>
+      </div>
+
+    <div class="card background-color">
+      <div class="card-content">
+      <span class="card-title">Elite Runner</span>
+      <hr>
+      <%= form_tag(workouts_path, method: "get") do %>
+        <%= radio_button_tag(:elite, "Anton") %>
+        <%= label_tag(:elite_Anton, "Anton Krupicka") %>
+        <%= radio_button_tag(:elite, "Killian") %>
+        <%= label_tag(:elite_Killian, "Killian Jornet") %>
+        <%= radio_button_tag(:elite, "Jenn") %>
+        <%= label_tag(:elite_Jenn, "Jenn Shelton") %>
+        <br><br>
+        <%= submit_tag("Calculate")%>
+      <% end %>
       </div>
     </div>
 
-  <div class="col s12 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <h5 class="center dashboard-large">Upcoming Races/Goals</h5>
-        <p id="dashboard-name"><%= current_user.name %></p>
-        <p><%= current_user.city %>,  <%= current_user.state %></p>
+  </div>
+
+    <div class="col s8 custom-padding">
+    <h4 class="titillium center black-text grey-shadow">Upcoming Races</h4>
+    <table class="bordered highlight centered responsive-table font-color font-outline">
+      <thead>
+        <tr>
+            <th data-field="Date">Date</th>
+            <th data-field="Title">Title</th>
+            <th data-field="Distance">Distance</th>
+            <th data-field="Target">Target Time</th>
+            <th data-field="Location">Location</th>
+            <th data-field="Time">Start Time</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <%# @activities.each do |activity| %>
+          <tr class="clickable-row" data-href="<%#= workout_path(activity["id"]) %>">
+            <td><%#= @service.start_date(activity) %></td> 
+            <td><%#= @service.start_time(activity) %></td> 
+            <td><%#= @service.name(activity) %></td> 
+            <td><%#= @service.distance(activity) %> mi</td>  
+            <td><%#= @service.duration(activity) %></td>
+            <td><%#= @service.average_pace(activity) %></td>
+            <td><%#= link_to("details", workout_path(activity["id"]))%></td>
+          </tr>
+        <%# end %> 
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col s2 center">
+    <br><br>
+    <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
+    <br>
+    <%= current_user.name %>
+
+      <div class="card background-color">
+        <div class="card-content">
+          <span class="card-title">Year to Date</span>
+          <hr>
+          <p><i class="tiny material-icons">trending_flat</i> <%= number_with_delimiter(@stats.distance("ytd")) %> miles</p>
+          <p><i class="tiny material-icons">query_builder</i> <%= @stats.sessions("ytd") %> sessions</p>
+          <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@stats.duration("ytd")) %></p>
+          <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@stats.elevation_gain("ytd").to_i) %> ft gain</p>
+        </div>
+      </div>
+
+    <div class="card background-color">
+      <div class="card-content">
+      <span class="card-title">Running Tip</span>
+      <hr>
+
       </div>
     </div>
+
   </div>
 </div>
 
-<div class="row">
-  <div class="col s12 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <div class="card-title">
-          <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
-        </div>
-        <div class="dashboard-large"><%= current_user.name %></div>
-        <span><%= current_user.city %>,  <%= current_user.state %></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="col s12 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <h5 class="center dashboard-large">Upcoming Races/Goals</h5>
-        <p id="dashboard-name"><%= current_user.name %></p>
-        <p><%= current_user.city %>,  <%= current_user.state %></p>
-      </div>
-    </div>
-  </div>
-</div>
 
 
