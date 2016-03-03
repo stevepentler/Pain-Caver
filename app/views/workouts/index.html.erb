@@ -1,31 +1,112 @@
+
 <%= render partial: "/navbar/navbar" %> 
+<div class="row background-color">
+  <div class="col s2 center">
+    <br><br>
+    <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
 
-<div class="container">
-  <table class="bordered highlight centered responsive-table font-color font-outline">
-    <thead>
-      <tr>
-          <th data-field="Date">Date</th>
-          <th data-field="Time">Start Time</th>
-          <th data-field="Title">Title</th>
-          <th data-field="Distance">Distance</th>
-          <th data-field="Duration">Duration</th>
-          <th data-field="Pace">Pace</th>
-          <th data-field="Difficulty">Difficulty</th>
-          <th data-field="Details">View Details</th>
-      </tr>
-    </thead>
+    <div class="card background-color">
+      <div class="card-content">
+      <h5>Elite<br>Comparison</h5>
+      <hr>
+      <%= form_tag(workouts_path, method: "get") do %>
+        <%= radio_button_tag(:elite, "Anton") %>
+        <%= label_tag(:elite_Anton, "Anton Krupicka") %>
+        <%= radio_button_tag(:elite, "Killian") %>
+        <%= label_tag(:elite_Killian, "Killian Jornet") %>
+        <%= radio_button_tag(:elite, "Jenn") %>
+        <%= label_tag(:elite_Jenn, "Jenn Shelton") %>
+        <br><br>
+        <%= submit_tag("Calculate")%>
+      <% end %>
+      </div>
+    </div>
 
-    <tbody>
-      <% @activities.list_athlete_activities.each do |activity| %>
-        <tr class="clickable-row" data-href="<%= workout_path(activity["id"]) %>">
-          <td><%= @activities.start_date(activity) %></td> 
-          <td><%= @activities.start_time(activity) %></td> 
-          <td><%= @activities.name(activity) %></td> 
-          <td><%= @activities.distance(activity) %> mi</td>  
-          <td><%= @activities.duration(activity) %></td>
-          <td><%= @activities.average_pace(activity) %></td>
+      <div class="card background-color">
+        <div class="card-content">
+          <span class="card-title"><%#= link_to(@race.title, @race.website) %> </span>
+          <p><i class="tiny material-icons">query_builder</i> <%#= number_with_delimiter(@race.distance) %> miles</p>
+          <p><i class="tiny material-icons">query_builder</i> <%#= number_with_delimiter(@race.course_record) %> CR</p>
+          <p><i class="tiny material-icons">navigation</i> <%#= number_with_delimiter(@race.elevation_gain.to_i) %> ft gain</p>
+          <p><i class="tiny material-icons">navigation</i> <%#= number_with_delimiter(@race.max_elevation.to_i) %> ft max</p>
+        </div>
+        <div class="card-action">
+          <p style="text-decoration: underline"><%#= @race.city %>, <%#= @race.state %></p>
+          <p><%#= @race.description %></p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="col s8 custom-padding">
+    <h4 class="titillium center black-text grey-shadow">Workouts</h4>
+    <table class="bordered highlight centered responsive-table font-color font-outline">
+      <thead>
+        <tr>
+            <th data-field="Date">Date</th>
+            <th data-field="Time">Start Time</th>
+            <th data-field="Title">Title</th>
+            <th data-field="Distance">Distance</th>
+            <th data-field="Duration">Duration</th>
+            <th data-field="Pace">Pace</th>
+            <th data-field="Details">View Details</th>
         </tr>
-      <% end %> 
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @activities.each do |activity| %>
+          <tr class="clickable-row" data-href="<%= workout_path(activity["id"]) %>">
+            <td><%= @service.start_date(activity) %></td> 
+            <td><%= @service.start_time(activity) %></td> 
+            <td><%= @service.name(activity) %></td> 
+            <td><%= @service.distance(activity) %> mi</td>  
+            <td><%= @service.duration(activity) %></td>
+            <td><%= @service.average_pace(activity) %></td>
+          </tr>
+        <% end %> 
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col s2 center">
+    <br><br>
+    <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
+
+    <div class="card background-color">
+      <div class="card-content">
+      <h5>Course<br>Comparison</h5>
+      <hr>
+      <%= form_tag(workouts_path, method: "get") do %>
+        <%= radio_button_tag(:race, "leadville") %>
+        <%= label_tag(:race_leadville, "Leadville 100") %>
+        <%= radio_button_tag(:race, "boston") %>
+        <%= label_tag(:race_boston, "Boston Marathon") %>
+        <%= radio_button_tag(:race, "western") %>
+        <%= label_tag(:race_western, "Western States") %>
+        <%= radio_button_tag(:race, "badwater") %>
+        <%= label_tag(:race_badwater, "Badwater 135") %>
+        <%= radio_button_tag(:race, "hardrock") %>
+        <%= label_tag(:race_hardrock, "Hardrock 100") %>
+        <br><br>
+        <%= submit_tag("Calculate")%>
+      <% end %>
+      </div>
+    </div>
+
+      <div class="card background-color">
+        <div class="card-content">
+          <span class="card-title"><%#= link_to(@race.title, @race.website) %> </span>
+          <p><i class="tiny material-icons">query_builder</i> <%#= number_with_delimiter(@race.distance) %> miles</p>
+          <p><i class="tiny material-icons">query_builder</i> <%#= number_with_delimiter(@race.course_record) %> CR</p>
+          <p><i class="tiny material-icons">navigation</i> <%#= number_with_delimiter(@race.elevation_gain.to_i) %> ft gain</p>
+          <p><i class="tiny material-icons">navigation</i> <%#= number_with_delimiter(@race.max_elevation.to_i) %> ft max</p>
+        </div>
+        <div class="card-action">
+          <p style="text-decoration: underline"><%#= @race.city %>, <%#= @race.state %></p>
+          <p><%#= @race.description %></p>
+        </div>
+      </div>
+  </div>
 </div>

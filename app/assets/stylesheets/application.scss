@@ -29,6 +29,10 @@
   font-size: 1.75em;
 }
 
+.grey-shadow {
+  text-shadow: 1.5px 1.5px white;
+}
+
 /*Navbar*/
 .green-background {
   background-color: #A9B184;
@@ -80,6 +84,18 @@ div.col.s10.custom-padding {
   padding-right: 5rem;
   padding-left: 1rem;
 }
+
+tbody tr td span {
+  font-size: 1.35em;
+}
+
+#range {
+  font-size: 0.7em;
+}
+
+.background-color {
+  background-color: #F3F3F3;
+ }
 
 
 
