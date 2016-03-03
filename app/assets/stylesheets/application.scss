@@ -40,13 +40,24 @@ label {
 }
 
 input {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  color: white;
 }
 
 #bibrave {
-  margin-top: 40%;
+  margin-top: 30%;
   max-height: 20em;
   border-radius: 50px;
+}
+
+#green-trail{
+  background-image: image-url("green-trail.jpg");
+  height: 100vh;
+  width: auto;
+}
+
+.grey-font {
+  color: #9E9E9E;
 }
 
 /*Navbar*/
