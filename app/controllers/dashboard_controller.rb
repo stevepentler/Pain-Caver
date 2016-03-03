@@ -3,5 +3,6 @@ class DashboardController <ApplicationController
   
   def show
     @stats = UserStatsService.new(current_user)
+    @upcoming_races = UserRace.all
   end
 end

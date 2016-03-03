@@ -14,16 +14,47 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
       visit dashboard_path
       assert_equal dashboard_path, current_path
       
-      assert page.has_content?(@user.first_name)
-      assert page.has_content?(@user.city)
-      assert page.has_content?(@user.state)
-      assert page.has_content?("Monthly Stats")
-      assert page.has_content?("sessions")
+      assert page.has_content?(@user.name)
+      assert page.has_content?("Year to Date")
       assert page.has_content?("miles")
+      assert page.has_content?("sessions")
       assert page.has_content?("hr")
       assert page.has_content?("m")
-      assert page.has_content?("feet")
+      assert page.has_content?("gain")
     end
+  end
+
+  test 'user views elite runner options' do
+    login
+    visit dashboard_path
+    assert_equal dashboard_path, current_path
+
+    assert page.has_content?("Elite Runner")
+    assert page.has_content?("Anton Krupicka")
+    assert page.has_content?("Killian Jornet")
+    assert page.has_content?("Jenn Shelton")
+  end
+
+  test 'user views running tip on dashboard' do
+    login
+    visit dashboard_path
+    assert_equal dashboard_path, current_path
+
+    assert page.has_content?("Running Tip")
+  end
+
+  test 'user views upcoming races on dashboard' do
+    login
+    visit dashboard_path
+    assert_equal dashboard_path, current_path
+
+    assert page.has_content?("Upcoming Races")
+    assert page.has_content?("Date")
+    assert page.has_content?("Title")
+    assert page.has_content?("Distance")
+    assert page.has_content?("Target Time")
+    assert page.has_content?("Location")
+    assert page.has_content?("Start Time")
   end
 
   test 'user views dashboard navbar' do 

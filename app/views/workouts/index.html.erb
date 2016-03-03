@@ -64,7 +64,7 @@
             <td><%= @service.distance(activity) %> mi</td>  
             <td><%= @service.duration(activity) %></td>
             <td><%= @service.average_pace(activity) %></td>
-            <td><%= link_to("details", workouts_path(activity["id"]))%></td>
+            <td><%= link_to("details", workout_path(activity["id"]))%></td>
           </tr>
         <% end %> 
       </tbody>

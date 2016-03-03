@@ -58,3 +58,12 @@ hardrock = Race.create(title: "Hardrock 100",
                        city: "Silverton",
                        state: "Colorado"
                       )
+
+# revel = UserRace.create(user_id: 1,
+#                     date: "06-12-16",
+#                     title: "Revel Rockies",
+#                     distance: 26.2,
+#                     target_time: "3:00",
+#                     location: "Morrison, CO",
+#                     start_time: "7AM"
+#                     )

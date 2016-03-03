@@ -33,6 +33,33 @@
   text-shadow: 1.5px 1.5px white;
 }
 
+/*Forms*/
+
+label {
+  font-size: 1.2em;
+}
+
+input {
+  font-size: 1.5em;
+  color: white;
+}
+
+#bibrave {
+  margin-top: 30%;
+  max-height: 20em;
+  border-radius: 50px;
+}
+
+#green-trail{
+  background-image: image-url("green-trail.jpg");
+  height: 100vh;
+  width: auto;
+}
+
+.grey-font {
+  color: #9E9E9E;
+}
+
 /*Navbar*/
 .green-background {
   background-color: #A9B184;
@@ -48,6 +75,22 @@ nav ul a {
   font-size: 1.4em;
   text-shadow: 0 1px black; 
 }
+
+.round-opaque {
+  background-color: black;
+  height: 100vh;
+  width: auto;
+  opacity: 0.6;
+  border-radius: 50px;
+ }
+
+.edit_user_race {
+  margin-top: 25px;
+ }
+
+.new_user_race {
+  margin-top: 25px;
+ }
 
 /*Home Root Page*/
 
