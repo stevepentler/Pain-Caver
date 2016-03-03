@@ -2,6 +2,7 @@ class WorkoutsController < ApplicationController
   def index
     @service = ActivityService.new(current_user)
     @activities = @service.list_athlete_activities
+    @stats = UserStatsService.new(current_user)
   end
 
   def show
