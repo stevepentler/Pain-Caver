@@ -71,25 +71,20 @@
     </div>
   <% end %> 
 
-
-
-
-
-
   <div class="col s2 center">
     <br><br>
-    <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
+    <%= image_tag("anton-profile.jpg", class: "circle profile-pic") %>
     <br>
-    <%= current_user.name %>
+    <%= "Anton Krupicka" %>
 
       <div class="card background-color">
         <div class="card-content">
           <span class="card-title">Year to Date</span>
           <hr>
-          <p><i class="tiny material-icons">trending_flat</i> <%= number_with_delimiter(@stats.distance("ytd")) %> miles</p>
-          <p><i class="tiny material-icons">query_builder</i> <%= @stats.sessions("ytd") %> sessions</p>
-          <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@stats.duration("ytd")) %></p>
-          <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@stats.elevation_gain("ytd").to_i) %> ft gain</p>
+          <p><i class="tiny material-icons">trending_flat</i>246.4<%#= number_with_delimiter(@stats.distance("ytd")) %> miles</p>
+          <p><i class="tiny material-icons">query_builder</i>20 <%#= @stats.sessions("ytd") %> sessions</p>
+          <p><i class="tiny material-icons">query_builder</i>50hr 46min <%#= number_with_delimiter(@stats.duration("ytd")) %></p>
+          <p><i class="tiny material-icons">navigation</i>89,757 <%#= number_with_delimiter(@stats.elevation_gain("ytd").to_i) %> ft gain</p>
         </div>
       </div>
 
