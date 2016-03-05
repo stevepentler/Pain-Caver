@@ -1,33 +1,31 @@
-<% cache "trails" do %>
+<%# cache "trails" do %>
   <div class="col s8 custom-padding">
     <table class="bordered highlight centered responsive-table font-color font-outline">
       <h4 class="titillium center black-text grey-shadow">Trails Near You
-        <%= trails_path do %>
-          <i class="small material-icons black-text">call_split</i>
-        <% end %> 
       <thead>
         <tr>
             <th data-field="Name">Name</th>
-            <th data-field="Length">Length</th>
+            <th data-field="Distance">Distance</th>
+            <th data-field="Type">Type</th>
             <th data-field="City">City</th>
             <th data-field="State">State</th>
-            <th data-field="Rating">Rating</th>
             <th data-field="Detaiils">Details</th>
         </tr>
       </thead>
 
       <tbody>
         <% @trail_service.trails(current_user).each do |trail| %>
+        <%#= binding.pry %>
           <tr>
             <td><%= @trail_service.name(trail) %></td> 
-            <td><%= @trail_service.rating(trail) %></td> 
+            <td><%= @trail_service.distance(trail) %></td> 
+            <td><%= @trail_service.type(trail) %></td> 
             <td><%= @trail_service.city(trail) %></td> 
             <td><%= @trail_service.state(trail) %></td> 
-            <td><%= @trail_service.rating(trail) %></td> 
-            <td><%= link_to("Details", trails_path(trail.id)) %></td>
+            <td><%#= link_to("Details", trails_path(trail.id)) %></td>
           </tr>
         <% end %> 
       </tbody>
     </table>
   </div>
-<% end %> 
+<%# end %> 
