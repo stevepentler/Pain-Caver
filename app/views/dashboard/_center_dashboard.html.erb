@@ -1,0 +1,38 @@
+<% cache "upcoming-races-#{UserRace.maximum(:updated_at)}" do %>
+
+  <div class="col s8 custom-padding">
+    <table class="bordered highlight centered responsive-table font-color font-outline magnify">
+      <h4 class="titillium center black-text grey-shadow">Upcoming Races & Goals</h4>
+      <thead>
+        <tr>
+            <th data-field="Date">Date</th>
+            <th data-field="Title">Title</th>
+            <th data-field="Distance">Distance</th>
+            <th data-field="Target">Target Time</th>
+            <th data-field="Location">Location</th>
+            <th data-field="Time">Start Time</th>
+            <th data-field="Edit">Update</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @upcoming_races.each do |race| %>
+          <tr>
+            <td><%= race.date %></td> 
+            <td><%= race.title %></td> 
+            <td><%= race.distance %></td> 
+            <td><%= race.target_time %> mi</td>  
+            <td><%= race.location %></td>
+            <td><%= race.start_time %></td>
+            <td><%= link_to("edit", edit_user_race_path(race.id), class: "edit-button") %>/<%=link_to("remove", user_race_path(race.id), method: :delete, class: "remove-button") %></td>
+          </tr>
+        <% end %> 
+      </tbody>
+    </table>
+    <h5 class="center">
+      <%= link_to new_user_race_path do %>
+        <i class="small material-icons black-text">add</i>
+      <% end %>
+    </h5>
+  </div>
+<% end %> 
