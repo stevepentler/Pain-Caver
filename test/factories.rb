@@ -39,6 +39,10 @@ FactoryGirl.define do
     start_time "7AM"
   end
 
+  factory :running_tip do 
+    tip "No excuses."
+  end
+
   # factory :activity do 
   #   activity {"id"=>505114540,
   #    "resource_state"=>3,
