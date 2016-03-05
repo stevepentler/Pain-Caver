@@ -25,7 +25,15 @@
       </tr>
     </tbody>
   </table>
+   
+   <div class="card background-color">
+     <div class="card-content">
+      <span class="card-title">Description</span>
+      <hr>
+      <%= @trail_service.description(@trail) %> 
+    </div>
+   </div>
+
 
   <%= @trail_service.directions(@trail) %> 
-  <%= @trail_service.description(@trail) %> 
 <%# end %> 
