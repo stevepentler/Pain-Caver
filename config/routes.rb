@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   resources :workouts, only: [:show, :index]
   resources :user_races, only: [:new, :create, :edit, :update, :destroy]
-  resources :trails, only: [:index, :show]
+  resources :trails, only: [:show]
 end
