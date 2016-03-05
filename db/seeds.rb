@@ -59,11 +59,13 @@ hardrock = Race.create(title: "Hardrock 100",
                        state: "Colorado"
                       )
 
-# revel = UserRace.create(user_id: 1,
-#                     date: "06-12-16",
-#                     title: "Revel Rockies",
-#                     distance: 26.2,
-#                     target_time: "3:00",
-#                     location: "Morrison, CO",
-#                     start_time: "7AM"
-#                     )
+RunningTip.create(tip: "Increase weekly training mileage by no more than 10 percent per week.")
+RunningTip.create(tip: "The most effective training mimics the event for which you’re training.")
+RunningTip.create(tip: "The 2-Day Rule: If something hurts for two straight days while running, take two days off.")
+RunningTip.create(tip: "If you’re about to bonk, eating something new is probably better than eating nothing at all.")
+RunningTip.create(tip: "Runners improve for an average of seven years.")
+RunningTip.create(tip: "Runners who only run are prone to injury.")
+RunningTip.create(tip: "The best way to train your brain for a 50 is to run two long days in a row.")
+RunningTip.create(tip: "Go out conservatively.")
+RunningTip.create(tip: "No Excuses.")
+RunningTip.create(tip: "Most people run a race to see who is fastest. I run a race to see who has the most guts. -Steve Prefontaine")

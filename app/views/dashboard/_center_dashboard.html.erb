@@ -1,8 +1,11 @@
 <% cache "upcoming-races-#{UserRace.maximum(:updated_at)}" do %>
 
   <div class="col s8 custom-padding">
-    <table class="bordered highlight centered responsive-table font-color font-outline magnify">
-      <h4 class="titillium center black-text grey-shadow">Upcoming Races & Goals</h4>
+    <table class="bordered highlight centered responsive-table font-color font-outline">
+      <h4 class="titillium center black-text grey-shadow">Upcoming Races & Goals
+        <%= link_to new_user_race_path do %>
+          <i class="small material-icons black-text">add</i>
+        <% end %> 
       <thead>
         <tr>
             <th data-field="Date">Date</th>
@@ -29,10 +32,5 @@
         <% end %> 
       </tbody>
     </table>
-    <h5 class="center">
-      <%= link_to new_user_race_path do %>
-        <i class="small material-icons black-text">add</i>
-      <% end %>
-    </h5>
   </div>
 <% end %> 
