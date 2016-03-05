@@ -59,6 +59,18 @@ hardrock = Race.create(title: "Hardrock 100",
                        state: "Colorado"
                       )
 
+colfax_half = Race.create(title: "Colfax Half",
+                          title_id: "colfax",
+                          elevation_gain: 179,
+                          max_elevation: 5375,
+                          distance: 13.1,
+                          description: "Fast, flat and shady, the Colfax Half Marathon is the only race to run through Denver Zoo! Denver’s springtime half marathon takes runners on a one mile trek through the zoo, through historic neighborhoods and through Aurora Fire Station #1. The Colorado Firefighter Calendar LIVE will cheer you on as you head to the finish line and after party in City Park.",
+                          website: "http://www.runcolfax.org/races/half-marathon/",
+                          course_record: "1:06:44",
+                          city: "Denver",
+                          state: "Colorado"
+                          )
+
 RunningTip.create(tip: "Increase weekly training mileage by no more than 10 percent per week.")
 RunningTip.create(tip: "The most effective training mimics the event for which you’re training.")
 RunningTip.create(tip: "The 2-Day Rule: If something hurts for two straight days while running, take two days off.")
