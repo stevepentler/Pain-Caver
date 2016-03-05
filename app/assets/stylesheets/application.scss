@@ -72,12 +72,13 @@ input {
 
 nav .brand-logo {
   font-size: 2.75em;
-  text-shadow: 1px 1px black;
+  text-shadow: 1.5px 1.5
+  px black;
   padding: 0 30px;
 }
 
 nav ul a {
-  font-size: 1.4em;
+  font-size: 1.8em;
   text-shadow: 0 1px black; 
 }
 
@@ -118,6 +119,7 @@ nav ul a {
 }
 
 /*Dashboard*/
+
 .profile-pic {
   height: 100px;
   width: auto;
@@ -125,6 +127,10 @@ nav ul a {
 
 .dashboard-large {
   font-size: 1.5em;
+}
+
+.magnify {
+  font-size: 1.2em;
 }
 
 /*show*/
