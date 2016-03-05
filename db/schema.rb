@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20160305002240) do
     t.integer  "user_id"
     t.string   "date"
     t.string   "title"
-    t.integer  "distance"
+    t.float    "distance"
     t.string   "target_time"
     t.string   "location"
     t.string   "start_time"
