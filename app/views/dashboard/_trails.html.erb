@@ -1,37 +1,30 @@
-<% cache "trails" do %>
-  <table class="bordered highlight centered responsive-table font-color font-outline">
-    <h4 class="titillium center black-text grey-shadow">Trails Near You
-    <thead>
+<table class="bordered highlight centered responsive-table font-color font-outline">
+  <h4 class="titillium center black-text grey-shadow">Trails Near You
+  <thead>
+    <tr>
+        <th data-field="Name">Name</th>
+        <th data-field="Distance">Distance</th>
+        <th data-field="Type">Type</th>
+        <th data-field="City">City</th>
+        <th data-field="State">State</th>
+        <th data-field="Detaiils">Details</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trail_service.trails(current_user).each do |trail| %>
       <tr>
-          <th data-field="Name">Name</th>
-          <th data-field="Distance">Distance</th>
-          <th data-field="Type">Type</th>
-          <th data-field="City">City</th>
-          <th data-field="State">State</th>
-          <th data-field="Detaiils">Details</th>
+        <td><%= @trail_service.name(trail) %></td> 
+        <td><%= @trail_service.distance(trail) %></td> 
+        <td><%= @trail_service.type(trail) %></td> 
+        <td><%= @trail_service.city(trail) %></td> 
+        <td><%= @trail_service.state(trail) %></td> 
+        <td><%= link_to("Details", trail_path({name: @trail_service.name(trail),
+                                               city: @trail_service.city(trail),
+                                               state: @trail_service.state(trail)}
+                                             )) %>
+        </td>
       </tr>
-    </thead>
-
-    <tbody>
-      <% @trail_service.trails(current_user).each do |trail| %>
-        <tr>
-          <td><%= @trail_service.name(trail) %></td> 
-          <td><%= @trail_service.distance(trail) %></td> 
-          <td><%= @trail_service.type(trail) %></td> 
-          <td><%= @trail_service.city(trail) %></td> 
-          <td><%= @trail_service.state(trail) %></td> 
-          <td><%= link_to("Details", trail_path({name: @trail_service.name(trail),
-                                                 city: @trail_service.city(trail),
-                                                 state: @trail_service.state(trail)}
-                                               )) %>
-          </td>
-        </tr>
-      <% end %> 
-    </tbody>
-  </table>
-<% end %> 
-
-
-                                              <!--   {name:  @trail_service.name(trail),
-                                                 city:  @trail_service.city(trail), 
-                                                 state: @trail_service.state(trail)} -->
+    <% end %> 
+  </tbody>
+</table>

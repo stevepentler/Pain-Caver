@@ -23,8 +23,8 @@ class TrailService
   end
 
   def single_trail(params)
-    response = client.get("/?q[city_cont]=#{params[:city]}&q[state_cont]=#{state(trail)}&q[activities_activity_name_cont]=#{name(trail)}&limit=1")
-    trails = JSON.parse(response.body)["places"]
+    response = client.get("/?q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}&q[activities_activity_name_cont]=#{params[:name]}&limit=1")
+    trails = JSON.parse(response.body)["places"].last
   end
 
   def name(trail)
@@ -39,6 +39,14 @@ class TrailService
     parse(trail)["activity_type_name"]
   end
 
+  def rating(trail)
+    if parse(trail)["rating"] == 0.0
+      "N/A"
+    else
+      parse(trail)["rating"]
+    end
+  end
+
   def city(trail)
     trail["city"]
   end
@@ -48,13 +56,13 @@ class TrailService
   end
 
 
-  # def description(trail)
-  #   trail["activities"].last["description"]
-  # end
+  def description(trail)
+    parse(trail)["description"]
+  end
 
-  # def directions(trail)
-  #   trail["directions"]
-  # end
+  def directions(trail)
+    trail["directions"]
+  end
 
 
   private
