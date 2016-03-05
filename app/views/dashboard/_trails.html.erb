@@ -20,12 +20,18 @@
           <td><%= @trail_service.type(trail) %></td> 
           <td><%= @trail_service.city(trail) %></td> 
           <td><%= @trail_service.state(trail) %></td> 
-          <td><%= link_to("Details", trail_path(@trail_service.city(trail), 
-                                                 @trail_service.state(trail), 
-                                                 @trail_service.name(trail))) %>
+          <td><%= link_to("Details", trail_path({name: @trail_service.name(trail),
+                                                 city: @trail_service.city(trail),
+                                                 state: @trail_service.state(trail)}
+                                               )) %>
           </td>
         </tr>
       <% end %> 
     </tbody>
   </table>
 <% end %> 
+
+
+                                              <!--   {name:  @trail_service.name(trail),
+                                                 city:  @trail_service.city(trail), 
+                                                 state: @trail_service.state(trail)} -->

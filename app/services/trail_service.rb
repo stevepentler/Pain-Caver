@@ -22,8 +22,8 @@ class TrailService
     end
   end
 
-  def single_trail(trail)
-    response = client.get("/?q[city_cont]=#{city(trail)}&q[state_cont]=#{state(trail)}&q[activities_activity_name_cont]=#{name(trail)}&limit=1")
+  def single_trail(params)
+    response = client.get("/?q[city_cont]=#{params[:city]}&q[state_cont]=#{state(trail)}&q[activities_activity_name_cont]=#{name(trail)}&limit=1")
     trails = JSON.parse(response.body)["places"]
   end
 
