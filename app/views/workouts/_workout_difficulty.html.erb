@@ -1,0 +1,62 @@
+<h5 class="center"> Difficulty vs <%= @race.title %></span> </h4>
+<h4 class="center titillium"><%= @service.difficulty_rating(@activity) %>
+  <span id="range">/<%= @service.difficulty_range(@activity)%></h4>
+
+
+<table class="bordered highlight centered responsive-table font-color font-outline">
+
+  <tbody>
+      <tr>
+        <td><i class="medium material-icons">navigation</i><br>Elevation</td>
+        <td><span><%= @service.total_elevation_gain(@activity) %></span> ft<br>
+          total gain</td>   
+        <td><span><%= @service.elev_high(@activity) %></span> ft<br>
+          max</td> 
+        <td><span><%= @service.elev_low(@activity) %></span> ft<br>
+          min</td> 
+        <td><span><%= @service.score_elevation(@activity) %></span><br>
+          rating/20<td>
+      </tr>
+
+  <tbody>
+      <tr>
+        <td><i class="medium material-icons">trending_up</i><br>Heartrate</td>
+        <td><span><%= @service.average_heartrate(@activity) %></span> bpm<br>
+          average</td>   
+        <td><span><%= @service.max_heartrate(@activity) %></span> bpm<br>
+          max</td> 
+        <td><span><%= @service.ideal_heartrate %> </span> bpm<br>
+          target</td> 
+        <td><span><%= @service.score_heartrate(@activity) %></span> <br>
+          rating/10<td>
+      </tr>
+  </tbody>
+
+  <tbody>
+      <tr>
+        <td><i class="medium material-icons">query_builder</i><br>Duration</td>
+        <td><span><%= @service.distance(@activity) %></span> miles<br>
+          distance</td>   
+        <td><span><%= @service.duration(@activity) %></span><br>
+          duration</td> 
+        <td><span><%= @service.elapsed_time(@activity) %></span><br>
+          elapsed</td> 
+        <td><span><%= @service.score_duration(@activity) %></span><br>
+          rating/20<td>
+      </tr>
+  </tbody>
+
+  <tbody>
+      <tr>
+        <td><i class="medium material-icons">trending_flat</i><br>Speed</td>
+        <td><span><%= @service.average_pace(@activity) %></span><br>
+          pace</td>   
+        <td><span><%= @service.average_speed(@activity) %></span> mph<br>
+          average</td> 
+        <td><span><%= @service.max_speed(@activity) %></span> mph<br>
+          max</td> 
+        <td>-<br>
+          not rated<td>
+      </tr>
+  </tbody>
+</table>
