@@ -14,7 +14,6 @@
 
     <tbody>
       <% @trail_service.trails(current_user).each do |trail| %>
-      <%#= binding.pry %>
         <tr>
           <td><%= @trail_service.name(trail) %></td> 
           <td><%= @trail_service.distance(trail) %></td> 
