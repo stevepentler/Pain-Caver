@@ -12,13 +12,13 @@ class TrailService
   end
 
   def all_trails(current_user)
-    response = client.get("/?q[city_cont]=#{current_user.city}&radius=20")
+    response = client.get("/?q[city_cont]=#{current_user.city}&q[state_cont]=#{current_user.state}&radius=25")
     trails = JSON.parse(response.body)["places"]
   end
 
   def trails(current_user)
     all_trails(current_user).select do |trail|
-      trail["activities"] && trail["activities"].last
+      trail["activities"] && parse(trail)
     end
   end
 
@@ -32,11 +32,11 @@ class TrailService
   end
 
   def distance(trail)
-    trail["activities"].last["length"]
+    parse(trail)["length"]
   end
 
   def type(trail)
-    trail["activities"].last["activity_type_name"]
+    parse(trail)["activity_type_name"]
   end
 
   def city(trail)
@@ -60,7 +60,7 @@ class TrailService
   private
 
   def parse(trail)
-    trails(current_user)["activities"].last
+    trail["activities"].last
   end
 
   def headers
