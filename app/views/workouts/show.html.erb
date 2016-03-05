@@ -36,7 +36,13 @@
           </div>
           <div class="card-action">
             <p style="text-decoration: underline"><%= @race.city %>, <%= @race.state %></p>
-            <p><%= @race.description %></p>
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header">Race Description</div>
+                <div class="collapsible-body"><p><%= @race.description %></p></div>
+              </li>
+            </ul>
+
           </div>
         </div>
     </div>
@@ -77,18 +83,7 @@
         <span id="range">/<%= @service.difficulty_range(@activity)%></h4>
 
 
-
-
       <table class="bordered highlight centered responsive-table font-color font-outline">
-      <!--   <thead>
-          <tr>
-            <th data-field="Category">Category</th>
-            <th data-field="Total-Elevation-Gain">Total Elevation Gain</th>
-            <th data-field="Max-Elevation">Max Elevation</th>
-            <th data-field="Min-Elevation">Min Elevation</th>
-            <th data-field="Score">Score</th>
-          </tr>
-        </thead> -->
 
         <tbody>
             <tr>
@@ -102,16 +97,6 @@
               <td><span><%= @service.score_elevation(@activity) %></span><br>
                 rating/20<td>
             </tr>
-
-      <!--   <thead>
-          <tr>
-            <th data-field="Category">Category</th>
-            <th data-field="Average-Heartrate">Average Heartrate</th>
-            <th data-field="Max-Heartrate">Max Heartrate</th>
-            <th data-field="100">100% effort</th>
-            <th data-field="Score">Score</th>
-          </tr>
-        </thead> -->
 
         <tbody>
             <tr>
@@ -127,16 +112,6 @@
             </tr>
         </tbody>
 
-      <!--   <thead>
-          <tr>
-            <th data-field="Category">Category</th>
-            <th data-field="Distance">Distance</th>
-            <th data-field="Duration">Duration</th>
-            <th data-field="Elapsed-Time">Elapsed</th>
-            <th data-field="Score">Score</th>
-          </tr>
-        </thead> -->
-
         <tbody>
             <tr>
               <td><i class="medium material-icons">query_builder</i><br>Duration</td>
@@ -150,17 +125,6 @@
                 rating/20<td>
             </tr>
         </tbody>
-
-
-      <!--   <thead>
-          <tr>
-            <th data-field="Category">Category</th>
-            <th data-field="Average-Pace">Average Pace</th>
-            <th data-field="Average-Speed">Average Speed</th>
-            <th data-field="Max-Speed">Max Speed</th>
-            <th data-field="Score">Score</th>
-          </tr>
-        </thead> -->
 
         <tbody>
             <tr>
