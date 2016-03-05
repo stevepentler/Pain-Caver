@@ -22,10 +22,15 @@ class TrailService
     end
   end
 
-  def single_trail(params)
-    response = client.get("/?q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}&q[activities_activity_name_cont]=#{params[:name]}&limit=1")
-    trails = JSON.parse(response.body)["places"].last
-  end
+  # def single_trail(params)
+  #   name = params[:name]
+  #   city = params[:city]
+  #   binding.pry
+  #   response = client.get("/?q[activities_activity_name_cont]=#{name}")
+
+  #   # response = client.get("/?q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}&q[activities_activity_name_cont]=#{params[:name]}&limit=1")
+  #   trails = JSON.parse(response.body)["places"].last
+  # end
 
   def name(trail)
     trail["name"]
@@ -57,7 +62,7 @@ class TrailService
 
 
   def description(trail)
-    parse(trail)["description"]
+    parse(trail)["description"].sub("&lt;br /&gt;<br />", "")
   end
 
   def directions(trail)

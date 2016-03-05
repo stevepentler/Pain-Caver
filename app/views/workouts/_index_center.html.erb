@@ -1,0 +1,34 @@
+<% cache "user-activities-count-#{@service.count_activity_services}" do %>
+  <div class="col s8 custom-padding">
+    <h4 class="titillium center black-text grey-shadow">Workouts</h4>
+    <table class="bordered highlight centered responsive-table font-color font-outline">
+      <thead>
+        <tr>
+            <th data-field="Date">Date</th>
+            <th data-field="Time">Start Time</th>
+            <th data-field="Title">Title</th>
+            <th data-field="Distance">Distance</th>
+            <th data-field="Duration">Duration</th>
+            <th data-field="Pace">Pace</th>
+            <th data-field="Details">View Details</th>
+        </tr>
+      </thead>
+
+<%# cache "activity-count-#{@activitites.count}-#{@activities.maximum(:updated_at)}" do %> 
+      <tbody>
+        <% @activities.each do |activity| %>
+        <%#= binding.pry %>
+          <tr class="clickable-row" data-href="<%= workout_path(activity["id"]) %>">
+            <td><%= @service.start_date(activity) %></td> 
+            <td><%= @service.start_time(activity) %></td> 
+            <td><%= @service.name(activity) %></td> 
+            <td><%= @service.distance(activity) %> mi</td>  
+            <td><%= @service.duration(activity) %></td>
+            <td><%= @service.average_pace(activity) %></td>
+            <td><%= link_to("details", workout_path(activity["id"]))%></td>
+          </tr>
+        <% end %> 
+      </tbody>
+    </table>
+  </div>
+<% end %> 

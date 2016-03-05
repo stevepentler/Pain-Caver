@@ -49,12 +49,6 @@ input {
   color: white;
 }
 
-#green-trail{
-  background-image: image-url("green-trail.jpg");
-  height: 100vh;
-  width: auto;
-}
-
 .grey-font {
   color: #9E9E9E;
 }
@@ -75,14 +69,6 @@ nav ul a {
   font-size: 1.8em;
   text-shadow: 0 1px black; 
 }
-
-.round-opaque {
-  background-color: black;
-  height: 100vh;
-  width: auto;
-  opacity: 0.6;
-  border-radius: 50px;
- }
 
 .edit_user_race {
   margin-top: 25px;
@@ -112,7 +98,9 @@ nav ul a {
   font-size: 2em;
 }
 
+
 /*Dashboard*/
+
 
 .profile-pic {
   height: 100px;
@@ -127,6 +115,10 @@ nav ul a {
   margin-top: 5%;
   max-height: 20em;
   border-radius: 50px;
+}
+
+.collapsible-header {
+  background-color: #F3F3F3;
 }
 
 
