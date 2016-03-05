@@ -9,7 +9,8 @@ class UserSessionsTest < ActionDispatch::IntegrationTest
   test "successful user login" do 
     VCR.use_cassette('user') do
       user = create(:user)
-
+      running_tip = create(:running_tip)
+      
       visit root_path
       click_on "Login with Strava"
       
@@ -24,6 +25,7 @@ class UserSessionsTest < ActionDispatch::IntegrationTest
     login
     VCR.use_cassette('user') do 
       user = create(:user)
+      running_tip = create(:running_tip)
       visit root_path
       click_on "Login with Strava"
       

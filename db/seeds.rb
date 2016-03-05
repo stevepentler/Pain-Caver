@@ -59,11 +59,21 @@ hardrock = Race.create(title: "Hardrock 100",
                        state: "Colorado"
                       )
 
-# revel = UserRace.create(user_id: 1,
-#                     date: "06-12-16",
-#                     title: "Revel Rockies",
-#                     distance: 26.2,
-#                     target_time: "3:00",
-#                     location: "Morrison, CO",
-#                     start_time: "7AM"
-#                     )
+RunningTip.create(tip: "Increase weekly training mileage by no more than 10 percent per week.")
+RunningTip.create(tip: "The most effective training mimics the event for which you’re training.")
+RunningTip.create(tip: "The 2-Day Rule: If something hurts for two straight days while running, take two days off.")
+RunningTip.create(tip: "If you’re about to bonk, eating something new is probably better than eating nothing at all.")
+RunningTip.create(tip: "Runners improve for an average of seven years.")
+RunningTip.create(tip: "Runners who only run are prone to injury.")
+RunningTip.create(tip: "The best way to train your brain for a 50 is to run two long days in a row.")
+RunningTip.create(tip: "Go out conservatively.")
+RunningTip.create(tip: "No Excuses.")
+RunningTip.create(tip: "Most people run a race to see who is fastest. I run a race to see who has the most guts. -Steve Prefontaine")
+RunningTip.create(tip: "Everyone is an athlete. But some of us are training, and some of us are not.” —Dr. George Sheehan")
+RunningTip.create(tip: "think in minutes, not miles.” —Budd Coates, four-time U.S. Olympic Marathon Trials qualifier/coach")
+RunningTip.create(tip: "“The ‘talk test’ means running at a pace comfortable enough to converse with a training partner")
+RunningTip.create(tip: "So-called ‘junk miles’—those slow miles done on easy days or during warmups—do count. They burn calories as effectively as fast miles; it just takes longer. - Hal Higdon")
+RunningTip.create(tip: "Any idiot can train himself into the ground; the trick is doing the training that makes you gradually stronger. —Keith Brantly, U.S. Olympic marathoner")
+RunningTip.create(tip: "Energy bars are good portable food for runners. Look for bars with 4 grams of fat or fewer per 230 calories. Fat slows down digestion. —Liz Applegate, Ph.D., sports nutritionist")
+RunningTip.create(tip: "Think chest/hips/push, or CHP, when it’s time for uphill running. Chest up, hips forward, push strongly off each foot. —Jeff Galloway")
+RunningTip.create(tip: "It’s better to run too slow at the start than too fast and get into oxygen debt, which is what 99.9 percent of runners do. You have to learn pace. —Bill Bowerman, renowned University of Oregon coach")

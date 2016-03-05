@@ -4,7 +4,7 @@ class CreateUserRaces < ActiveRecord::Migration
       t.references :user, index: true, foreign_key: true
       t.string :date
       t.string :title
-      t.integer :distance
+      t.float :distance
       t.string :target_time
       t.string :location
       t.string :start_time
