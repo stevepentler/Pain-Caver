@@ -13,7 +13,7 @@ class TrailService
 
   def trails(current_user)
     response = client.get("/?q[city_cont]=#{current_user.city}&radius=1&limit=1")
-    response.body
+    trails = JSON.parse(response.body)
     binding.pry
   end
 
