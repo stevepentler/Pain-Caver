@@ -3,7 +3,7 @@
     
     var map_options = {
       center: new google.maps.LatLng(<%= @service.midpoint_latitude(@activity) %>, <%= @service.midpoint_longitude(@activity) %>),
-      zoom: 12,
+      zoom: 13,
       mapTypeId: google.maps.MapTypeId.TERRAIN,
       panControl: false,
       mapTypeControl: false,
@@ -21,7 +21,7 @@
 
     var poly = new google.maps.Polyline({
       geodesic: true,
-      strokeColor: "#64eb06",
+      strokeColor: "#EB7001",
       strokeWeight: 4,
       map: map
     });
