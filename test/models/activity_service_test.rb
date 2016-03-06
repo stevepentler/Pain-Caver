@@ -35,7 +35,6 @@ class ActivityServiceTest < ActiveSupport::TestCase
       service = ActivityService.new(current_user, leadville)
       activity = service.single_activity(505114540)
 
-      binding.pry
       assert_equal 45.56, service.difficulty_rating(activity)
       assert_equal 30.6310957247048, service.score_elevation_gain(activity)
       assert_equal 2.209206349206349, service.score_elevation_max(activity)

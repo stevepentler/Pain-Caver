@@ -157,8 +157,8 @@ class ActivityService
     activity["start_longitude"]
   end
 
-  def summary_polyline(activity)
-    activity["map"]["summary_polyline"]
+  def polyline(activity)
+    activity["map"]["polyline"]
   end
 
   def difficulty_range(activity)
