@@ -6,7 +6,7 @@ gem 'rails_12factor'
 gem 'faraday'
 gem 'mechanize'
 gem 'polylines'
-gem 'geocoder'
+# gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 
