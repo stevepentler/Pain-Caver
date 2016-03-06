@@ -12,6 +12,12 @@
      
     var map = new google.maps.Map(document.getElementById("google-map"), map_options);
 
+    var startMarker = new google.maps.Marker({
+      position: { lat: <%= @service.start_latitude(@activity) %>, 
+                  lng: <%= @service.start_longitude(@activity) %> },
+      map: map,
+      label: "+"
+    });
 
       var routePath = new google.maps.Polyline({
         path: polylineSummary,
