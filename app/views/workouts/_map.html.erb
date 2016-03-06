@@ -3,8 +3,8 @@
     
     var map_options = {
       center: new google.maps.LatLng(<%= @service.midpoint_latitude(@activity) %>, <%= @service.midpoint_longitude(@activity) %>),
-      zoom: 11,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
       panControl: false,
       mapTypeControl: false,
       zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER }
