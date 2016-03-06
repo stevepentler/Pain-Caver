@@ -1,5 +1,6 @@
-<script>
+<%= javascript_tag do %>
   function trailMap() {
+    
     var map_options = {
       center: new google.maps.LatLng(<%= @service.start_latitude(@activity) %>, <%= @service.start_longitude(@activity) %>),
       zoom: 10,
@@ -11,22 +12,22 @@
      
     var map = new google.maps.Map(document.getElementById("google-map"), map_options);
 
-    var polyOptions = {
-      strokeColor: '#5e96d9',
-      strokeOpacity: 0.8,
-      strokeWeight: 6
-    }
-     
-    var poly = new google.maps.Polyline(polyOptions);
-    poly.setMap(map);
 
+      var routePath = new google.maps.Polyline({
+        path: polylineSummary,
+        geodesic: true,
+        strokeColor: "#64eb06",
+        strokeWeight: 4,
+        map: map
+      });
+    
 
-    var polylineSummary = <%= @service.polyline(@activity) %>
+    var polylineSummary = "<%= @service.polyline(@activity) %>"
     poly.setPath(polylineSummary);
   };
-</script>
+<% end %>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAPS']&callback=trailMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2JdFlUn8iGRg0wvRVHw78wpJvo0hFuM&callback=trailMap"
 async defer></script>
 
 <div id="map">
