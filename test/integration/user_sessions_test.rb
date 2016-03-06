@@ -45,4 +45,26 @@ class UserSessionsTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "succesful user creation" do 
+    VCR.use_cassette('user') do
+      auth = OmniAuth.config.mock_auth[:strava]
+      user = User.find_or_create_by_auth(auth)
+      assert_equal ENV['USER_TOKEN'], user.token
+      assert_equal 13541251, user.user_id
+      assert_equal "Steve Pentler", user.name
+      assert_equal "Steve", user.first_name
+      assert_equal "Pentler", user.last_name
+      assert_equal "stevepentler@gmail.com", user.email
+      assert_equal "https://lh4.googleusercontent.com/-xXqkgEoPVCc/AAAAAAAAAAI/AAAAAAAAA1M/_EEbUWVP6jY/photo.jpg", user.profile_picture
+      assert_equal "Denver", user.city
+      assert_equal "Colorado", user.state
+      assert_equal "M", user.sex
+      assert_equal 1, user.athlete_type
+      assert_equal "[{\"ASICS Gel Nimbus 17 Asics\"=>0.0}, {\"Saucony Peregrine Peregrine 4\"=>9688.0}]", user.shoes
+      assert_equal "0", user.follower_count
+      assert_equal "3", user.friend_count
+      assert_equal [{"ASICS Gel Nimbus 17 Asics"=>0.0}, {"Saucony Peregrine Peregrine 4"=>9688.0}], User.shoe_mileage(auth)
+    end
+  end
+  
 end

@@ -73,7 +73,7 @@ class ActivityServiceTest < ActiveSupport::TestCase
     assert_equal "Your workout was 1.0x more difficult than", service.percentage_difficulty(activity)
   end 
 
-  test "#activity_service no heartrate scoring for Leadville 100" do 
+  test "#activity_service NO HEARTRATE scoring for Leadville 100" do 
     current_user = create(:user)
     leadville = create(:race)
     service = ActivityService.new(current_user, leadville)

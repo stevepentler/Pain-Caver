@@ -1,14 +1,12 @@
 class WorkoutsController < ApplicationController
   before_action :authorize!
-  
+
   def index
     @service = ActivityService.new(current_user)
     @activities = @service.list_athlete_activities
     @stats = UserStatsService.new(current_user)
     tip_count = rand(RunningTip.count)
     @running_tip = RunningTip.offset(tip_count).first
-    # @anton = Scrapers::AntonScraper.login_and_scrape
-    # binding.pry
   end
 
   def show
