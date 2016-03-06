@@ -23,11 +23,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 06 Mar 2016 03:51:30 GMT
+      - Sun, 06 Mar 2016 05:33:38 GMT
       Etag:
       - W/"0493e03da524c7645d11f035cb2b8a8f"
       Set-Cookie:
-      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExOGM4ZWMwMjg4Nzg3NWIzNGY1MzEzNjQwMzE0ZDJjBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--52087ad0e47c8cb9a0855ac3b9b6ae0a4ab3971b;
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTRhMDRiNGRlNWNjZjhkZjcxMWFjZDlkOWQ1MjBkZjQzBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--848e7d6940297ce1110dcfc9039c515562dad648;
         domain=strava.com; path=/; HttpOnly
       Status:
       - 200 OK
@@ -36,13 +36,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600,30000'
       X-Ratelimit-Usage:
-      - '4,159'
+      - '1,477'
       X-Request-Id:
-      - eaced13823d7d068df5fcf78a7c5ed2a
+      - 15c0689bb350170617833a3c1ebf50cf
       X-Ua-Compatible:
       - IE=Edge,chrome=1
-      Content-Length:
-      - '3488'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
@@ -66,5 +66,5 @@ http_interactions:
         mile","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":866,"moving_time":856,"start_date":"2016-02-28T17:52:24Z","start_date_local":"2016-02-28T10:52:24Z","distance":1609,"start_index":189,"end_index":394,"pr_rank":null,"achievements":[]},{"id":1256935463,"resource_state":2,"name":"5k","activity":{"id":505114540,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":2618,"moving_time":1820,"start_date":"2016-02-28T17:58:37Z","start_date_local":"2016-02-28T10:58:37Z","distance":5000,"start_index":278,"end_index":752,"pr_rank":null,"achievements":[]}],"gear":{"id":"g1261218","primary":true,"name":"Saucony
         Peregrine Peregrine 4","resource_state":2,"distance":80085.0},"partner_logo_url":null,"photos":{"primary":null,"count":0},"similar_activities":{"effort_count":1,"average_speed":2.402542081758846,"min_average_speed":2.402542081758846,"mid_average_speed":2.402542081758846,"max_average_speed":2.402542081758846,"pr_rank":null,"frequency_milestone":null,"trend":{"speeds":[2.402542081758846],"current_activity_index":0,"min_speed":2.402542081758846,"mid_speed":2.402542081758846,"max_speed":2.402542081758846,"direction":0},"resource_state":2},"embed_token":"a7e49ed36df6f0e2a31dfbc5fd8aed7a7b748276"}'
     http_version: 
-  recorded_at: Sun, 06 Mar 2016 03:51:30 GMT
+  recorded_at: Sun, 06 Mar 2016 05:33:38 GMT
 recorded_with: VCR 3.0.1
