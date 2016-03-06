@@ -1,0 +1,29 @@
+
+<div id="map" style='width: 800px; height: 400px;'>
+  <script>
+    var map_options = {
+      center: new google.maps.LatLng(<%= @service.start_latitude(@activity) %>, <%= @service.start_longitude(@activity) %>),
+      zoom: 10,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      panControl: false,
+      mapTypeControl: false,
+      zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER }
+    };
+     
+    var map = new google.maps.Map(document.getElementById("map-canvas"), map_options);
+
+    var polyOptions = {
+      strokeColor: '#5e96d9',
+      strokeOpacity: 0.8,
+      strokeWeight: 6
+    }
+     
+    var poly = new google.maps.Polyline(polyOptions);
+    poly.setMap(map);
+
+
+    var polylineSummary = <%= @service.summary_polyline(@activity) %>
+    poly.setPath(polylineSummary);
+  </script>
+</div>
+  <%= binding.pry %> 

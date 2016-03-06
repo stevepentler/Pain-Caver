@@ -148,6 +148,18 @@ class ActivityService
     end.round(2)
   end
 
+  def start_latitude(activity)
+    activity["start_latitude"]
+  end
+
+  def start_longitude(activity)
+    activity["start_longitude"]
+  end
+
+  def summary_polyline(activity)
+    activity["map"]["summary_polyline"]
+  end
+
   def difficulty_range(activity)
     if score_heartrate(activity) == "N/A"
       40
