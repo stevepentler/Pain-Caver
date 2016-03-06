@@ -3,7 +3,7 @@
     
     var map_options = {
       center: new google.maps.LatLng(<%= @service.start_latitude(@activity) %>, <%= @service.start_longitude(@activity) %>),
-      zoom: 10,
+      zoom: 12,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       panControl: false,
       mapTypeControl: false,
@@ -19,17 +19,16 @@
       label: "+"
     });
 
-      var routePath = new google.maps.Polyline({
-        path: polylineSummary,
-        geodesic: true,
-        strokeColor: "#64eb06",
-        strokeWeight: 4,
-        map: map
-      });
-    
+    var poly = new google.maps.Polyline({
+      geodesic: true,
+      strokeColor: "#64eb06",
+      strokeWeight: 4,
+      map: map
+    });
 
-    var polylineSummary = "<%= @service.polyline(@activity) %>"
-    poly.setPath(polylineSummary);
+    var path = <%= @service.polyline(@activity).to_json.html_safe %>;
+
+    poly.setPath(path);
   };
 <% end %>
 

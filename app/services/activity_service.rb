@@ -158,14 +158,15 @@ class ActivityService
   def start_latitude(activity)
     activity["start_latitude"]
   end
-# 39.692479
+
   def start_longitude(activity)
     activity["start_longitude"]
   end
-# -104.98402
 
   def polyline(activity)
-    activity["map"]["polyline"]
+    polyline = activity["map"]["polyline"]
+    poly_arrays = Polylines::Decoder.decode_polyline(polyline)
+    poly_arrays.map { |lat, lng| { lat: lat, lng: lng } }
   end
 
 end
