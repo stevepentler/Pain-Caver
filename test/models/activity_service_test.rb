@@ -46,6 +46,24 @@ class ActivityServiceTest < ActiveSupport::TestCase
     end
   end 
 
+  test "#activity_service scoring for user workout" do 
+    VCR.use_cassette('activity') do
+      current_user = create(:user)
+      leadville = create(:race)
+      service = ActivityService.new(current_user, leadville)
+      activity = service.single_activity(505114540)
+
+      assert_equal 68.38, service.difficulty_rating(activity)
+      assert_equal 56.95469361312299, service.score_elevation_gain(activity)
+      assert_equal 2.899583333333333, service.score_elevation_max(activity)
+      assert_equal 59.85, service.score_elevation(activity)
+      assert_equal 5.451923076923077, service.score_heartrate_average(activity)
+      assert_equal 0.47, service.score_heartrate_max(activity)
+      assert_equal 5.92, service.score_heartrate(activity)
+      assert_equal 2.61, service.score_duration(activity)
+    end
+  end 
+
   test "#activity_service scoring for Leadville 100" do 
     current_user = create(:user)
     leadville = create(:race)
