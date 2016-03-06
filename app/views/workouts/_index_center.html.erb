@@ -14,10 +14,8 @@
         </tr>
       </thead>
 
-<%# cache "activity-count-#{@activitites.count}-#{@activities.maximum(:updated_at)}" do %> 
       <tbody>
         <% @activities.each do |activity| %>
-        <%#= binding.pry %>
           <tr class="clickable-row" data-href="<%= workout_path(activity["id"]) %>">
             <td><%= @service.start_date(activity) %></td> 
             <td><%= @service.start_time(activity) %></td> 

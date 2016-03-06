@@ -76,6 +76,7 @@ GEM
       thor (~> 0.14)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     hashdiff (0.3.0)
     hashie (3.4.3)
     http-cookie (1.0.2)
@@ -142,6 +143,7 @@ GEM
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
     pg (0.18.4)
+    polylines (0.3.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -217,6 +219,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.8.3)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
@@ -244,6 +247,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.0)
   faraday
   figaro
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   launchy
@@ -251,6 +255,7 @@ DEPENDENCIES
   minitest-vcr
   omniauth-strava
   pg (~> 0.15)
+  polylines
   pry
   rails (= 4.2.5)
   rails_12factor
@@ -260,6 +265,7 @@ DEPENDENCIES
   spring
   strava-api-v3
   uglifier (>= 1.3.0)
+  underscore-rails
   vcr
   web-console (~> 2.0)
   webmock

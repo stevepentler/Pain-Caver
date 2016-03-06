@@ -65,7 +65,8 @@ class ActivityService
   end
 
   def total_elevation_gain(activity)
-    activity["total_elevation_gain"]
+    meters = activity["total_elevation_gain"]
+    feet = (meters * meter_to_foot).round(0)
   end
 
   def elev_high(activity)
@@ -156,10 +157,10 @@ class ActivityService
     end
   end
 
-  def summary_polyline(activity)
-    activity["map"]["summary_polyline"]
+  def percentage_difficulty(activity)
+    percent = difficulty_rating(activity) / difficulty_range(activity)
+    format_percentage(percent)
   end
-  # "}lgqFduw_S}A_@Jkj@oAaWwiAv@wIa@wAyBg\\?_e@vDoKoBsu@Au@oEkFAW}EG}M`C|@dBsCLgSq@qAmd@N{C~BW~Dch@Vs@ud@a@sCmBn@a@yBb@{mBsj@s@e@bmAjBdd@fb@tAd@x\\|FB~AtFph@TT~Ora@Yp@|CtFZn@hRfAt@pvAbAnBcCdi@C[wObD{D|hAUh@qEvFOp@`Ak@dD|@|nARbMp@L"
 
   def start_latitude(activity)
     activity["start_latitude"]
@@ -169,4 +170,9 @@ class ActivityService
     activity["start_longitude"]
   end
 # -104.98402
+
+  def polyline(activity)
+    activity["map"]["polyline"]
+  end
+
 end

@@ -17,9 +17,9 @@ class ActivityServiceTest < ActiveSupport::TestCase
       assert_equal 4.35, service.distance(activity)
       assert_equal "48 mins", service.duration(activity)
       assert_equal "1hr 16m", service.elapsed_time(activity)
-      assert_equal 461.1, service.total_elevation_gain(activity)
-      assert_equal 2121, service.elev_high(activity)
-      assert_equal 1744, service.elev_low(activity)
+      assert_equal 1513, service.total_elevation_gain(activity)
+      assert_equal 6959, service.elev_high(activity)
+      assert_equal 5720, service.elev_low(activity)
       assert_equal "11:09", service.average_pace(activity)
       assert_equal 5.38, service.average_speed(activity)
       assert_equal 44.52, service.max_speed(activity)
@@ -35,10 +35,10 @@ class ActivityServiceTest < ActiveSupport::TestCase
       service = ActivityService.new(current_user, leadville)
       activity = service.single_activity(505114540)
 
-      assert_equal 22.73, service.difficulty_rating(activity)
-      assert_equal 9.335094671950683, service.score_elevation_gain(activity)
-      assert_equal 0.6733333333333333, service.score_elevation_max(activity)
-      assert_equal 10.01, service.score_elevation(activity)
+      assert_equal 45.56, service.difficulty_rating(activity)
+      assert_equal 30.6310957247048, service.score_elevation_gain(activity)
+      assert_equal 2.209206349206349, service.score_elevation_max(activity)
+      assert_equal 32.84, service.score_elevation(activity)
       assert_equal 10.903846153846153, service.score_heartrate_average(activity)
       assert_equal 0.9421052631578948, service.score_heartrate_max(activity)
       assert_equal 11.85, service.score_heartrate(activity)
@@ -50,16 +50,16 @@ class ActivityServiceTest < ActiveSupport::TestCase
     current_user = create(:user)
     leadville = create(:race)
     service = ActivityService.new(current_user, leadville)
-    activity = {"total_elevation_gain"=>18168,
+    activity = {"total_elevation_gain"=>5537.6064,
                 "distance"=>160934.4,
-                "elev_high"=>12600,
+                "elev_high"=>3840.48,
                 "average_heartrate"=>152,
                 "max_heartrate"=> 190
                 }
 
     assert_equal 50.0, service.difficulty_rating(activity)
     assert_equal 16, service.score_elevation_gain(activity)
-    assert_equal 4, service.score_elevation_max(activity)
+    assert_equal 4.0, service.score_elevation_max(activity)
     assert_equal 20, service.score_elevation(activity)
     assert_equal 9, service.score_heartrate_average(activity)
     assert_equal 1, service.score_heartrate_max(activity)
