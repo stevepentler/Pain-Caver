@@ -1,29 +1,42 @@
-<script>
-  var map_options = {
-    center: new google.maps.LatLng(<%= @service.start_latitude(@activity) %>, <%= @service.start_longitude(@activity) %>),
-    zoom: 10,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    panControl: false,
-    mapTypeControl: false,
-    zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER }
+<%= javascript_tag do %>
+  function trailMap() {
+    
+    var map_options = {
+      center: new google.maps.LatLng(<%= @service.midpoint_latitude(@activity) %>, <%= @service.midpoint_longitude(@activity) %>),
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
+      panControl: false,
+      mapTypeControl: false,
+      zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER }
+    };
+     
+    var map = new google.maps.Map(document.getElementById("google-map"), map_options);
+
+    var startMarker = new google.maps.Marker({
+      position: { lat: <%= @service.start_latitude(@activity) %>, 
+                  lng: <%= @service.start_longitude(@activity) %> },
+      map: map,
+      label: "+"
+    });
+
+    var poly = new google.maps.Polyline({
+      geodesic: true,
+      strokeColor: "#64eb06",
+      strokeWeight: 4,
+      map: map
+    });
+
+    var path = <%= @service.polyline(@activity).to_json.html_safe %>;
+
+    poly.setPath(path);
   };
-   
-  var map = new google.maps.Map(document.getElementById("map-canvas"), map_options);
+<% end %>
 
-  var polyOptions = {
-    strokeColor: '#5e96d9',
-    strokeOpacity: 0.8,
-    strokeWeight: 6
-  }
-   
-  var poly = new google.maps.Polyline(polyOptions);
-  poly.setMap(map);
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2JdFlUn8iGRg0wvRVHw78wpJvo0hFuM&callback=trailMap"
+async defer></script>
 
-
-  var polylineSummary = <%= @service.polyline(@activity) %>
-  poly.setPath(polylineSummary);
-</script>
-
-<div id="map">
-  <div id="map-canvas" style="width: 800px; height: 400px; position: absolute;"></div>
+<div class="center background-color" style="margin-bottom: 100px;">
+  <div id="google-map" style="width: 90%; height: 80%; position: absolute; left: 5%; top: 10%;"></div>
 </div>
+
+<div class="space"></div>

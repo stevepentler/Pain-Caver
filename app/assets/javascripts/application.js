@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require underscore
-//= require gmaps/google
 
 jQuery(document).ready(function($) {
   $(".clickable-row").click(function() {

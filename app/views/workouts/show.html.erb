@@ -2,11 +2,15 @@
   
   <div class="row background-color">
     <%= render partial: "show_left" %> 
-
+    
     <div class="col s10 custom-padding">
       <%= render partial: "workout_snapshot" %> 
       <%= render partial: "workout_difficulty" %>
-      <%= render partial: "map" %>
+      
+      <div class="card center background-color" style="margin-top: 0px;">
+      <h4 class="titillium center">Route</h4>
+        <%= render partial: "map" %>
+      </div>
     </div>
-    
   </div>
+

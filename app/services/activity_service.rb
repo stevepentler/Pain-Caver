@@ -158,14 +158,28 @@ class ActivityService
   def start_latitude(activity)
     activity["start_latitude"]
   end
-# 39.692479
+
   def start_longitude(activity)
     activity["start_longitude"]
   end
-# -104.98402
 
   def polyline(activity)
-    activity["map"]["polyline"]
+    polyline = activity["map"]["polyline"]
+    poly_arrays = Polylines::Decoder.decode_polyline(polyline)
+    poly_arrays.map { |lat, lng| { lat: lat, lng: lng } }
+  end
+
+  def midpoint(activity)
+    midpoint = (polyline(activity).count / 2)
+    polyline(activity)[midpoint]
+  end
+
+  def midpoint_latitude(activity)
+    midpoint(activity)[:lat]
+  end
+
+  def midpoint_longitude(activity)
+    midpoint(activity)[:lng]
   end
 
 end
