@@ -1,4 +1,6 @@
 class WorkoutsController < ApplicationController
+  before_action :authorize!
+  
   def index
     @service = ActivityService.new(current_user)
     @activities = @service.list_athlete_activities
