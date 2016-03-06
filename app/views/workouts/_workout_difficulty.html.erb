@@ -1,7 +1,4 @@
-<h5 class="center"> Difficulty vs <%= @race.title %></span> </h4>
-<h4 class="center titillium"><%= @service.difficulty_rating(@activity) %>
-  <span id="range">/<%= @service.difficulty_range(@activity)%></h4>
-
+<h4 class="center titillium"><%= @service.percentage_difficulty(@activity) %> the <%= @race.title %></h4>
 
 <table class="bordered highlight centered responsive-table font-color font-outline">
 

@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require underscore
+//= require gmaps/google
 
 jQuery(document).ready(function($) {
     $(".clickable-row").click(function() {
@@ -22,5 +24,4 @@ jQuery(document).ready(function($) {
     $('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
-    
 });

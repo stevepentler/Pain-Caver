@@ -141,7 +141,17 @@ tbody tr td span {
   background-color: #F3F3F3;
  }
 
+#map-canvas {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+}
 
+#map {
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+}
 
 
 
