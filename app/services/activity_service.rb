@@ -156,4 +156,17 @@ class ActivityService
     end
   end
 
+  def summary_polyline(activity)
+    activity["map"]["summary_polyline"]
+  end
+  # "}lgqFduw_S}A_@Jkj@oAaWwiAv@wIa@wAyBg\\?_e@vDoKoBsu@Au@oEkFAW}EG}M`C|@dBsCLgSq@qAmd@N{C~BW~Dch@Vs@ud@a@sCmBn@a@yBb@{mBsj@s@e@bmAjBdd@fb@tAd@x\\|FB~AtFph@TT~Ora@Yp@|CtFZn@hRfAt@pvAbAnBcCdi@C[wObD{D|hAUh@qEvFOp@`Ak@dD|@|nARbMp@L"
+
+  def start_latitude(activity)
+    activity["start_latitude"]
+  end
+# 39.692479
+  def start_longitude(activity)
+    activity["start_longitude"]
+  end
+# -104.98402
 end
