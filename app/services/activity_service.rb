@@ -69,11 +69,13 @@ class ActivityService
   end
 
   def elev_high(activity)
-    activity["elev_high"].round(0)
+    meters = activity["elev_high"]
+    feet = (meters * meter_to_foot).round(0)
   end
 
   def elev_low(activity)
-    activity["elev_low"].round(0)
+    meters = activity["elev_low"]
+    feet = (meters * meter_to_foot).round(0)
   end
 
   def average_pace(activity)
