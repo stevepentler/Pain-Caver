@@ -169,4 +169,17 @@ class ActivityService
     poly_arrays.map { |lat, lng| { lat: lat, lng: lng } }
   end
 
+  def midpoint(activity)
+    midpoint = (polyline(activity).count / 2)
+    polyline(activity)[midpoint]
+  end
+
+  def midpoint_latitude(activity)
+    midpoint(activity)[:lat]
+  end
+
+  def midpoint_longitude(activity)
+    midpoint(activity)[:lng]
+  end
+
 end

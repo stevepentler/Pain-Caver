@@ -119,6 +119,7 @@ nav ul a {
 
 .collapsible-header {
   background-color: #F3F3F3;
+  background-repeat: repeat-y;
 }
 
 
@@ -144,13 +145,11 @@ tbody tr td span {
 #google-map {
   height: 500px;
   width: 400px;
-  position: absolute;
 }
 
 #map {
   width: 800px;
   height: 500px;
-  position: absolute;
 }
 
 

@@ -2,8 +2,8 @@
   function trailMap() {
     
     var map_options = {
-      center: new google.maps.LatLng(<%= @service.start_latitude(@activity) %>, <%= @service.start_longitude(@activity) %>),
-      zoom: 12,
+      center: new google.maps.LatLng(<%= @service.midpoint_latitude(@activity) %>, <%= @service.midpoint_longitude(@activity) %>),
+      zoom: 11,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       panControl: false,
       mapTypeControl: false,
@@ -35,6 +35,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2JdFlUn8iGRg0wvRVHw78wpJvo0hFuM&callback=trailMap"
 async defer></script>
 
-<div id="map">
+<div class="center" id="map">
   <div id="google-map" style="width: 800px; height: 400px; position: absolute;"></div>
 </div>
