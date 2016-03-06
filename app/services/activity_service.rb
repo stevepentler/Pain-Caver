@@ -65,7 +65,8 @@ class ActivityService
   end
 
   def total_elevation_gain(activity)
-    activity["total_elevation_gain"]
+    meters = activity["total_elevation_gain"]
+    feet = (meters * meter_to_foot).round(0)
   end
 
   def elev_high(activity)

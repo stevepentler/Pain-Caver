@@ -1,6 +1,6 @@
 module Scoring
   def elevation_gain_factor
-    gain_per_mile = (race.elevation_gain / race.distance)     #Leadville 100 is the standard (18168ft/100miles)
+    gain_per_mile = (race.elevation_gain  / race.distance)     #Leadville 100 is the standard (18168ft/100miles)
     factor = gain_per_mile / 16.0      #80% of elevation score
     # factor = 22.71        
   end
