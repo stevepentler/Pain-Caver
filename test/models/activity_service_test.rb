@@ -35,14 +35,14 @@ class ActivityServiceTest < ActiveSupport::TestCase
       service = ActivityService.new(current_user, leadville)
       activity = service.single_activity(505114540)
 
-      assert_equal 45.56, service.difficulty_rating(activity)
-      assert_equal 30.6310957247048, service.score_elevation_gain(activity)
-      assert_equal 2.209206349206349, service.score_elevation_max(activity)
-      assert_equal 32.84, service.score_elevation(activity)
-      assert_equal 10.903846153846153, service.score_heartrate_average(activity)
-      assert_equal 0.9421052631578948, service.score_heartrate_max(activity)
-      assert_equal 11.85, service.score_heartrate(activity)
-      assert_equal 0.87, service.score_duration(activity)
+      assert_equal 68.38, service.difficulty_rating(activity)
+      assert_equal 56.95469361312299, service.score_elevation_gain(activity)
+      assert_equal 2.899583333333333, service.score_elevation_max(activity)
+      assert_equal 59.85, service.score_elevation(activity)
+      assert_equal 5.451923076923077, service.score_heartrate_average(activity)
+      assert_equal 0.47, service.score_heartrate_max(activity)
+      assert_equal 5.92, service.score_heartrate(activity)
+      assert_equal 2.61, service.score_duration(activity)
     end
   end 
 
@@ -57,13 +57,13 @@ class ActivityServiceTest < ActiveSupport::TestCase
                 "max_heartrate"=> 190
                 }
 
-    assert_equal 50.0, service.difficulty_rating(activity)
-    assert_equal 16, service.score_elevation_gain(activity)
-    assert_equal 4.0, service.score_elevation_max(activity)
-    assert_equal 20, service.score_elevation(activity)
-    assert_equal 9, service.score_heartrate_average(activity)
-    assert_equal 1, service.score_heartrate_max(activity)
-    assert_equal 10, service.score_heartrate(activity)
-    assert_equal 20, service.score_duration(activity)
+    assert_equal 100.0, service.difficulty_rating(activity)
+    assert_equal 29.75, service.score_elevation_gain(activity)
+    assert_equal 5.25, service.score_elevation_max(activity)
+    assert_equal 35.0, service.score_elevation(activity)
+    assert_equal 4.5, service.score_heartrate_average(activity)
+    assert_equal 0.5, service.score_heartrate_max(activity)
+    assert_equal 5, service.score_heartrate(activity)
+    assert_equal 60, service.score_duration(activity)
   end 
 end

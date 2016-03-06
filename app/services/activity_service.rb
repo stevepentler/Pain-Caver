@@ -125,6 +125,7 @@ class ActivityService
 
   def score_heartrate_max(activity)
     max_percentage = max_heartrate(activity) / possible_heartrate
+    (max_percentage / 2).round(2)
   end
 
   def score_heartrate(activity)
@@ -150,11 +151,11 @@ class ActivityService
   end
 
   def difficulty_range(activity)
-    if score_heartrate(activity) == "N/A"
-      40
-    else
-      50
-    end
+    score_heartrate(activity) == "N/A" ? 95 : 100
+  end
+
+  def heartrate_range(activity)
+    score_heartrate(activity) == "N/A" ? "N/A" : 5
   end
 
   def percentage_difficulty(activity)

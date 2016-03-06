@@ -11,7 +11,7 @@ class ScoringTest < ActiveSupport::TestCase
 
   test "heartrate scoring" do 
     assert_equal 190, possible_heartrate
-    assert_equal 5.777777777777778, heartrate_factor
+    assert_equal 11.555555555555555, heartrate_factor
   end
 
   # test "duration scoring" do
