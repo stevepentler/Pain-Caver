@@ -149,6 +149,19 @@ class ActivityService
     end.round(2)
   end
 
+  def difficulty_range(activity)
+    if score_heartrate(activity) == "N/A"
+      40
+    else
+      50
+    end
+  end
+
+  def percentage_difficulty(activity)
+    percent = difficulty_rating(activity) / difficulty_range(activity)
+    format_percentage(percent)
+  end
+
   def start_latitude(activity)
     activity["start_latitude"]
   end
@@ -161,12 +174,5 @@ class ActivityService
     activity["map"]["polyline"]
   end
 
-  def difficulty_range(activity)
-    if score_heartrate(activity) == "N/A"
-      40
-    else
-      50
-    end
-  end
 
 end

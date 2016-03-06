@@ -58,4 +58,14 @@ module Formatter
     activity["start_date_local"].split("T").last.chop
   end
 
+  def format_percentage(percent)
+    if percent >= 1
+      percentage = percent.round(2)
+      "Your workout was #{percentage}x more difficult than"
+    else
+      percentage = (percent * 100).round(0)
+      "Your workout was #{percentage}% as difficult as"
+    end
+  end
+
 end

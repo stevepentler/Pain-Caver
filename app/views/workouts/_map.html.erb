@@ -20,10 +20,10 @@
   poly.setMap(map);
 
 
-  var polylineSummary = <%= @service.summary_polyline(@activity) %>
+  var polylineSummary = <%= @service.polyline(@activity) %>
   poly.setPath(polylineSummary);
 </script>
 
-<div id="map" style='width: 800px; height: 400px; position: absolute;'>
+<div id="map">
   <div id="map-canvas" style="width: 800px; height: 400px; position: absolute;"></div>
 </div>
