@@ -22,5 +22,29 @@ jQuery(document).ready(function($) {
     $('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
-    
 });
+
+
+var map_options = {
+   center: new google.maps.LatLng(//start_lattitude(activity), start_longitude(activity)),
+   zoom: 16,
+   mapTypeId: google.maps.MapTypeId.ROADMAP,
+   panControl: false,
+   mapTypeControl: false,
+   zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER }
+};
+ 
+var map = new google.maps.Map(document.getElementById("map-canvas"), map_options);
+
+var polyOptions = {
+  strokeColor: '#5e96d9',
+  strokeOpacity: 0.8,
+  strokeWeight: 6
+}
+ 
+var poly = new google.maps.Polyline(polyOptions);
+poly.setMap(map);
+
+
+var polylineSummary = //<%= summary_polyline(activity) %>
+poly.setPath(polylineSummary);
