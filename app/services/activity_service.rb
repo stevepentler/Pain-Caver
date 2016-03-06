@@ -33,17 +33,9 @@ class ActivityService
     activity["type"]
   end
 
-  # def most_recent(activity)
-  #   activity["start_date_local"]
-  # end
-
   def start_date(activity)
     format_date(activity)
   end
-
-  # def start_year(activity)
-  #   format_year(activity)
-  # end 
 
   def start_time(activity)
     activity["start_date_local"].split("T").last.chop

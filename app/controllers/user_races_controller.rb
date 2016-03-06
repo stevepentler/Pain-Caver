@@ -1,4 +1,5 @@
 class UserRacesController < ApplicationController
+  before_action :authorize!
   
   def new
     @user_race = UserRace.new
