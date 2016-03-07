@@ -13,6 +13,10 @@ SimpleCov.start 'rails'
 
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
+
+  def teardown 
+    DatabaseCleaner.clean
+  end
   
   class ActionDispatch::IntegrationTest
     include Capybara::DSL
