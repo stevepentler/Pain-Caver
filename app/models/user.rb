@@ -20,7 +20,6 @@ class User < ActiveRecord::Base
 
     user.save
     return user
-    binding.pry
   end
 
   def self.shoe_mileage(auth)
