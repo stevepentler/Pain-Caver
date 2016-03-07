@@ -108,5 +108,24 @@ class ActivityServiceTest < ActiveSupport::TestCase
     end
   end
 
+  test "#activity_service polylines" do 
+    VCR.use_cassette('activity') do
+      current_user = create(:user)
+      leadville = create(:race)
+      service = ActivityService.new(current_user, leadville)
+      activity = service.single_activity(505114540)
+
+      start_coordinates = {:lat=>39.99913, :lng=>-105.29043}
+      midpoint_coordiantes = {:lat=>39.99225999999997, :lng=>-105.30658999999999}
+      finish_coordinates = {:lat=>40.00492999999998, :lng=>-105.29307999999986}
+      
+      assert_equal start_coordinates, service.polyline(activity).first
+      assert_equal finish_coordinates, service.polyline(activity).last
+      assert_equal midpoint_coordiantes, service.midpoint(activity)
+      assert_equal midpoint_coordiantes[:lat], service.midpoint_latitude(activity)
+      assert_equal midpoint_coordiantes[:lng], service.midpoint_longitude(activity)
+    end
+  end
+
 
 end

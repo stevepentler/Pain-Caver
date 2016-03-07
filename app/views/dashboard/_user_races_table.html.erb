@@ -23,7 +23,7 @@
             <td><%= race.date %></td> 
             <td><%= race.title %></td> 
             <td><%= race.distance %></td> 
-            <td><%= race.target_time %> mi</td>  
+            <td><%= race.target_time %></td>  
             <td><%= race.location %></td>
             <td><%= race.start_time %></td>
             <td><%= link_to("edit", edit_user_race_path(race.id), class: "edit-button") %>/<%=link_to("remove", user_race_path(race.id), method: :delete, class: "remove-button") %></td>
