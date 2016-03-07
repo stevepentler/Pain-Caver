@@ -7,5 +7,6 @@ class DashboardController <ApplicationController
     tip_count = rand(RunningTip.count)
     @running_tip = RunningTip.offset(tip_count).first
     @trail_service = TrailService.new(current_user)
+    # WorkoutIndexWorker.perform_async(current_user)
   end
 end
