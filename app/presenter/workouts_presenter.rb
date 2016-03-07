@@ -12,9 +12,6 @@ class WorkoutsPresenter < SimpleDelegator
     super(@service)
   end
 
-  # def service(current_user)
-  # end
-
   def activities
     service.list_athlete_activities
   end

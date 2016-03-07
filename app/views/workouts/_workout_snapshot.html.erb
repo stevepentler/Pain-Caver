@@ -1,4 +1,4 @@
-<h5 class="center"><%= @service.name(@activity) %> </h5>
+<h5 class="center"><%= @presenter.name(@presenter.activity) %> </h5>
 <table class="bordered highlight centered responsive-table font-color font-outline">
   <thead>
     <tr>
@@ -14,13 +14,13 @@
 
   <tbody>
     <tr>
-      <td><%= @service.start_date(@activity) %></td> 
-      <td><%= @service.distance(@activity) %> mi</td>  
-      <td><%= @service.duration(@activity) %></td>
-      <td><%= @service.average_pace(@activity) %></td>
-      <td><%= @service.total_elevation_gain(@activity) %></td> 
-      <td><%= @service.elev_high(@activity) %></td> 
-      <td><%= @service.start_time(@activity) %></td> 
+      <td><%= @presenter.start_date(@presenter.activity) %></td> 
+      <td><%= @presenter.distance(@presenter.activity) %> mi</td>  
+      <td><%= @presenter.duration(@presenter.activity) %></td>
+      <td><%= @presenter.average_pace(@presenter.activity) %></td>
+      <td><%= @presenter.total_elevation_gain(@presenter.activity) %></td> 
+      <td><%= @presenter.elev_high(@presenter.activity) %></td> 
+      <td><%= @presenter.start_time(@presenter.activity) %></td> 
     </tr> 
   </tbody>
 </table>
