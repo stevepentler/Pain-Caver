@@ -15,14 +15,14 @@
       </thead>
 
       <tbody>
-        <% @activities.each do |activity| %>
+        <% @presenter.activities.each do |activity| %>
           <tr class="clickable-row" data-href="<%= workout_path(activity["id"]) %>">
-            <td><%= @service.start_date(activity) %></td> 
-            <td><%= @service.start_time(activity) %></td> 
-            <td><%= @service.name(activity) %></td> 
-            <td><%= @service.distance(activity) %> mi</td>  
-            <td><%= @service.duration(activity) %></td>
-            <td><%= @service.average_pace(activity) %></td>
+            <td><%= @presenter.start_date(activity) %></td> 
+            <td><%= @presenter.start_time(activity) %></td> 
+            <td><%= @presenter.name(activity) %></td> 
+            <td><%= @presenter.distance(activity) %> mi</td>  
+            <td><%= @presenter.duration(activity) %></td>
+            <td><%= @presenter.average_pace(activity) %></td>
             <td><%= link_to("details", workout_path(activity["id"]))%></td>
           </tr>
         <% end %> 
