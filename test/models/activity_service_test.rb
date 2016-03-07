@@ -27,7 +27,6 @@ class ActivityServiceTest < ActiveSupport::TestCase
       assert_equal 179, service.max_heartrate(activity)
       assert_equal 39.999133, service.start_latitude(activity)
       assert_equal -105.290421, service.start_longitude(activity)
-      assert_equal "qicsFdpsaSF?RMTAXEJG`@MN?HFb@|@l@bAh@fAZXDJ?ZB|@Xp@Nt@AlBF`@?JMb@CVBPAt@EXK\\?n@IFKb@]^QXOhAY`@CXMl@GVGHQr@CJUJI^JV^JN?THLJFT@VBfBDZIz@B^G^X|@BTCRJ\\@P?NIHBLAJ_@^KTC`@J`@Tj@PNDG?BJ?DNA^BHEZIJCRLPGTCT@FGP@B?JG?MLAP@JAFZr@NlAT^PDTLj@H?FEFKFYFGJZ?NFDJRLb@@PLBJRLDNAPLn@?XDR?x@GVDJCh@DFPBr@TRANLIXIHo@b@Yd@ONINQF[Bc@LI@g@KKDOl@DRTJTPb@dAPR@RDPFdALZDZVx@BNc@bAW\\DLTZFNRXDZAL@RHRJj@LHJAZs@Lk@HO\\Yv@a@h@Ej@SNYLIn@BDCBGn@J^@ZCx@?PCPE`@ARCPId@]t@w@JG^g@h@g@Vs@PQJUr@YDS?SF]j@u@HWLQhA}@|Bm@QBSL}A~AgLzMsBb@_@?m@MSMKC]Vu@O[P]\\g@Fo@Bs@f@SPs@`BEHKFe@yAWg@[_AL][yCEsAGSA]KSEYUk@MMUMQQG[Cm@PIb@DZSXITAf@aANSTQRCROJYMIo@Iw@AMOL{AIw@?q@G_@GMUUMO_@WGIu@s@MEUDGEJM\\ALUMEo@Ia@WUgAOc@Ei@@KJKJAIKFa@Rg@CKII@CTm@Do@OAEKGLY]Ss@Ca@Bg@\\]@Y?g@IYBo@CO[e@Ay@BmAFU@YFIA}@Gm@QU[GQIUU@g@LQFCP[Ry@JSJOH_@JCZsAVq@RYPeAD_@Lo@RgCBGAc@E_@CEw@i@aAaAk@_AeA{AQOw@c@_@Yy@eA]Qe@E{@YWMIS_@Gy@?o@Zw@lAUXWNmA\\YLe@Xq@f@QP_@`@Yh@g@VKDmA@[CgA[S?]JSNW`@[xBMJQ@m@QcBBYGGEG]IYWc@CvAZHd@FV@nAG^F", service.polyline(activity)
     end
   end
 
