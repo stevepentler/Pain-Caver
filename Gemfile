@@ -5,6 +5,7 @@ gem 'figaro'
 gem 'rails_12factor'
 gem 'faraday'
 gem 'mechanize'
+gem 'polylines'
 
 gem 'rails', '4.2.5'
 gem 'pg', '~> 0.15'

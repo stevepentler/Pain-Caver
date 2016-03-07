@@ -142,6 +142,7 @@ GEM
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
     pg (0.18.4)
+    polylines (0.3.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -251,6 +252,7 @@ DEPENDENCIES
   minitest-vcr
   omniauth-strava
   pg (~> 0.15)
+  polylines
   pry
   rails (= 4.2.5)
   rails_12factor
