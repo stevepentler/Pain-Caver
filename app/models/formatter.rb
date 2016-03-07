@@ -45,11 +45,6 @@ module Formatter
     end
   end
 
-  # def format_year(activity)
-  #   binding.pry
-  #   activity["start_date_local"].split("-").first
-  # end
-
   def format_date(activity)
     activity["start_date_local"].split("T").first[5..-1]
   end
