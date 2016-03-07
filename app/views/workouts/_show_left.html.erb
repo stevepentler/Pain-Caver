@@ -1,46 +1,48 @@
-<div class="col s2 center">
-  <br><br>
-  <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
+<% cache "famous-race-#{@presenter.race.title}" do %>
+  <div class="col s2 center">
+    <br><br>
+    <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
 
-  <div class="card background-color">
-    <div class="card-content">
-    <h5>Course<br>Comparison</h5>
-    <hr>
-    <%= form_tag(workout_path(@presenter.activity), method: "get") do %>
-      <%= radio_button_tag(:race, "leadville") %>
-      <%= label_tag(:race_leadville, "Leadville 100") %>
-      <%= radio_button_tag(:race, "boston") %>
-      <%= label_tag(:race_boston, "Boston Marathon") %>
-      <%= radio_button_tag(:race, "western") %>
-      <%= label_tag(:race_western, "Western States") %>
-      <%= radio_button_tag(:race, "badwater") %>
-      <%= label_tag(:race_badwater, "Badwater 135") %>
-      <%= radio_button_tag(:race, "hardrock") %>
-      <%= label_tag(:race_hardrock, "Hardrock 100") %>
-      <%= radio_button_tag(:race, "colfax") %>
-      <%= label_tag(:race_colfax, "Colfax Half") %>
-      <br><br>
-      <%= submit_tag("Calculate")%>
-    <% end %>
+    <div class="card background-color">
+      <div class="card-content">
+      <h5>Course<br>Comparison</h5>
+      <hr>
+      <%= form_tag(workout_path(@presenter.activity), method: "get") do %>
+        <%= radio_button_tag(:race, "leadville") %>
+        <%= label_tag(:race_leadville, "Leadville 100") %>
+        <%= radio_button_tag(:race, "boston") %>
+        <%= label_tag(:race_boston, "Boston Marathon") %>
+        <%= radio_button_tag(:race, "western") %>
+        <%= label_tag(:race_western, "Western States") %>
+        <%= radio_button_tag(:race, "badwater") %>
+        <%= label_tag(:race_badwater, "Badwater 135") %>
+        <%= radio_button_tag(:race, "hardrock") %>
+        <%= label_tag(:race_hardrock, "Hardrock 100") %>
+        <%= radio_button_tag(:race, "colfax") %>
+        <%= label_tag(:race_colfax, "Colfax Half") %>
+        <br><br>
+        <%= submit_tag("Calculate")%>
+      <% end %>
+      </div>
+    </div>
+
+    <div class="card background-color">
+      <div class="card-content">
+        <span class="card-title"><%= link_to(@presenter.race.title, @presenter.race.website) %> </span>
+        <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@presenter.race.distance) %> miles</p>
+        <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@presenter.race.course_record) %> CR</p>
+        <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@presenter.race.elevation_gain.to_i) %> ft gain</p>
+        <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@presenter.race.max_elevation.to_i) %> ft max</p>
+      </div>
+      <div class="card-action">
+        <p style="text-decoration: underline"><%= @presenter.race.city %>, <%= @presenter.race.state %></p>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header">Race Description</div>
+            <div class="collapsible-body"><p><%= @presenter.race.description %></p></div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-
-  <div class="card background-color">
-    <div class="card-content">
-      <span class="card-title"><%= link_to(@presenter.race.title, @presenter.race.website) %> </span>
-      <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@presenter.race.distance) %> miles</p>
-      <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@presenter.race.course_record) %> CR</p>
-      <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@presenter.race.elevation_gain.to_i) %> ft gain</p>
-      <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@presenter.race.max_elevation.to_i) %> ft max</p>
-    </div>
-    <div class="card-action">
-      <p style="text-decoration: underline"><%= @presenter.race.city %>, <%= @presenter.race.state %></p>
-      <ul class="collapsible" data-collapsible="accordion">
-        <li>
-          <div class="collapsible-header">Race Description</div>
-          <div class="collapsible-body"><p><%= @presenter.race.description %></p></div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<% end %>

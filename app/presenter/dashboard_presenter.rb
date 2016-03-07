@@ -8,11 +8,10 @@ class DashboardPresenter < SimpleDelegator
   
   def initialize(current_user)
     @current_user = current_user
-    super(@service)
   end
 
   def stats
-    UserStatsService.new(current_user)  
+    stats ||= UserStatsService.new(current_user) 
   end
 
   def upcoming_races
@@ -25,7 +24,7 @@ class DashboardPresenter < SimpleDelegator
   end
 
   def trail_service
-    TrailService.new(current_user)
+    trail_service ||= TrailService.new(current_user)
   end
 
 end

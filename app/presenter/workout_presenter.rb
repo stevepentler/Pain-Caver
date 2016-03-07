@@ -1,24 +1,27 @@
 class WorkoutPresenter < SimpleDelegator
 
     attr_reader :service,
-                :activitity,
+                :activity,
                 :race,
                 :current_user,
                 :params
                 
-  def initialize(current_user, params)
+  def initialize(current_user, params={race: "leadville"})
     @current_user = current_user
     @params = params
-    @service = ActivityService.new(current_user, race)
-    super(@service)
+    super(service)
+  end
+
+  def service
+    @service ||= ActivityService.new(current_user, race)
   end
 
   def activity
-    service.single_activity(params[:id])
+    @activity ||= service.single_activity(params[ :id])
   end
 
   def race
-    Race.find_by(title_id: params[:race]) || Race.first
+    @race ||= Race.find_by(title_id: params[:race])
   end
 
 end
