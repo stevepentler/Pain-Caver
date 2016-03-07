@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 gem 'strava-api-v3'
 gem 'omniauth-strava'
 gem 'figaro'
-gem 'rails_12factor'
 gem 'faraday'
 gem 'mechanize'
 gem 'polylines'
@@ -17,6 +16,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'pry'
