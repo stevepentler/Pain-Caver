@@ -1,14 +1,21 @@
 class User < ActiveRecord::Base
   has_many :user_races
   validates :provider, presence: true, acceptance: {accept: 'strava'}
-  validates :user_id, presence: true, uniqueness: true
-  validates :token, presence: true, uniqueness: true
-  validates :email, presence: true, uniqueness: true
+  validates :user_id, presence: true
+  validates :token, presence: true
+  validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
   
   def self.find_or_create_by_auth(auth)
     user = User.find_or_create_by(provider: auth[:provider], user_id: auth[:uid])
+    user_attributes(user, auth)
+
+    user.save
+    return user
+  end
+
+  def self.user_attributes(user, auth)
     user.token = auth[:credentials][:token]
     user.email = auth[:info][:email]
     user.name = auth[:info][:name]
@@ -23,9 +30,6 @@ class User < ActiveRecord::Base
     user.shoes = shoe_mileage(auth)
     user.follower_count = auth[:extra][:raw_info][:follower_count]
     user.friend_count = auth[:extra][:raw_info][:friend_count]
-
-    user.save
-    return user
   end
 
   def self.shoe_mileage(auth)

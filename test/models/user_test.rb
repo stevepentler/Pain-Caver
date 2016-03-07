@@ -1,13 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  
-test 'attributues' do 
-  # assert_equal 0, User.count
-  # user = User.find_or_create_by_auth(auth_hash)
-  # assert_equal 1, User.count
-end
-
 
 
 
