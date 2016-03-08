@@ -1,4 +1,4 @@
-  <% cache "user-monthly-stats-#{@stats.distance("ytd")}" do %>
+  <% cache "user-monthly-stats-#{@presenter.stats.distance("ytd")}" do %>
     <div class="col s2 center">
       <br><br>
       <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
@@ -9,10 +9,10 @@
           <div class="card-content">
             <span class="card-title">Year to Date</span>
             <hr>
-            <p><i class="tiny material-icons">trending_flat</i> <%= number_with_delimiter(@stats.distance("ytd")) %> miles</p>
-            <p><i class="tiny material-icons">query_builder</i> <%= @stats.sessions("ytd") %> sessions</p>
-            <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@stats.duration("ytd")) %></p>
-            <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@stats.elevation_gain("ytd").to_i) %> ft gain</p>
+            <p><i class="tiny material-icons">trending_flat</i> <%= number_with_delimiter(@presenter.stats.distance("ytd")) %> miles</p>
+            <p><i class="tiny material-icons">query_builder</i> <%= @presenter.stats.sessions("ytd") %> sessions</p>
+            <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@presenter.stats.duration("ytd")) %></p>
+            <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@presenter.stats.elevation_gain("ytd").to_i) %> ft gain</p>
           </div>
         </div>
 

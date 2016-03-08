@@ -1,17 +1,17 @@
-<h4 class="center titillium"><%= @service.percentage_difficulty(@activity) %> the <%= @race.title %></h4>
+<h4 class="center titillium"><%= @presenter.percentage_difficulty(@presenter.activity) %> the <%= @presenter.race.title %></h4>
 
 <table class="bordered highlight centered responsive-table font-color font-outline">
 
   <tbody>
     <tr>
       <td><i class="medium material-icons">navigation</i><br>Elevation</td>
-      <td><span><%= @service.total_elevation_gain(@activity) %></span> ft<br>
+      <td><span><%= @presenter.total_elevation_gain(@presenter.activity) %></span> ft<br>
         total gain</td>   
-      <td><span><%= @service.elev_high(@activity) %></span> ft<br>
+      <td><span><%= @presenter.elev_high(@presenter.activity) %></span> ft<br>
         max</td> 
-      <td><span><%= @service.elev_low(@activity) %></span> ft<br>
+      <td><span><%= @presenter.elev_low(@presenter.activity) %></span> ft<br>
         min</td> 
-      <td><span><%= @service.score_elevation(@activity) %></span><br>
+      <td><span><%= @presenter.score_elevation(@presenter.activity) %></span><br>
         rating/35<td>
     </tr>
   </tbody>
@@ -19,13 +19,13 @@
   <tbody>
     <tr>
       <td><i class="medium material-icons">query_builder</i><br>Duration</td>
-      <td><span><%= @service.distance(@activity) %></span> miles<br>
+      <td><span><%= @presenter.distance(@presenter.activity) %></span> miles<br>
         distance</td>   
-      <td><span><%= @service.duration(@activity) %></span><br>
+      <td><span><%= @presenter.duration(@presenter.activity) %></span><br>
         duration</td> 
-      <td><span><%= @service.elapsed_time(@activity) %></span><br>
+      <td><span><%= @presenter.elapsed_time(@presenter.activity) %></span><br>
         elapsed</td> 
-      <td><span><%= @service.score_duration(@activity) %></span><br>
+      <td><span><%= @presenter.score_duration(@presenter.activity) %></span><br>
         rating/60<td>
     </tr>
   </tbody>
@@ -33,25 +33,25 @@
   <tbody>
     <tr>
       <td><i class="medium material-icons">trending_up</i><br>Heartrate</td>
-      <td><span><%= @service.average_heartrate(@activity) %></span> bpm<br>
+      <td><span><%= @presenter.average_heartrate(@presenter.activity) %></span> bpm<br>
         average</td>   
-      <td><span><%= @service.max_heartrate(@activity) %></span> bpm<br>
+      <td><span><%= @presenter.max_heartrate(@presenter.activity) %></span> bpm<br>
         max</td> 
-      <td><span><%= @service.ideal_heartrate %> </span> bpm<br>
+      <td><span><%= @presenter.ideal_heartrate %> </span> bpm<br>
         target</td> 
-      <td><span><%= @service.score_heartrate(@activity) %></span> <br>
-        rating/<%= @service.heartrate_range(@activity) %><td>
+      <td><span><%= @presenter.score_heartrate(@presenter.activity) %></span> <br>
+        rating/<%= @presenter.heartrate_range(@presenter.activity) %><td>
     </tr>
   </tbody>
 
   <tbody>
     <tr>
       <td><i class="medium material-icons">trending_flat</i><br>Speed</td>
-      <td><span><%= @service.average_pace(@activity) %></span><br>
+      <td><span><%= @presenter.average_pace(@presenter.activity) %></span><br>
         pace</td>   
-      <td><span><%= @service.average_speed(@activity) %></span> mph<br>
+      <td><span><%= @presenter.average_speed(@presenter.activity) %></span> mph<br>
         average</td> 
-      <td><span><%= @service.max_speed(@activity) %></span> mph<br>
+      <td><span><%= @presenter.max_speed(@presenter.activity) %></span> mph<br>
         max</td> 
       <td>-<br>
         not rated<td>

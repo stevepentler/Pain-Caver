@@ -18,7 +18,7 @@
       </thead>
 
       <tbody>
-        <% @upcoming_races.each do |race| %>
+        <% @presenter.upcoming_races.each do |race| %>
           <tr>
             <td><%= race.date %></td> 
             <td><%= race.title %></td> 

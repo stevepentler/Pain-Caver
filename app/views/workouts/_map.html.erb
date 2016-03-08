@@ -2,7 +2,7 @@
   function trailMap() {
     
     var map_options = {
-      center: new google.maps.LatLng(<%= @service.midpoint_latitude(@activity) %>, <%= @service.midpoint_longitude(@activity) %>),
+      center: new google.maps.LatLng(<%= @presenter.midpoint_latitude(@presenter.activity) %>, <%= @presenter.midpoint_longitude(@presenter.activity) %>),
       zoom: 13,
       mapTypeId: google.maps.MapTypeId.TERRAIN,
       panControl: false,
@@ -13,8 +13,8 @@
     var map = new google.maps.Map(document.getElementById("google-map"), map_options);
 
     var startMarker = new google.maps.Marker({
-      position: { lat: <%= @service.start_latitude(@activity) %>, 
-                  lng: <%= @service.start_longitude(@activity) %> },
+      position: { lat: <%= @presenter.start_latitude(@presenter.activity) %>, 
+                  lng: <%= @presenter.start_longitude(@presenter.activity) %> },
       map: map,
       label: "+"
     });
@@ -26,7 +26,7 @@
       map: map
     });
 
-    var path = <%= @service.polyline(@activity).to_json.html_safe %>;
+    var path = <%= @presenter.polyline(@presenter.activity).to_json.html_safe %>;
 
     poly.setPath(path);
   };
