@@ -42,7 +42,6 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
   end
 
   test 'user views upcoming races on dashboard' do
-    skip
     login_and_visit_dashboard
 
     user_race = UserRace.create(user_id: @user.id,

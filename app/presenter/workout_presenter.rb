@@ -3,6 +3,7 @@ class WorkoutPresenter < SimpleDelegator
     attr_reader :service,
                 :activity,
                 :race,
+                :stats,
                 :current_user,
                 :params
                 
@@ -22,6 +23,10 @@ class WorkoutPresenter < SimpleDelegator
 
   def race
     @race ||= Race.find_by(title_id: params[:race]) || Race.first
+  end
+
+  def stats
+   @stats ||= UserStatsService.new(current_user)
   end
 
 end
