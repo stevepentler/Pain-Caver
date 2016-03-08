@@ -27,15 +27,9 @@ class User < ActiveRecord::Base
     user.sex = auth[:extra][:raw_info][:sex]
     user.athlete_type = auth[:extra][:raw_info][:athlete_type]
     user.weight = auth[:extra][:raw_info][:weight]
-    user.shoes = shoe_mileage(auth)
+    user.shoes = auth[:extra][:raw_info][:shoes]
     user.follower_count = auth[:extra][:raw_info][:follower_count]
     user.friend_count = auth[:extra][:raw_info][:friend_count]
   end
 
-  def self.shoe_mileage(auth)
-    shoes = auth[:extra][:raw_info][:shoes]
-    shoes.map do |shoe|
-      {shoe[:name] => shoe[:distance]}
-    end
-  end
 end

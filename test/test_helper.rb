@@ -7,6 +7,7 @@ require 'vcr'
 require 'minitest-vcr'
 require 'webmock'
 require 'database_cleaner'
+require 'mocha/mini_test'
 require 'minitest/pride'
 
 SimpleCov.start 'rails'

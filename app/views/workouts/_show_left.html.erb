@@ -1,4 +1,4 @@
-
+<% cache "workout-show-left-#{@presenter.current_user}" do %>
   <div class="col s2 center">
     <br><br>
     <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
@@ -45,3 +45,4 @@
       </div>
     </div>
   </div>
+<% end %> 

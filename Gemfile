@@ -39,5 +39,6 @@ group :test do
   gem 'webmock'
   gem 'capybara'
   gem 'simplecov'
+  gem 'mocha'
 end
 

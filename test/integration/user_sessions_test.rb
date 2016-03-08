@@ -60,11 +60,9 @@ class UserSessionsTest < ActionDispatch::IntegrationTest
       assert_equal "Colorado", user.state
       assert_equal "M", user.sex
       assert_equal 1, user.athlete_type
-      assert_equal "[{\"ASICS Gel Nimbus 17 Asics\"=>0.0}, {\"Saucony Peregrine Peregrine 4\"=>9688.0}]", user.shoes
+      assert_equal "[#<OmniAuth::AuthHash distance=0.0 id=\"g1261219\" name=\"ASICS Gel Nimbus 17 Asics\" primary=false resource_state=2>, #<OmniAuth::AuthHash distance=9688.0 id=\"g1261218\" name=\"Saucony Peregrine Peregrine 4\" primary=true resource_state=2>]", user.shoes
       assert_equal "0", user.follower_count
-      assert_equal "3", user.friend_count
-      assert_equal [{"ASICS Gel Nimbus 17 Asics"=>0.0}, {"Saucony Peregrine Peregrine 4"=>9688.0}], User.shoe_mileage(auth)
-    end
+      assert_equal "3", user.friend_count    end
   end
   
 end
