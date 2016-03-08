@@ -2,8 +2,6 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
 
-
-
 test 'auth hash' do 
   assert_difference 'User.count', 1 do 
     user = User.find_or_create_by_auth(auth_hash)
@@ -26,19 +24,40 @@ end
 
 test 'user has races' do
   user = create(:user) 
-  race = UserRace.create( user_id: user.id,
-                          title: "Revel Rockies",
-                          date: "06-12-2016",
-                          distance: 26.2,
-                          target_time: "3:00",
-                          location: "Morrison, CO",
-                          start_time: "7AM")
-  assert_equal "Revel Rockies", user.user_races.first.title
-  assert_equal "06-12-2016", user.user_races.first.date
-  assert_equal 26.2, user.user_races.first.distance
-  assert_equal "3:00", user.user_races.first.target_time
-  assert_equal "Morrison, CO", user.user_races.first.location
-  assert_equal "7AM", user.user_races.first.start_time
+  assert_difference 'user.user_races.count', 1 do 
+    race = UserRace.create( user_id: user.id,
+                            title: "Revel Rockies",
+                            date: "06-12-2016",
+                            distance: 26.2,
+                            target_time: "3:00",
+                            location: "Morrison, CO",
+                            start_time: "7AM")
+
+    assert_equal "Revel Rockies", user.user_races.first.title
+    assert_equal "06-12-2016", user.user_races.first.date
+    assert_equal 26.2, user.user_races.first.distance
+    assert_equal "3:00", user.user_races.first.target_time
+    assert_equal "Morrison, CO", user.user_races.first.location
+    assert_equal "7AM", user.user_races.first.start_time
+    assert_equal 1, user.user_races.count
+  end
+
+  race2 = UserRace.create( user_id: user.id,
+                          title: "Leadville 100",
+                          date: "05-23-2016",
+                          distance: 100.0,
+                          target_time: "22hr",
+                          location: "Leadville, CO",
+                          start_time: "5AM")
+
+  assert_equal "Leadville 100", user.user_races.last.title
+  assert_equal "05-23-2016", user.user_races.last.date
+  assert_equal 100.0, user.user_races.last.distance
+  assert_equal "22hr", user.user_races.last.target_time
+  assert_equal "Leadville, CO", user.user_races.last.location
+  assert_equal "5AM", user.user_races.last.start_time
+  assert_equal 2, user.user_races.count
+
 end
 
 
