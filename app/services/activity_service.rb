@@ -2,18 +2,22 @@ class ActivityService
   include Formatter
   include Scoring
   attr_reader :client,
-              :race
+              :race,
+              :current_user
 
   def initialize(current_user, race=nil)
     @client = Strava::Api::V3::Client.new(:access_token => "#{current_user.token}")
     @race = race ||= Race.find(1)
+    @current_user = current_user
   end
 
   def list_athlete_activities
-    client.list_athlete_activities.select {|activity| activity["type"] == "Run"}
+    Rails.cache.fetch("workouts-index-#{current_user.id}", expires_in: (0.2).hours) do 
+      client.list_athlete_activities.select {|activity| activity["type"] == "Run"}
+    end
   end
 
-  def count_activity_services #for caching
+  def count_activity_services
     list_athlete_activities.count
   end
 

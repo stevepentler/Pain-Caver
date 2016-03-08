@@ -17,8 +17,10 @@ class TrailService
   end
 
   def trails(current_user)
-    all_trails(current_user).select do |trail|
-      trail["activities"] && parse(trail)
+    Rails.cache.fetch("trails-#{current_user.id}", expires_in: 72.hours) do 
+      all_trails(current_user).select do |trail|
+        trail["activities"] && parse(trail)
+      end
     end
   end
 

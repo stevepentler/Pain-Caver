@@ -8,20 +8,26 @@ class WorkoutsPresenter < SimpleDelegator
                 
   def initialize(current_user)
     @current_user = current_user
-    @service = ActivityService.new(current_user)
-    super(@service)
+    super(service)
+  end
+
+  def service
+    @service ||= ActivityService.new(current_user)
   end
 
   def activities
-    service.list_athlete_activities
+    @activity ||= service.list_athlete_activities
   end
 
   def stats
-    UserStatsService.new(current_user)
+   @stats ||= UserStatsService.new(current_user)
   end
 
   def running_tip
-    tip_count = rand(RunningTip.count)
-    running_tip = RunningTip.offset(tip_count).first
+    @running_tip ||= RunningTip.offset(tip_count).first
+  end
+
+  def tip_count
+    rand(RunningTip.count)
   end
 end
