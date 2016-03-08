@@ -52,6 +52,7 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
                                 location: "Morrison, CO",
                                 start_time: "7AM",
                                 )
+    visit dashboard_path
 
     assert_equal dashboard_path, current_path
     assert page.has_content?("Upcoming Races")
