@@ -1,8 +1,7 @@
-<% cache "workout-show-left-#{@presenter.current_user}" do %>
-  <div class="col s2 center">
-    <br><br>
-    <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
-
+<div class="col s2 center">
+  <br><br>
+  <%= image_tag(@presenter.current_user.profile_picture, class: "circle profile-pic") %>
+  <% cache "workout-left" do %> 
     <div class="card background-color">
       <div class="card-content">
       <h5>Course<br>Comparison</h5>
@@ -44,5 +43,5 @@
         </ul>
       </div>
     </div>
-  </div>
-<% end %> 
+  <% end %> 
+</div>

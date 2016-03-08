@@ -16,10 +16,8 @@ class UserStatsService
   end
 
   def distance(timeframe)
-    Rails.cache.fetch("distance-#{current_user.id}", expires_in: (0.2).hours) do 
-      meters = stats_for(current_user)["#{timeframe}_run_totals"]["distance"]
-      miles = (meters * meter_to_mile).round(2)
-    end
+    meters = stats_for(current_user)["#{timeframe}_run_totals"]["distance"]
+    miles = (meters * meter_to_mile).round(2)
   end
 
   def duration(timeframe) #recent / ytd

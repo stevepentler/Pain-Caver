@@ -17,7 +17,7 @@ class WorkoutPresenter < SimpleDelegator
   end
 
   def activity
-    @activity ||= service.single_activity(params[ :id])
+    @activity ||= @service.single_activity(params[ :id])
   end
 
   def race
