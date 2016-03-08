@@ -21,7 +21,7 @@ class WorkoutPresenter < SimpleDelegator
   end
 
   def race
-    @race ||= Race.find_by(title_id: params[:race])
+    @race ||= Race.find_by(title_id: params[:race]) || Race.first
   end
 
 end
