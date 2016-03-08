@@ -2,19 +2,18 @@ require 'test_helper'
 
 class UserDashboardTest < ActionDispatch::IntegrationTest
 
-  def login_and_create_tip
+  def login_and_visit_dashboard
     @user = create(:user)
-    running_tip = create(:running_tip)
-    visit root_path
-    click_on "Login with Strava"
+    @running_tip = create(:running_tip)
+    ApplicationController.any_instance.stubs(:current_user).returns(@user)
     visit dashboard_path
+    assert_equal dashboard_path, current_path
   end
 
   test 'user views monthly stats on dashboard' do
-    login_and_create_tip
+    login_and_visit_dashboard
+
     VCR.use_cassette('stats') do
-      
-      assert_equal dashboard_path, current_path
       assert page.has_content?(@user.name)
       assert page.has_content?("Year to Date")
       assert page.has_content?("miles")
@@ -26,8 +25,8 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
   end
 
   test 'user views elite runner options' do
-    login_and_create_tip
-    
+    login_and_visit_dashboard
+
     assert_equal dashboard_path, current_path
     assert page.has_content?("Elite Runner")
     assert page.has_content?("Anton Krupicka")
@@ -36,18 +35,26 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
   end
 
   test 'user views running tip on dashboard' do
-    login_and_create_tip
-    visit dashboard_path
-    assert_equal dashboard_path, current_path
+    login_and_visit_dashboard
 
     assert page.has_content?("Running Tip")
+    assert page.has_content?(@running_tip.tip)
   end
 
   test 'user views upcoming races on dashboard' do
-    user_race = create(:user_race)
-    login_and_create_tip
-    assert_equal dashboard_path, current_path
+    skip
+    login_and_visit_dashboard
 
+    user_race = UserRace.create(user_id: @user.id,
+                                date: "06-12-2016",
+                                title: "Revel Rockies",
+                                distance: 26.2,
+                                target_time: "3:00",
+                                location: "Morrison, CO",
+                                start_time: "7AM",
+                                )
+
+    assert_equal dashboard_path, current_path
     assert page.has_content?("Upcoming Races")
     assert page.has_content?("Date")
     assert page.has_content?(user_race.date)
@@ -66,16 +73,15 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
   end
 
   test 'user views dashboard without user_races' do
-    login_and_create_tip
-    assert_equal dashboard_path, current_path
+    login_and_visit_dashboard
 
     assert page.has_content?("Add a Race or Goal")
     assert page.has_content?(@user.name)
-
   end
 
   test 'user views dashboard navbar' do 
-    login_and_create_tip
+    login_and_visit_dashboard
+
     VCR.use_cassette('stats') do
       
       assert_equal dashboard_path, current_path
@@ -89,14 +95,10 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
   end
 
   test 'user views dashboard running tip' do 
-    user = create(:user)
-    running_tip = create(:running_tip)
-    visit root_path
-    click_on "Login with Strava"
-    visit dashboard_path
+    login_and_visit_dashboard
 
-    assert page.has_content?(running_tip.tip)
-    assert page.has_content?(user.name)
+    assert page.has_content?(@running_tip.tip)
+    assert page.has_content?(@user.name)
   end
 
 end
