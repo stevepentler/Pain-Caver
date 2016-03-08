@@ -5,15 +5,41 @@ class UserTest < ActiveSupport::TestCase
 
 
 test 'auth hash' do 
-  User.find_or_create_by_auth(auth_hash)
+  assert_difference 'User.count', 1 do 
+    user = User.find_or_create_by_auth(auth_hash)
+
+    assert_equal ENV['USER_TOKEN'], user.token
+    assert_equal ENV['USER_EMAIL'], user.email
+    assert_equal "Steve Pentler", user.name
+    assert_equal "Steve", user.first_name
+    assert_equal "Pentler", user.last_name
+    assert_equal "https://dgalywyr863hv.cloudfront.net/pictures/athletes/13541251/3953992/5/large.jpg", user.profile_picture
+    assert_equal "Denver", user.city
+    assert_equal "Colorado", user.state
+    assert_equal "M", user.sex
+    assert_equal 1, user.athlete_type
+    assert_equal "[{\"ASICS Gel Nimbus 17 Asics\"=>42449.0}, {\"Saucony Peregrine Peregrine 4\"=>80085.0}]", user.shoes
+    assert_equal "0", user.follower_count
+    assert_equal "8", user.friend_count
+  end
 end 
 
-
-
-
-
-
-
+test 'user has races' do
+  user = create(:user) 
+  race = UserRace.create( user_id: user.id,
+                          title: "Revel Rockies",
+                          date: "06-12-2016",
+                          distance: 26.2,
+                          target_time: "3:00",
+                          location: "Morrison, CO",
+                          start_time: "7AM")
+  assert_equal "Revel Rockies", user.user_races.first.title
+  assert_equal "06-12-2016", user.user_races.first.date
+  assert_equal 26.2, user.user_races.first.distance
+  assert_equal "3:00", user.user_races.first.target_time
+  assert_equal "Morrison, CO", user.user_races.first.location
+  assert_equal "7AM", user.user_races.first.start_time
+end
 
 
 def auth_hash
