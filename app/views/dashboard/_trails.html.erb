@@ -13,7 +13,6 @@
   <tbody>
     <% @presenter.trail_service.trails(current_user).each do |trail| %>
       <tr>
-        <%#= binding.pry %>
         <td><%= @presenter.trail_service.name(trail) %></td> 
         <td><%= @presenter.trail_service.distance(trail) %></td> 
         <td><%= @presenter.trail_service.city(trail) %>, <%= @presenter.trail_service.state(trail) %></td>
@@ -31,7 +30,9 @@
           <ul class="collapsible" data-collapsible="accordion">
             <li>
               <div class="collapsible-header">Directions</div>
-              <div class="collapsible-body"><p><%= @presenter.trail_service.directions(trail) %></p></div>
+              <div class="collapsible-body">
+                <p><%= @presenter.trail_service.directions(trail) %></p>
+              </div>
             </li>
           </ul>
         </td>
