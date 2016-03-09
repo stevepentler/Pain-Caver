@@ -4,10 +4,12 @@
     <%= render partial: "show_left" %> 
     
     <div class="col s10 custom-padding">
-      <%= render partial: "workout_snapshot" %> 
+      <h3 class="titillium center"><%= @presenter.name(@presenter.activity) %></h3>
       <%= render partial: "workout_difficulty" %>
+      <h4 class="titillium center">Snapshot</h4>
+
+      <%= render partial: "workout_snapshot" %> 
       
-      <h3 class="titillium center">Route</h3>
         <%= render partial: "map" %>
     </div>
   </div>
