@@ -3,7 +3,7 @@
     <br><br>
     <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
 
-    <div class="card background-color">
+    <div class="card background-color" id="race-selection">
       <div class="card-content">
       <h5>Course<br>Comparison</h5>
       <hr>
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="card background-color">
+    <div class="card background-color" id="race-details">
       <div class="card-content">
         <span class="card-title"><%= link_to(@presenter.race.title, @presenter.race.website) %> </span>
         <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@presenter.race.distance) %> miles</p>
