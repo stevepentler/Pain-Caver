@@ -1,6 +1,6 @@
 <% cache 'snapshot-#{@presenter.activity}' do %>
   <h5 class="center"><%= @presenter.name(@presenter.activity) %> </h5>
-  <table class="bordered highlight centered responsive-table font-color font-outline">
+  <table class="bordered highlight centered responsive-table font-color font-outline" id="snapshot">
     <thead>
       <tr>
           <th data-field="Date">Date</th>
@@ -19,8 +19,8 @@
         <td><%= @presenter.distance(@presenter.activity) %> mi</td>  
         <td><%= @presenter.duration(@presenter.activity) %></td>
         <td><%= @presenter.average_pace(@presenter.activity) %></td>
-        <td><%= @presenter.total_elevation_gain(@presenter.activity) %></td> 
-        <td><%= @presenter.elev_high(@presenter.activity) %></td> 
+        <td><%= @presenter.total_elevation_gain(@presenter.activity) %> ft</td> 
+        <td><%= @presenter.elev_high(@presenter.activity) %> ft</td> 
         <td><%= @presenter.start_time(@presenter.activity) %></td> 
       </tr> 
     </tbody>

@@ -69,25 +69,29 @@ class WorkoutShowTest < ActionDispatch::IntegrationTest
     end
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  test 'user views workout snapshot' do 
+    login_and_visit_workout
+    
+    assert page.has_content?("Triple Crown")
+    within('#snapshot thead') do
+      assert page.has_content?("Date") 
+      assert page.has_content?("Distance") 
+      assert page.has_content?("Duration") 
+      assert page.has_content?("Pace") 
+      assert page.has_content?("Elevation Gain") 
+      assert page.has_content?("Max Elevation") 
+      assert page.has_content?("Start Time") 
+    end
+    within('#snapshot tbody') do
+      assert page.has_content?("03-05") 
+      assert page.has_content?("13.42") 
+      assert page.has_content?("1hr 39m") 
+      assert page.has_content?("7:23") 
+      assert page.has_content?("352 ft") 
+      assert page.has_content?("5379 ft") 
+      assert page.has_content?("13:35:10") 
+    end
+  end
 
   def login_and_visit_workout
     @user = create(:user)
