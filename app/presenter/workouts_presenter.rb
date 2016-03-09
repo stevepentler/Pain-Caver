@@ -4,7 +4,7 @@ class WorkoutsPresenter < SimpleDelegator
                 :activitites,
                 :stats,
                 :running_tip,
-                :stat_leader,
+                :stat_leaders,
                 :current_user
                 
   def initialize(current_user)
@@ -24,10 +24,9 @@ class WorkoutsPresenter < SimpleDelegator
    @stats ||= UserStatsService.new(current_user)
   end
 
-  def stat_leader
+  def stat_leaders
     @stats ||= UserStatistic.order(recent_mileage: :desc)
-                            .includes(:user)
-                            .first
+                            .includes(:user)                     
   end
 
   def running_tip
