@@ -1,4 +1,4 @@
-<% Rails.cache.fetch("monthly-stats-#{@presenter.current_user.id}", expires_in: (0.3).hours) do %>
+<% cache("monthly-stats-#{@presenter.current_user.id}", expires_in: (0.3).hours) do %>
   <div class="col s2 center" id="user-recent">
     <br><br>
     <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
