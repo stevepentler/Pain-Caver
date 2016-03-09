@@ -12,6 +12,8 @@ class DashboardPresenter < SimpleDelegator
 
   def stats
     stats ||= UserStatsService.new(current_user) 
+    stats.create_user_statistics(current_user, stats)
+    return stats
   end
 
   def upcoming_races

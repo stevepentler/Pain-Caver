@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305002240) do
+ActiveRecord::Schema.define(version: 20160309203233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,22 @@ ActiveRecord::Schema.define(version: 20160305002240) do
 
   add_index "user_races", ["user_id"], name: "index_user_races_on_user_id", using: :btree
 
+  create_table "user_statistics", force: :cascade do |t|
+    t.integer  "user_id"
+    t.float    "ytd_mileage"
+    t.integer  "ytd_sessions"
+    t.string   "ytd_duration"
+    t.integer  "ytd_elevation"
+    t.float    "recent_mileage"
+    t.integer  "recent_sessions"
+    t.string   "recent_duration"
+    t.integer  "recent_elevation"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "user_statistics", ["user_id"], name: "index_user_statistics_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "provider"
@@ -73,4 +89,5 @@ ActiveRecord::Schema.define(version: 20160305002240) do
   end
 
   add_foreign_key "user_races", "users"
+  add_foreign_key "user_statistics", "users"
 end

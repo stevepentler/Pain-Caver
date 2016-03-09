@@ -10,7 +10,7 @@ class UserStatsService
     end
     @current_user = current_user
   end
-  
+
   def sessions(timeframe)
     stats_for(current_user)["#{timeframe}_run_totals"]["count"]
   end
@@ -32,6 +32,9 @@ class UserStatsService
     feet = (meters * meter_to_foot).to_i
   end
 
+  def create_user_statistics(current_user, stats)
+    user_statistic = UserStatistic.user_statistic_attributes(current_user, stats)
+  end
 
   private
 
