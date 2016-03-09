@@ -1,4 +1,4 @@
-<% cache 'snapshot-#{@presenter.activity}' do %>
+<% cache 'snapshot-#{@presenter.current_user}-#{@presenter.activity}' do %>
   <h5 class="center"><%= @presenter.name(@presenter.activity) %> </h5>
   <table class="bordered highlight centered responsive-table font-color font-outline" id="snapshot">
     <thead>
