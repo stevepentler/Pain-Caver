@@ -2,20 +2,16 @@ require 'test_helper'
 
 class UserDashboardTest < ActionDispatch::IntegrationTest
 
-
   test 'user views monthly stats on dashboard' do
     login_and_visit_dashboard
 
-    VCR.use_cassette('stats') do
-      
-      assert page.has_content?(@user.name)
-      assert page.has_content?("Year to Date")
-      assert page.has_content?("miles")
-      assert page.has_content?("sessions")
-      assert page.has_content?("hr")
-      assert page.has_content?("m")
-      assert page.has_content?("gain")
-    end
+    assert page.has_content?(@user.name)
+    assert page.has_content?("Year to Date")
+    assert page.has_content?("miles")
+    assert page.has_content?("sessions")
+    assert page.has_content?("hr")
+    assert page.has_content?("m")
+    assert page.has_content?("gain")
   end
 
   test 'user views elite runner options' do
