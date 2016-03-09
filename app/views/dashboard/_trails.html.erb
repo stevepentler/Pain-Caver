@@ -13,6 +13,7 @@
   <tbody>
     <% @presenter.trail_service.trails(current_user).each do |trail| %>
       <tr>
+        <%#= binding.pry %>
         <td><%= @presenter.trail_service.name(trail) %></td> 
         <td><%= @presenter.trail_service.distance(trail) %></td> 
         <td><%= @presenter.trail_service.city(trail) %>, <%= @presenter.trail_service.state(trail) %></td>
@@ -20,7 +21,10 @@
           <ul class="collapsible" data-collapsible="accordion">
             <li>
               <div class="collapsible-header">Description</div>
-              <div class="collapsible-body"><p><%= @presenter.trail_service.description(trail) %></p></div>
+              <div class="collapsible-body">
+                <p><%= @presenter.trail_service.description(trail) %></p>
+                <%= render partial: "trail_map", :locals => {:trail => trail}  %>
+              </div>
             </li>
         </td>
         <td>
@@ -32,11 +36,6 @@
           </ul>
         </td>
       </tr>
-          <!-- <td><%#= link_to("Details", trail_path({name: @trail_service.name(trail), -->
-                                               city: @trail_service.city(trail),
-                                               state: @trail_service.state(trail)}
-                                             <!-- )) %> -->
-      
     <% end %> 
   </tbody>
 </table>
