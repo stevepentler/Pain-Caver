@@ -1,14 +1,6 @@
 class UserStatistic < ActiveRecord::Base
   belongs_to :user
 
-  # def self.gather_statistics(current_user)
-  #   @stats_service ||= UserStatsService.new(current_user)
-  #   user_statistic = find_or_create_by(current_user.id)
-  #   create_user_statistic(current_user)
-  #   binding.pry
-  #   user.save
-  # end
-
   def self.user_statistic_attributes(current_user, service)
     user_statistic = find_or_create_by(user_id: current_user.id)
     
@@ -23,7 +15,6 @@ class UserStatistic < ActiveRecord::Base
     recent_duration:   service.duration("recent"),
     recent_elevation:  service.elevation_gain("recent"),
     })
-    
     return user_statistic
   end
 end
