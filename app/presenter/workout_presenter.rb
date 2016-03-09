@@ -17,7 +17,9 @@ class WorkoutPresenter < SimpleDelegator
   end
 
   def activity
-    @activity ||= service.single_activity(params[ :id])
+    Rails.cache.fetch("activity-#{params}") do 
+      service.single_activity(params[:id])
+    end
   end
 
   def race
