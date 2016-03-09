@@ -1,19 +1,10 @@
 require 'test_helper'
 
 class NavbarTest < ActionDispatch::IntegrationTest
-
-  def login
-    @user = create(:user)
-    visit root_path
-    click_on "Login with Strava"
-  end
-
+  
   test 'links for navbar' do 
-    skip
-    login
-    visit dashboard_path
-    assert_equal dashboard_path, current_path
-
+    login_and_visit_dashboard
+    race = create(:race)
     within("nav") do 
       click_on("View Workouts")
       assert_equal workouts_path, current_path
