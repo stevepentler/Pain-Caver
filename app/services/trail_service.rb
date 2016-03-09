@@ -17,7 +17,7 @@ class TrailService
   end
 
   def trails(current_user)
-    Rails.cache.fetch("trails-#{current_user.id}", expires_in: 72.hours) do 
+    Rails.cache.fetch("trails-#{current_user.id}", expires_in: 100.hours) do 
       all_trails(current_user).select do |trail|
         trail["activities"] && parse(trail)
       end
@@ -52,13 +52,20 @@ class TrailService
     trail["state"]
   end
 
-
   def description(trail)
     parse(trail)["description"].sub("&lt;br /&gt;<br />", "")
   end
 
   def directions(trail)
     trail["directions"]
+  end
+
+  def latitude(trail)
+    trail["lat"]
+  end
+
+  def longitude(trail)
+    trail["lon"]
   end
 
 
