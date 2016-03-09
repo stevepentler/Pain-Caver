@@ -67,7 +67,9 @@ class WorkoutIndexTest < ActionDispatch::IntegrationTest
     @user = create(:user)
     @running_tip = create(:running_tip)
     ApplicationController.any_instance.stubs(:current_user).returns(@user)
-    visit workouts_path
-    assert_equal workouts_path, current_path
+    VCR.use_cassette('activities') do 
+      visit workouts_path
+      assert_equal workouts_path, current_path
+    end
   end
 end

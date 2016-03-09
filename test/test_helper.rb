@@ -72,16 +72,10 @@ class ActionDispatch::IntegrationTest
   def login_and_visit_dashboard
     @user = create(:user)
     @running_tip = create(:running_tip)
+    VCR.use_cassette('dashboard') do 
     ApplicationController.any_instance.stubs(:current_user).returns(@user)
-    visit dashboard_path
-    assert_equal dashboard_path, current_path
-  end
-
-  def login_and_visit_dashboard
-    @user = create(:user)
-    @running_tip = create(:running_tip)
-    ApplicationController.any_instance.stubs(:current_user).returns(@user)
-    visit dashboard_path
-    assert_equal dashboard_path, current_path
+      visit dashboard_path
+      assert_equal dashboard_path, current_path
+    end
   end
 end
