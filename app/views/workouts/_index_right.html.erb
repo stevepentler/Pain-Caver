@@ -1,4 +1,4 @@
-<div class="col s2 center">
+<div class="col s2 center" id="anton-recent">
   <% cache "anton-index-stats" do %> 
     <br><br>
     <%= image_tag("anton-dashboard.jpg", class: "circle profile-pic") %>
@@ -6,11 +6,11 @@
     <%= "Anton Krupicka" %>
     <div class="card background-color">
       <div class="card-content">
-        <span class="card-title">Montly Stats</span>
+        <span class="card-title">Monthly Stats</span>
         <hr>
         <p><i class="tiny material-icons">trending_flat</i>40.6<%#= number_with_delimiter(@stats.distance("ytd")) %> miles/week</p>
         <p><i class="tiny material-icons">query_builder</i>2 <%#= @stats.sessions("ytd") %> sessions/week</p>
-        <p><i class="tiny material-icons">query_builder</i>7hr 35min <%#= number_with_delimiter(@stats.duration("ytd")) %>/week</p>
+        <p><i class="tiny material-icons">query_builder</i>7hr 35min<%#= number_with_delimiter(@stats.duration("ytd")) %>/week</p>
         <!-- <p><i class="tiny material-icons">navigation</i>89,757 <%#= number_with_delimiter(@stats.elevation_gain("ytd").to_i) %> ft gain</p> -->
         <hr>
         <ul class="collapsible" data-collapsible="accordion">

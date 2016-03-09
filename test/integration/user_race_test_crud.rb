@@ -1,18 +1,13 @@
 require 'test_helper'
 
 class UserRaceCrudTest < ActionDispatch::IntegrationTest
-  def login
-    @user = create(:user)
-    visit root_path
-    click_on "Login with Strava"
-  end
 
   test "user adds a race" do 
-    login
-    visit dashboard_path
-    assert_equal dashboard_path, current_path
-
-    click_on "Add a Race"
+    login_and_visit_dashboard
+    
+    within('h5') do 
+      click_on "add"
+    end
     assert_equal new_user_race_path, current_path
 
     assert page.has_content?("Date")
@@ -39,13 +34,11 @@ class UserRaceCrudTest < ActionDispatch::IntegrationTest
   end
 
   test "user edits a race" do 
-    login
-    user_race = create(:user_race)
-    visit dashboard_path
-    assert_equal dashboard_path, current_path
- 
+    login_and_visit_dashboard
+    create_race_and_visit_dashboard
+
     click_on "edit"
-    assert_equal edit_user_race_path(user_race.id), current_path
+    assert_equal edit_user_race_path(@user_race.id), current_path
 
     assert page.has_content?("Date")
     fill_in "user_race[date]", with: "05-23-1991"
@@ -71,16 +64,26 @@ class UserRaceCrudTest < ActionDispatch::IntegrationTest
   end
 
   test "user removes a race" do 
-    login
-    user_race = create(:user_race)
-    visit dashboard_path
-    assert_equal dashboard_path, current_path
+    login_and_visit_dashboard
+    create_race_and_visit_dashboard
 
     click_on "remove"
 
-    refute page.has_content?(user_race.title)
-    refute page.has_content?(user_race.date)
-    refute page.has_content?(user_race.distance)
-    refute page.has_content?(user_race.target_time)
+    refute page.has_content?(@user_race.title)
+    refute page.has_content?(@user_race.date)
+    refute page.has_content?(@user_race.distance)
+    refute page.has_content?(@user_race.target_time)
   end 
+
+  def create_race_and_visit_dashboard
+    @user_race = UserRace.create(user_id: @user.id,
+                        date: "06-12-2016",
+                        title: "Revel Rockies",
+                        distance: 26.2,
+                        target_time: "3:00",
+                        location: "Morrison, CO",
+                        start_time: "7AM",
+                        )
+    visit dashboard_path
+  end
 end

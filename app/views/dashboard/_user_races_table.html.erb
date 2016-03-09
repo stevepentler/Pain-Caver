@@ -1,5 +1,5 @@
 <% cache "user-races-#{@presenter.current_user}-#{current_user.user_races.maximum(:updated_at)}" do %>
-  <div class="col s8 custom-padding">
+  <div class="col s8 custom-padding" id="user-races">
     <table class="bordered highlight centered responsive-table font-color font-outline">
       <h4 class="titillium center black-text grey-shadow">Upcoming Races & Goals
         <%= link_to new_user_race_path do %>

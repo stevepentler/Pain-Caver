@@ -18,10 +18,6 @@ class ActiveSupport::TestCase
   def teardown 
     DatabaseCleaner.clean
   end
-  
-  class ActionDispatch::IntegrationTest
-    include Capybara::DSL
-  end
 
   VCR.configure do |config|
     config.cassette_library_dir = 'test/cassettes'
@@ -68,5 +64,24 @@ class ActiveSupport::TestCase
   }
 
   OmniAuth.config.add_mock(:strava, omniauth_hash)
+end
+  
+class ActionDispatch::IntegrationTest
+  include Capybara::DSL
 
+  def login_and_visit_dashboard
+    @user = create(:user)
+    @running_tip = create(:running_tip)
+    ApplicationController.any_instance.stubs(:current_user).returns(@user)
+    visit dashboard_path
+    assert_equal dashboard_path, current_path
+  end
+
+  def login_and_visit_dashboard
+    @user = create(:user)
+    @running_tip = create(:running_tip)
+    ApplicationController.any_instance.stubs(:current_user).returns(@user)
+    visit dashboard_path
+    assert_equal dashboard_path, current_path
+  end
 end

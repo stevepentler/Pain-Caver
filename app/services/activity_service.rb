@@ -7,7 +7,7 @@ class ActivityService
 
   def initialize(current_user, race=nil)
     @client = Strava::Api::V3::Client.new(:access_token => "#{current_user.token}")
-    @race = race ||= Race.find(1)
+    @race = race ||= Race.first
     @current_user = current_user
   end
 

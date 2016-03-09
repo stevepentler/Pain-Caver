@@ -1,10 +1,10 @@
 class DashboardPresenter < SimpleDelegator
 
-    attr_reader :stats,
-                :upcoming_races,
-                :running_tip,
-                :trail_service,
-                :current_user
+  attr_reader :stats,
+              :upcoming_races,
+              :running_tip,
+              :trail_service,
+              :current_user
   
   def initialize(current_user)
     @current_user = current_user
