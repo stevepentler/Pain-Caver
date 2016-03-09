@@ -25,11 +25,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 09 Mar 2016 01:39:09 GMT
+      - Wed, 09 Mar 2016 02:51:50 GMT
       Etag:
       - W/"b6e63e20565688c19bb3ca5bc1d9dc52"
       Set-Cookie:
-      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTFmZmM4NGRlODExYWI3ZjE5OTlhNzI1Y2YxODMyZTE0BjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--1322f520cae205e6a470208d70b65de5c63b399f;
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTZhZGYwYzZkZDJkNTU0MGQ2ODA3YmZkYzRjYjQ4ZTU5BjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--5e64c4243f9b1ca4ef54fd25b65b943ec0ddb655;
         domain=strava.com; path=/; HttpOnly
       Status:
       - 200 OK
@@ -38,9 +38,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600,30000'
       X-Ratelimit-Usage:
-      - '298,1193'
+      - '63,1332'
       X-Request-Id:
-      - 8c3b4b6f5a25e5c9ad7c67fd655d2e13
+      - 92021886a4a65cc62b9c77bbc812b0e2
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -51,7 +51,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"biggest_ride_distance":11705.6,"biggest_climb_elevation_gain":99.80000000000018,"recent_ride_totals":{"count":2,"distance":22048.69921875,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60.66666603088379,"achievement_count":9},"recent_run_totals":{"count":14,"distance":109088.40069580078,"moving_time":29860,"elapsed_time":35330,"elevation_gain":1587.6219062805176,"achievement_count":85},"recent_swim_totals":{"count":0,"distance":0.0,"moving_time":0,"elapsed_time":0,"elevation_gain":0.0,"achievement_count":0},"ytd_ride_totals":{"count":2,"distance":22049,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60},"ytd_run_totals":{"count":14,"distance":109088,"moving_time":29860,"elapsed_time":35330,"elevation_gain":1587},"ytd_swim_totals":{"count":0,"distance":0,"moving_time":0,"elapsed_time":0,"elevation_gain":0},"all_ride_totals":{"count":2,"distance":22049,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60},"all_run_totals":{"count":15,"distance":151537,"moving_time":41252,"elapsed_time":46769,"elevation_gain":1657},"all_swim_totals":{"count":0,"distance":0,"moving_time":0,"elapsed_time":0,"elevation_gain":0}}'
     http_version: 
-  recorded_at: Wed, 09 Mar 2016 01:39:09 GMT
+  recorded_at: Wed, 09 Mar 2016 02:51:50 GMT
 - request:
     method: get
     uri: https://www.strava.com/api/v3/athletes/13541251/stats?access_token=76d702a1cb0bcd86e7a85a8dde8f06c891edbd62
@@ -77,11 +77,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 09 Mar 2016 01:39:09 GMT
+      - Wed, 09 Mar 2016 02:51:50 GMT
       Etag:
       - W/"b6e63e20565688c19bb3ca5bc1d9dc52"
       Set-Cookie:
-      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWY0YzYwMTkyZjU5Mjg4M2UwOGM3NzdhM2FhNWNhNjAwBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--af9cf74c408b0fc3139010778a00f9a7552adb5a;
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWNkMTE0NzU2Y2VhMzNkYTUwMTc0MmQyZDNiYjkxZWY0BjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--0da3711fbb52dbff5367e4610959ea184bed2599;
         domain=strava.com; path=/; HttpOnly
       Status:
       - 200 OK
@@ -90,9 +90,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600,30000'
       X-Ratelimit-Usage:
-      - '299,1194'
+      - '64,1333'
       X-Request-Id:
-      - 53528c86c5b348ad1535dab31567b56e
+      - 05d387476ccbd2da106796d9e696fbdc
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -103,7 +103,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"biggest_ride_distance":11705.6,"biggest_climb_elevation_gain":99.80000000000018,"recent_ride_totals":{"count":2,"distance":22048.69921875,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60.66666603088379,"achievement_count":9},"recent_run_totals":{"count":14,"distance":109088.40069580078,"moving_time":29860,"elapsed_time":35330,"elevation_gain":1587.6219062805176,"achievement_count":85},"recent_swim_totals":{"count":0,"distance":0.0,"moving_time":0,"elapsed_time":0,"elevation_gain":0.0,"achievement_count":0},"ytd_ride_totals":{"count":2,"distance":22049,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60},"ytd_run_totals":{"count":14,"distance":109088,"moving_time":29860,"elapsed_time":35330,"elevation_gain":1587},"ytd_swim_totals":{"count":0,"distance":0,"moving_time":0,"elapsed_time":0,"elevation_gain":0},"all_ride_totals":{"count":2,"distance":22049,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60},"all_run_totals":{"count":15,"distance":151537,"moving_time":41252,"elapsed_time":46769,"elevation_gain":1657},"all_swim_totals":{"count":0,"distance":0,"moving_time":0,"elapsed_time":0,"elevation_gain":0}}'
     http_version: 
-  recorded_at: Wed, 09 Mar 2016 01:39:09 GMT
+  recorded_at: Wed, 09 Mar 2016 02:51:50 GMT
 - request:
     method: get
     uri: https://www.strava.com/api/v3/athletes/13541251/stats?access_token=76d702a1cb0bcd86e7a85a8dde8f06c891edbd62
@@ -129,11 +129,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 09 Mar 2016 01:39:09 GMT
+      - Wed, 09 Mar 2016 02:51:50 GMT
       Etag:
       - W/"b6e63e20565688c19bb3ca5bc1d9dc52"
       Set-Cookie:
-      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWIwNGMxNjEzMGQ2YTA1NmVlZWUyMjQ0Mzc3ZWU0ZDAzBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--c3c43da2677e688a1e8722581a11accf9ee40db3;
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWU4OTc0ZGRmNTU2OWNhMjhhYWE3MTkyMDhiMmFkNjEwBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--162d4bdd4c14be8838ceb51a9093fde18c73e4a8;
         domain=strava.com; path=/; HttpOnly
       Status:
       - 200 OK
@@ -142,9 +142,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600,30000'
       X-Ratelimit-Usage:
-      - '300,1195'
+      - '65,1334'
       X-Request-Id:
-      - a15028f23f522f114e962966a077327f
+      - d09c40e36877634222a052a86da02b76
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -155,7 +155,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"biggest_ride_distance":11705.6,"biggest_climb_elevation_gain":99.80000000000018,"recent_ride_totals":{"count":2,"distance":22048.69921875,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60.66666603088379,"achievement_count":9},"recent_run_totals":{"count":14,"distance":109088.40069580078,"moving_time":29860,"elapsed_time":35330,"elevation_gain":1587.6219062805176,"achievement_count":85},"recent_swim_totals":{"count":0,"distance":0.0,"moving_time":0,"elapsed_time":0,"elevation_gain":0.0,"achievement_count":0},"ytd_ride_totals":{"count":2,"distance":22049,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60},"ytd_run_totals":{"count":14,"distance":109088,"moving_time":29860,"elapsed_time":35330,"elevation_gain":1587},"ytd_swim_totals":{"count":0,"distance":0,"moving_time":0,"elapsed_time":0,"elevation_gain":0},"all_ride_totals":{"count":2,"distance":22049,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60},"all_run_totals":{"count":15,"distance":151537,"moving_time":41252,"elapsed_time":46769,"elevation_gain":1657},"all_swim_totals":{"count":0,"distance":0,"moving_time":0,"elapsed_time":0,"elevation_gain":0}}'
     http_version: 
-  recorded_at: Wed, 09 Mar 2016 01:39:09 GMT
+  recorded_at: Wed, 09 Mar 2016 02:51:50 GMT
 - request:
     method: get
     uri: https://www.strava.com/api/v3/athletes/13541251/stats?access_token=76d702a1cb0bcd86e7a85a8dde8f06c891edbd62
@@ -181,11 +181,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 09 Mar 2016 01:39:10 GMT
+      - Wed, 09 Mar 2016 02:51:51 GMT
       Etag:
       - W/"b6e63e20565688c19bb3ca5bc1d9dc52"
       Set-Cookie:
-      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTk3YTc3NjBkMWZjYTc2NzFkY2EzMGRiMTI0YWE2ZDFmBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--e35d2f7b03fa68167ba9f1a49f6e30b640752545;
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTY4YzUzMDlmODAwNDA4NzMzZGU3OWM3NTZmMjNlNzJjBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--6e10ae58fdd3d841c56092ad0e371eaad5d60a96;
         domain=strava.com; path=/; HttpOnly
       Status:
       - 200 OK
@@ -194,9 +194,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600,30000'
       X-Ratelimit-Usage:
-      - '301,1196'
+      - '66,1335'
       X-Request-Id:
-      - a21af9362462b26baeaae1be0a28387c
+      - e27b2ff4c1f15dc44116e4a5844fb498
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -207,7 +207,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"biggest_ride_distance":11705.6,"biggest_climb_elevation_gain":99.80000000000018,"recent_ride_totals":{"count":2,"distance":22048.69921875,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60.66666603088379,"achievement_count":9},"recent_run_totals":{"count":14,"distance":109088.40069580078,"moving_time":29860,"elapsed_time":35330,"elevation_gain":1587.6219062805176,"achievement_count":85},"recent_swim_totals":{"count":0,"distance":0.0,"moving_time":0,"elapsed_time":0,"elevation_gain":0.0,"achievement_count":0},"ytd_ride_totals":{"count":2,"distance":22049,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60},"ytd_run_totals":{"count":14,"distance":109088,"moving_time":29860,"elapsed_time":35330,"elevation_gain":1587},"ytd_swim_totals":{"count":0,"distance":0,"moving_time":0,"elapsed_time":0,"elevation_gain":0},"all_ride_totals":{"count":2,"distance":22049,"moving_time":4009,"elapsed_time":80177,"elevation_gain":60},"all_run_totals":{"count":15,"distance":151537,"moving_time":41252,"elapsed_time":46769,"elevation_gain":1657},"all_swim_totals":{"count":0,"distance":0,"moving_time":0,"elapsed_time":0,"elevation_gain":0}}'
     http_version: 
-  recorded_at: Wed, 09 Mar 2016 01:39:10 GMT
+  recorded_at: Wed, 09 Mar 2016 02:51:51 GMT
 - request:
     method: get
     uri: https://www.strava.com/api/v3//athlete/activities?access_token=76d702a1cb0bcd86e7a85a8dde8f06c891edbd62
@@ -231,11 +231,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 09 Mar 2016 01:39:10 GMT
+      - Wed, 09 Mar 2016 02:51:51 GMT
       Etag:
       - W/"0189893c67ea3ab1089baf62017ee1ff"
       Set-Cookie:
-      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTA3MDE3ZmNhZWQ3ZTg1NmNjYWIxYTE3Nzg0N2Y1MWQ0BjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--750c53a3591a2c8a3d9e330a7cedf57a46e80a60;
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWE2NzUzZjJiYTk4ZDlmNzVhMzZhYjQwYTZiMjIzNDMwBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--58ca18d74cf8dd11c88fe3364ca38bf644143b6b;
         domain=strava.com; path=/; HttpOnly
       Status:
       - 200 OK
@@ -246,13 +246,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600,30000'
       X-Ratelimit-Usage:
-      - '302,1197'
+      - '67,1336'
       X-Request-Id:
-      - 26363c5ebffea136d82a0489761b3c01
+      - ca712138e2a6933502cf33b662c75429
       X-Ua-Compatible:
       - IE=Edge,chrome=1
-      Content-Length:
-      - '5091'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
@@ -301,5 +301,5 @@ http_interactions:
         America/Denver","start_latlng":[39.684856,-105.51109],"end_latlng":[39.653074,-105.194905],"location_city":null,"location_state":null,"location_country":"United
         States","start_latitude":39.684856,"start_longitude":-105.51109,"achievement_count":3,"kudos_count":0,"comment_count":0,"athlete_count":13,"photo_count":0,"map":{"id":"a507109071","summary_polyline":"i}eqFhs~bSZsNcFsGoj@bB_E}CF_\\rMgX}HeWbP{OfOiw@`k@e_@bD}Q{LkPEiLxX{JdJu\\m@sIvDoJaI{]rRk{@_S{DyZfJsC{Px@_WdKwRkQrEmTuHwElIuCgHvIiPqF{GjHaHkNiMtAiKwGoVlHuYhRePgFmT|CgLeAs[fO}EgOgK_EsJfOqb@gOgy@hJuiAoA_f@vv@_M|p@}i@fi@cUj`Cu_CjQ}Zi@ew@bB{RvFoGoEwEsBmNoYiDmEyQuK|EwXwJe[EyP{m@zEa]wFgm@mQ{BwLaL{KjI}CeBdHeP@yQkS}YjHgSkI}KlF{P}Qg]jAyf@`DqN`IoKhNKzCmEiO_T{CyRhF}M~TcNeGyUhJiD|@uJhI[oFoNMgOlLFpFau@dToK_@}o@|FyJeFaEhCiQ]a]gIqV~H[","resource_state":2},"trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":"g1261219","average_speed":3.711,"max_speed":4.6,"elev_high":3219.1,"elev_low":1760.7,"total_photo_count":0,"has_kudoed":false,"workout_type":1}]'
     http_version: 
-  recorded_at: Wed, 09 Mar 2016 01:39:10 GMT
+  recorded_at: Wed, 09 Mar 2016 02:51:51 GMT
 recorded_with: VCR 3.0.1
