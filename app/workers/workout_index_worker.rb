@@ -1,6 +1,12 @@
 # class WorkoutIndexWorker
 #   include Sidekiq::Worker 
-#   def perform(current_user) #LOOKS FOR METHOD NAMED PERFORM, instance method
-    
+  
+#   def perform(current_user)
+#     @presenter = WorkoutsPresenter.new(current_user)
+#     @presenter.service
+#     @presenter.activities
+#     @presenter.stats
+#     @presenter.running_tip
+#     binding.pry
 #   end
 # end
