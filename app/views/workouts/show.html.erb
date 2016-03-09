@@ -4,7 +4,7 @@
     <%= render partial: "show_left" %> 
     
     <div class="col s10 custom-padding">
-      <h3 class="titillium center">Morning Run</h3>
+      <h3 class="titillium center"><%= @presenter.name(@presenter.activity) %></h3>
       <%= render partial: "workout_difficulty" %>
       <h4 class="titillium center">Snapshot</h4>
 
