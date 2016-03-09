@@ -1,4 +1,4 @@
-<% cache "monthly-stats-#{@presenter.current_user}-#{@presenter.stats.distance("ytd")}" do %>
+<% cache "monthly-stats-#{@presenter.current_user.id}-#{@presenter.stats.distance("ytd")}" do %>
   <div class="col s2 center" id="user-ytd">
     <br><br>
     <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
