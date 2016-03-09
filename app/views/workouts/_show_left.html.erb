@@ -7,19 +7,21 @@
     <h5>Course<br>Comparison</h5>
     <hr>
     <%= form_tag(workout_path(@presenter.activity), method: "get") do %>
-      <%= radio_button_tag(:race, "leadville") %>
-      <%= label_tag(:race_leadville, "Leadville 100") %>
-      <%= radio_button_tag(:race, "boston") %>
-      <%= label_tag(:race_boston, "Boston Marathon") %>
-      <%= radio_button_tag(:race, "western") %>
-      <%= label_tag(:race_western, "Western States") %>
-      <%= radio_button_tag(:race, "badwater") %>
-      <%= label_tag(:race_badwater, "Badwater 135") %>
-      <%= radio_button_tag(:race, "hardrock") %>
-      <%= label_tag(:race_hardrock, "Hardrock 100") %>
-      <%= radio_button_tag(:race, "colfax") %>
-      <%= label_tag(:race_colfax, "Colfax Half") %>
-      <br><br>
+      <div style="text-align:left">
+        <%= radio_button_tag(:race, "leadville") %>
+        <%= label_tag(:race_leadville, "Leadville 100") %>
+        <%= radio_button_tag(:race, "boston") %>
+        <%= label_tag(:race_boston, "Boston Marathon") %>
+        <%= radio_button_tag(:race, "western") %>
+        <%= label_tag(:race_western, "Western States") %>
+        <%= radio_button_tag(:race, "badwater") %>
+        <%= label_tag(:race_badwater, "Badwater 135") %>
+        <%= radio_button_tag(:race, "hardrock") %>
+        <%= label_tag(:race_hardrock, "Hardrock 100") %>
+        <%= radio_button_tag(:race, "colfax") %>
+        <%= label_tag(:race_colfax, "Colfax Half") %>
+        <br><br>
+      </div>
       <%= submit_tag("Calculate")%>
     <% end %>
     </div>
