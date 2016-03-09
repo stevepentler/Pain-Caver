@@ -6,6 +6,7 @@ gem 'faraday'
 gem 'mechanize'
 gem 'polylines'
 gem "skylight"
+gem 'sidekiq'
 
 
 gem 'rails', '4.2.5'

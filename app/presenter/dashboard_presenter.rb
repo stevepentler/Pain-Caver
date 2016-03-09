@@ -8,6 +8,7 @@ class DashboardPresenter < SimpleDelegator
   
   def initialize(current_user)
     @current_user = current_user
+    WorkoutIndexWorker.perform_async(current_user)
   end
 
   def stats
