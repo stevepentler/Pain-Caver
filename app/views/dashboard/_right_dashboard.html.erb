@@ -1,4 +1,4 @@
-<% cache("ytd-leaderboard", expires_in: (6).hours) do %>
+<% cache("ytd-leaderboard", expires_in: (2).hours) do %>
   <div class="col s2 center" id="leaders-ytd">
     <br><br>
     <%= image_tag(@presenter.stat_leaders.first.user.profile_picture, class: "circle profile-pic") %>
