@@ -79,3 +79,7 @@ class ActionDispatch::IntegrationTest
     end
   end
 end
+
+class ActionController::TestCase
+  include FactoryGirl::Syntax::Methods
+end
