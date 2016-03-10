@@ -1,12 +1,14 @@
 require 'test_helper'
 
 class DashboardControllerTest < ActionController::TestCase
-    # current_user = create(:user)
-    # tip = create(:tip)
-    # get :show, format: :json, current_user: current_user
+  test '#show' do
+    VCR.use_cassette('dashboard_controller') do 
+      @user = create(:user)
+      @running_tip = create(:running_tip)
+      ApplicationController.any_instance.stubs(:current_user).returns(@user)
+      get :show
 
-    # result = JSON.parse(response.body)
-    # binding.pry
-    # assert_response :success
-
+      assert_response :success
+    end
+  end
 end
