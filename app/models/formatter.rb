@@ -24,11 +24,7 @@ module Formatter
   end
 
   def time_formatter(hours, minutes)
-    if hours == 0
-      "#{minutes} mins"
-    else 
-      "#{hours}hr #{minutes}m"
-    end
+    hours == 0 ? "#{minutes} mins" : "#{hours}hr #{minutes}m"
   end
 
   def pace_converter(activity)
@@ -38,11 +34,7 @@ module Formatter
   end
 
   def format_pace(minutes, seconds)
-    if seconds < 10
-      "#{minutes}:0#{seconds}"
-    else
-      "#{minutes}:#{seconds}"
-    end
+    seconds < 10 ? "#{minutes}:0#{seconds}" : "#{minutes}:#{seconds}"
   end
 
   def format_date(activity)

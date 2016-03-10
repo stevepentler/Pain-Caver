@@ -68,7 +68,6 @@ class TrailService
     trail["lon"]
   end
 
-
   private
 
   def parse(trail)

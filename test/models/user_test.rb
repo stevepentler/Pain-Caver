@@ -60,7 +60,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 2, user.user_races.count
   end
 
-
+  private
 
   def auth_hash
   {provider: "strava",

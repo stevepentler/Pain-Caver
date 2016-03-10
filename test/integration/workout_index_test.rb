@@ -63,7 +63,7 @@ class WorkoutIndexTest < ActionDispatch::IntegrationTest
 
   end
 
-
+  private
 
   def login_and_visit_workouts
     @user = create(:user)

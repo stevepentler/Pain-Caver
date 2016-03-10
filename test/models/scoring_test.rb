@@ -37,6 +37,5 @@ class ScoringTest < ActiveSupport::TestCase
 
     service2 = ActivityService.new(current_user, colfax)
     assert_equal 0.22, service2.distance_factor
-
   end
 end
