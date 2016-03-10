@@ -10,7 +10,7 @@ class ActivityServiceTest < ActiveSupport::TestCase
       activity = service.single_activity(505114540)
 
       assert_equal 505114540, service.activity_id(activity)
-      assert_equal "Morning Run", service.name(activity)
+      assert_equal "Boulder: Green Mountain", service.name(activity)
       assert_equal "Run", service.type(activity)
       assert_equal "02-28", service.start_date(activity)
       assert_equal "10:38:22", service.start_time(activity)

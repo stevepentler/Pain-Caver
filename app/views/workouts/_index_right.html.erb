@@ -1,34 +1,31 @@
-<div class="col s2 center" id="anton-recent">
-  <% cache "anton-index-stats" do %> 
+<% cache("recent-leaderboard", expires_in: (6).hours) do %>
+  <div class="col s2 center" id="leaderboard-recent">
     <br><br>
-    <%= image_tag("anton-dashboard.jpg", class: "circle profile-pic") %>
+    <%= image_tag(@presenter.stat_leaders.first.user.profile_picture, class: "circle profile-pic") %>
     <br>
-    <%= "Anton Krupicka" %>
+    <%= @presenter.stat_leaders.first.user.name %>
     <div class="card background-color">
       <div class="card-content">
-        <span class="card-title">Monthly Stats</span>
+        <span class="card-title">Mileage Leaders</span>
         <hr>
-        <p><i class="tiny material-icons">trending_flat</i>40.6<%#= number_with_delimiter(@stats.distance("ytd")) %> miles/week</p>
-        <p><i class="tiny material-icons">query_builder</i>2 <%#= @stats.sessions("ytd") %> sessions/week</p>
-        <p><i class="tiny material-icons">query_builder</i>7hr 35min<%#= number_with_delimiter(@stats.duration("ytd")) %>/week</p>
-        <!-- <p><i class="tiny material-icons">navigation</i>89,757 <%#= number_with_delimiter(@stats.elevation_gain("ytd").to_i) %> ft gain</p> -->
-        <hr>
-        <ul class="collapsible" data-collapsible="accordion">
-          <li>
-            <div class="collapsible-header">Bio</div>
-            <div class="collapsible-body"><p>Anton Krupicka is a Boulder based ultra-runner who has won the Leadville 100 twice. Minimalist.</p></div>
-          </li>
-        </ul>
+        <% @presenter.stat_leaders.each do |leader| %>
+        <p>
+          <div style="font-size: 1.3em;"><%= leader.user.name %></div>
+          <i class="tiny material-icons">trending_flat</i>
+          <%= number_with_delimiter(leader.recent_mileage) %> miles
+          <br>
+          <i class="tiny material-icons">query_builder</i>
+          <%= number_with_delimiter(@presenter.stat_leaders.first.recent_sessions) %> sessions
+          <br>
+          <i class="tiny material-icons">query_builder</i>
+          <%= number_with_delimiter(@presenter.stat_leaders.first.recent_duration) %>
+          <br>
+          <i class="tiny material-icons">navigation</i>
+          <%= number_with_delimiter(leader.recent_elevation) %> miles
+          <hr>
+        </p>
+        <% end %>
       </div>
-    </div>
-  <% end %> 
-
-  <div class="card background-color">
-    <div class="card-content">
-      <span class="card-title">Running Tip</span>
-      <hr>
-      <p><%= @presenter.running_tip.tip %></p>
-    </div>
+    </div> 
   </div>
-
-</div>
+<% end %>

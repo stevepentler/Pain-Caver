@@ -16,21 +16,12 @@
         </div>
       </div>
 
-    <div class="card background-color">
-      <div class="card-content">
-      <span class="card-title">Elite Runner</span>
-      <hr>
-      <%= form_tag(workouts_path, method: "get") do %>
-        <%= radio_button_tag(:elite, "Anton") %>
-        <%= label_tag(:elite_Anton, "Anton Krupicka") %>
-        <%= radio_button_tag(:elite, "Killian") %>
-        <%= label_tag(:elite_Killian, "Killian Jornet") %>
-        <%= radio_button_tag(:elite, "Jenn") %>
-        <%= label_tag(:elite_Jenn, "Jenn Shelton") %>
-        <br><br>
-        <%= submit_tag("Calculate")%>
-      <% end %>
+      <div class="card background-color">
+        <div class="card-content">
+          <span class="card-title">Running Tip</span>
+          <hr>
+          <p><%= @presenter.running_tip.tip %></p>
+        </div>
       </div>
-    </div>
   </div>
 <% end %> 

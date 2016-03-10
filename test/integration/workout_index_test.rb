@@ -4,20 +4,22 @@ class WorkoutIndexTest < ActionDispatch::IntegrationTest
   test 'user views Anton stats' do 
     login_and_visit_workouts
     
-    within("#anton-recent") do 
-      assert page.has_content?("Anton Krupicka")
-      assert page.has_content?("Monthly Stats")
-      assert page.has_content?("40.6 miles/week")
-      assert page.has_content?("2 sessions/week")
-      assert page.has_content?("7hr 35min/week")
-      assert page.has_content?("Bio")
+    within("#leaderboard-recent") do 
+      assert page.has_content?("Mileage Leaders")
+      assert page.has_content?(@user.name)
+      assert page.has_content?("miles")
+      assert page.has_content?("85.57")
+      assert page.has_content?("sessions")
+      assert page.has_content?("12 sessions")
+      assert page.has_content?("13hr 0m")
+      assert page.has_content?("10,050")
     end
   end
 
   test 'user views running_tip' do 
     login_and_visit_workouts
     
-    within("#anton-recent") do 
+    within("#user-recent") do 
       assert page.has_content?("Running Tip")
       assert page.has_content?(@running_tip.tip)
     end
@@ -49,7 +51,7 @@ class WorkoutIndexTest < ActionDispatch::IntegrationTest
     end
 
     within("#workouts-index tbody") do 
-      assert page.has_content?("Afternoon Run")
+      assert page.has_content?("Wash Park Loop")
       assert page.has_content?("Triple Crown")
       assert page.has_content?("03-05")
       assert page.has_content?("13:35:10")
@@ -65,6 +67,11 @@ class WorkoutIndexTest < ActionDispatch::IntegrationTest
 
   def login_and_visit_workouts
     @user = create(:user)
+    @user_stats = UserStatistic.create(user_id: @user.id,
+                                       recent_mileage: 85.57,
+                                       recent_sessions: 12, 
+                                       recent_duration: "13hr 0m",
+                                       recent_elevation: 10050)
     @running_tip = create(:running_tip)
     ApplicationController.any_instance.stubs(:current_user).returns(@user)
     VCR.use_cassette('activities') do 

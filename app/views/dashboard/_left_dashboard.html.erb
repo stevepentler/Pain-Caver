@@ -1,36 +1,27 @@
-<% cache "monthly-stats-#{@presenter.current_user.id}-#{@presenter.stats.distance("ytd")}" do %>
+<% cache("ytd-stats-#{@presenter.current_user.id}", expires_in: (0.5).hours) do %>
   <div class="col s2 center" id="user-ytd">
     <br><br>
     <%= image_tag(current_user.profile_picture, class: "circle profile-pic") %>
     <br>
     <%= current_user.name %>
 
-      <div class="card background-color">
-        <div class="card-content">
-          <span class="card-title">Year to Date</span>
-          <hr>
-          <p><i class="tiny material-icons">trending_flat</i> <%= number_with_delimiter(@presenter.stats.distance("ytd")) %> miles</p>
-          <p><i class="tiny material-icons">query_builder</i> <%= @presenter.stats.sessions("ytd") %> sessions</p>
-          <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@presenter.stats.duration("ytd")) %></p>
-          <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@presenter.stats.elevation_gain("ytd").to_i) %> ft gain</p>
-        </div>
-      </div>
-
     <div class="card background-color">
       <div class="card-content">
-      <span class="card-title">Elite Runner</span>
-      <hr>
-      <%= form_tag(workouts_path, method: "get") do %>
-        <%= radio_button_tag(:elite, "Anton") %>
-        <%= label_tag(:elite_Anton, "Anton Krupicka") %>
-        <%= radio_button_tag(:elite, "Killian") %>
-        <%= label_tag(:elite_Killian, "Killian Jornet") %>
-        <%= radio_button_tag(:elite, "Jenn") %>
-        <%= label_tag(:elite_Jenn, "Jenn Shelton") %>
-        <br><br>
-        <%= submit_tag("Calculate")%>
-      <% end %>
+        <span class="card-title">Year to Date</span>
+        <hr>
+        <p><i class="tiny material-icons">trending_flat</i> <%= number_with_delimiter(@presenter.stats.distance("ytd")) %> miles</p>
+        <p><i class="tiny material-icons">query_builder</i> <%= @presenter.stats.sessions("ytd") %> sessions</p>
+        <p><i class="tiny material-icons">query_builder</i> <%= number_with_delimiter(@presenter.stats.duration("ytd")) %></p>
+        <p><i class="tiny material-icons">navigation</i> <%= number_with_delimiter(@presenter.stats.elevation_gain("ytd").to_i) %> ft gain</p>
       </div>
     </div>
-  </div>
 <% end %> 
+
+      <div class="card background-color">
+        <div class="card-content">
+          <span class="card-title">Running Tip</span>
+          <hr>
+          <p><%= @presenter.running_tip.tip %></p>
+        </div>
+      </div>
+  </div>

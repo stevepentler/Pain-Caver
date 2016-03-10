@@ -4,6 +4,7 @@ class DashboardPresenter < SimpleDelegator
               :upcoming_races,
               :running_tip,
               :trail_service,
+              :stat_leaders,
               :current_user
   
   def initialize(current_user)
@@ -11,7 +12,11 @@ class DashboardPresenter < SimpleDelegator
   end
 
   def stats
-    stats ||= UserStatsService.new(current_user) 
+    stats ||= UserStatsService.new(current_user)
+    Rails.cache.fetch("distance-#{current_user.id}-#{stats.distance("ytd")}") do  
+      stats.create_user_statistics(current_user, stats)
+    end
+    return stats
   end
 
   def upcoming_races
@@ -25,6 +30,12 @@ class DashboardPresenter < SimpleDelegator
 
   def trail_service
     trail_service ||= TrailService.new(current_user)
+  end
+
+  def stat_leaders
+    @stat_leaders ||= UserStatistic.order(ytd_mileage: :desc)
+                                   .includes(:user)
+                                   .first(3)                     
   end
 
 end

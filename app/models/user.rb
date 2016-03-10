@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :user_races
+  has_one :user_statistic
   validates :provider, presence: true, acceptance: {accept: 'strava'}
   validates :user_id, presence: true
   validates :token, presence: true
