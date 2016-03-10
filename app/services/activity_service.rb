@@ -97,6 +97,7 @@ class ActivityService
     activity["max_heartrate"] ? activity["max_heartrate"].round(0) : "N/A" 
   end
 
+#----- Scoring -----#
   def score_elevation_gain(activity)
     gain_per_mile = total_elevation_gain(activity) / distance(activity)
     rating = gain_per_mile / elevation_gain_factor
@@ -154,7 +155,8 @@ class ActivityService
     percent = difficulty_rating(activity) / difficulty_range(activity)
     format_percentage(percent)
   end
-
+  
+# ----- Graphing -----#
   def start_latitude(activity)
     activity["start_latitude"]
   end

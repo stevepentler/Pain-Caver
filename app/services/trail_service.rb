@@ -37,11 +37,7 @@ class TrailService
   end
 
   def rating(trail)
-    if parse(trail)["rating"] == 0.0
-      "N/A"
-    else
-      parse(trail)["rating"]
-    end
+    parse(trail)["rating"] == 0.0 ? "N/A" : parse(trail)["rating"]
   end
 
   def city(trail)
