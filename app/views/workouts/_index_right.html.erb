@@ -1,5 +1,5 @@
 <% cache("recent-leaderboard", expires_in: (6).hours) do %>
-  <div class="col s2 center" id="anton-recent">
+  <div class="col s2 center" id="leaderboard-recent">
     <br><br>
     <%= image_tag(@presenter.stat_leaders.first.user.profile_picture, class: "circle profile-pic") %>
     <br>

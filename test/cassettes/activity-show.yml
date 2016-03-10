@@ -23,11 +23,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 09 Mar 2016 02:52:00 GMT
+      - Thu, 10 Mar 2016 00:19:13 GMT
       Etag:
-      - W/"10bc427a5a39c8c91f02506e9c36ea91"
+      - W/"c205a2e681cd6772a4fc63533b98cee4"
       Set-Cookie:
-      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWRhOWJhMDYyZGNhY2IxZGEzMzhkODBkNmUzOTliYzUxBjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--84da0f916002fbf00c0084f7b48a83a27720994b;
+      - _strava3_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTNmMTQ5YTc5ZjE1NDBkODJkMTgzM2I5N2ZmYTA0Yzc4BjsAVEkiEGNsZWFyX2NsaWNrBjsARlQ%3D--c55aab47dbf6747ecd75baf7b9187a59832f6193;
         domain=strava.com; path=/; HttpOnly
       Status:
       - 200 OK
@@ -36,9 +36,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600,30000'
       X-Ratelimit-Usage:
-      - '83,1352'
+      - '26,111'
       X-Request-Id:
-      - 61a2423f55f33e0ab9a162be7b906f7f
+      - 83a0a7d9fac0764a3584a2ff489028ee
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -88,7 +88,7 @@ http_interactions:
         mile","activity":{"id":509570036,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":430,"moving_time":431,"start_date":"2016-03-05T22:00:45Z","start_date_local":"2016-03-05T15:00:45Z","distance":1609,"start_index":1133,"end_index":1219,"pr_rank":null,"achievements":[]},{"id":1265579261,"resource_state":2,"name":"2
         mile","activity":{"id":509570036,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":867,"moving_time":868,"start_date":"2016-03-05T21:58:14Z","start_date_local":"2016-03-05T14:58:14Z","distance":3219,"start_index":1100,"end_index":1280,"pr_rank":null,"achievements":[]},{"id":1265579262,"resource_state":2,"name":"5k","activity":{"id":509570036,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":1380,"moving_time":1362,"start_date":"2016-03-05T21:46:15Z","start_date_local":"2016-03-05T14:46:15Z","distance":5000,"start_index":946,"end_index":1236,"pr_rank":null,"achievements":[]},{"id":1265579263,"resource_state":2,"name":"10k","activity":{"id":509570036,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":2793,"moving_time":2748,"start_date":"2016-03-05T21:25:56Z","start_date_local":"2016-03-05T14:25:56Z","distance":10000,"start_index":681,"end_index":1278,"pr_rank":2,"achievements":[{"type_id":3,"type":"pr","rank":2}]},{"id":1265579264,"resource_state":2,"name":"15k","activity":{"id":509570036,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":4250,"moving_time":4107,"start_date":"2016-03-05T21:05:30Z","start_date_local":"2016-03-05T14:05:30Z","distance":15000,"start_index":416,"end_index":1330,"pr_rank":2,"achievements":[{"type_id":3,"type":"pr","rank":2}]},{"id":1265579265,"resource_state":2,"name":"10
         mile","activity":{"id":509570036,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":4562,"moving_time":4419,"start_date":"2016-03-05T21:00:22Z","start_date_local":"2016-03-05T14:00:22Z","distance":16090,"start_index":349,"end_index":1331,"pr_rank":2,"achievements":[{"type_id":3,"type":"pr","rank":2}]},{"id":1265579266,"resource_state":2,"name":"20k","activity":{"id":509570036,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":5647,"moving_time":5509,"start_date":"2016-03-05T20:40:18Z","start_date_local":"2016-03-05T13:40:18Z","distance":20000,"start_index":79,"end_index":1305,"pr_rank":2,"achievements":[{"type_id":3,"type":"pr","rank":2}]},{"id":1265579267,"resource_state":2,"name":"Half-Marathon","activity":{"id":509570036,"resource_state":1},"athlete":{"id":13541251,"resource_state":1},"elapsed_time":5967,"moving_time":5810,"start_date":"2016-03-05T20:37:55Z","start_date_local":"2016-03-05T13:37:55Z","distance":21097,"start_index":43,"end_index":1345,"pr_rank":2,"achievements":[{"type_id":3,"type":"pr","rank":2}]}],"gear":{"id":"g1261218","primary":true,"name":"Saucony
-        Peregrine Peregrine 4","resource_state":2,"distance":80085.0},"partner_logo_url":null,"photos":{"primary":null,"count":0},"similar_activities":{"effort_count":1,"average_speed":3.6319939475453933,"min_average_speed":3.6319939475453933,"mid_average_speed":3.6319939475453933,"max_average_speed":3.6319939475453933,"pr_rank":null,"frequency_milestone":null,"trend":{"speeds":[3.6319939475453933],"current_activity_index":0,"min_speed":3.6319939475453933,"mid_speed":3.6319939475453933,"max_speed":3.6319939475453933,"direction":0},"resource_state":2},"embed_token":"3b0c79c92abb7df878a50256d0c83497ab789ec8"}'
+        Peregrine Peregrine 4","resource_state":2,"distance":67520.0},"partner_logo_url":null,"photos":{"primary":null,"count":0},"similar_activities":{"effort_count":1,"average_speed":3.6319939475453933,"min_average_speed":3.6319939475453933,"mid_average_speed":3.6319939475453933,"max_average_speed":3.6319939475453933,"pr_rank":null,"frequency_milestone":null,"trend":{"speeds":[3.6319939475453933],"current_activity_index":0,"min_speed":3.6319939475453933,"mid_speed":3.6319939475453933,"max_speed":3.6319939475453933,"direction":0},"resource_state":2},"embed_token":"3b0c79c92abb7df878a50256d0c83497ab789ec8"}'
     http_version: 
-  recorded_at: Wed, 09 Mar 2016 02:52:00 GMT
+  recorded_at: Thu, 10 Mar 2016 00:19:13 GMT
 recorded_with: VCR 3.0.1

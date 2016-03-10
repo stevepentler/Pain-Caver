@@ -13,18 +13,14 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
     assert page.has_content?("m")
     assert page.has_content?("gain")
   end
-
-  test 'user views elite runner options' do
+  
+  test 'user views running tip on dashboard' do
     login_and_visit_dashboard
-    within('#user-ytd') do 
-      assert_equal dashboard_path, current_path
-      assert page.has_content?("Elite Runner")
-      assert page.has_content?("Anton Krupicka")
-      assert page.has_content?("Killian Jornet")
-      assert page.has_content?("Jenn Shelton")
+    within("#user-ytd") do 
+      assert page.has_content?("Running Tip")
+      assert page.has_content?(@running_tip.tip)
     end
   end
-
 
   test 'user views upcoming races on dashboard' do
     login_and_visit_dashboard
@@ -76,26 +72,6 @@ class UserDashboardTest < ActionDispatch::IntegrationTest
         assert page.has_content?("Dashboard")
         assert page.has_content?("Logout")
       end
-    end
-  end
-
-  test 'user views Anton stats' do 
-    login_and_visit_dashboard
-    within("#anton-ytd") do 
-      assert page.has_content?("Anton Krupicka")
-      assert page.has_content?("Year to Date")
-      assert page.has_content?("246.4 miles")
-      assert page.has_content?("20 sessions")
-      assert page.has_content?("50hr 46min")
-      assert page.has_content?("89,757 ft gain")
-    end
-  end
-  
-  test 'user views running tip on dashboard' do
-    login_and_visit_dashboard
-    within("#anton-ytd") do 
-      assert page.has_content?("Running Tip")
-      assert page.has_content?(@running_tip.tip)
     end
   end
 

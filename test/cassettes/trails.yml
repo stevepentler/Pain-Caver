@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 09 Mar 2016 02:52:04 GMT
+      - Thu, 10 Mar 2016 00:03:38 GMT
       Etag:
       - '"d0f243d283b65f5f271cbb7bf3b91508"'
       Server:
@@ -37,9 +37,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 725e8700-0f4c-40e4-9fb2-d00a29dd1430
+      - f4b5355d-befc-42e5-a888-b3c3172ad6d7
       X-Runtime:
-      - '0.181004'
+      - '0.118816'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Transfer-Encoding:
@@ -409,5 +409,5 @@ http_interactions:
         LTA2LTAxMTUzMzA2LTE5NDE2MC5qcGciLCJyYW5rIjpudWxsLCJyYXRpbmci
         OjAuMH1dfV19
     http_version: 
-  recorded_at: Wed, 09 Mar 2016 02:52:04 GMT
+  recorded_at: Thu, 10 Mar 2016 00:03:38 GMT
 recorded_with: VCR 3.0.1
