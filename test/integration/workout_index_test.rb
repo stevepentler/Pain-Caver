@@ -4,7 +4,7 @@ class WorkoutIndexTest < ActionDispatch::IntegrationTest
   test 'user views Anton stats' do 
     login_and_visit_workouts
     
-    within("#anton-recent") do 
+    within("#leaderboard-recent") do 
       assert page.has_content?("Mileage Leaders")
       assert page.has_content?(@user.name)
       assert page.has_content?("miles")
@@ -51,7 +51,7 @@ class WorkoutIndexTest < ActionDispatch::IntegrationTest
     end
 
     within("#workouts-index tbody") do 
-      assert page.has_content?("Afternoon Run")
+      assert page.has_content?("Wash Park Loop")
       assert page.has_content?("Triple Crown")
       assert page.has_content?("03-05")
       assert page.has_content?("13:35:10")

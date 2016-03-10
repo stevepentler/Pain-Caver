@@ -33,9 +33,9 @@ class DashboardPresenter < SimpleDelegator
   end
 
   def stat_leaders
-    @stats ||= UserStatistic.order(ytd_mileage: :desc)
-                            .includes(:user)
-                            .first(3)                     
+    @stat_leaders ||= UserStatistic.order(ytd_mileage: :desc)
+                                   .includes(:user)
+                                   .first(3)                     
   end
 
 end

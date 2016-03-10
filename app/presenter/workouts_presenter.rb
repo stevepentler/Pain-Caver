@@ -25,9 +25,9 @@ class WorkoutsPresenter < SimpleDelegator
   end
 
   def stat_leaders
-    @stats ||= UserStatistic.order(recent_mileage: :desc)
-                            .includes(:user)
-                            .first(3)                     
+    @stat_leaders ||= UserStatistic.order(recent_mileage: :desc)
+                                   .includes(:user)
+                                   .first(3)                     
   end
 
   def running_tip
