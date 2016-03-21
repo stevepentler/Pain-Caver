@@ -15,13 +15,13 @@
           <%= number_with_delimiter(leader.recent_mileage) %> miles
           <br>
           <i class="tiny material-icons">query_builder</i>
-          <%= number_with_delimiter(@presenter.stat_leaders.first.recent_sessions) %> sessions
+          <%= number_with_delimiter(leader.recent_sessions) %> sessions
           <br>
           <i class="tiny material-icons">query_builder</i>
-          <%= number_with_delimiter(@presenter.stat_leaders.first.recent_duration) %>
+          <%= number_with_delimiter(leader.recent_duration) %>
           <br>
           <i class="tiny material-icons">navigation</i>
-          <%= number_with_delimiter(leader.recent_elevation) %> miles
+          <%= number_with_delimiter(leader.recent_elevation) %> ft
           <hr>
         </p>
         <% end %>
