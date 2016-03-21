@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
     user.first_name = auth[:info][:first_name]
     user.last_name = auth[:info][:last_name]
     user.profile_picture = auth[:extra][:raw_info][:profile]
-    user.city = auth[:extra][:raw_info][:city] ||= "Denver"
+    user.city = auth[:extra][:raw_info][:city] || "Denver"
     user.state = auth[:extra][:raw_info][:state]
     user.sex = auth[:extra][:raw_info][:sex]
     user.athlete_type = auth[:extra][:raw_info][:athlete_type]
