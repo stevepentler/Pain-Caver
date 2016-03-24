@@ -18,7 +18,7 @@ class ActivityService
   end
 
   def workout_specifications(activity)
-    (activity["type"] == "Run" && activity["average_speed"] != 0.0) 
+    (activity["type"] == "Run" && activity["max_speed"] != 0.0) 
   end
 
   def count_activity_services
