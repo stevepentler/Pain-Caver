@@ -93,7 +93,7 @@ class ActivityServiceTest < ActiveSupport::TestCase
     assert_equal 60, service.score_duration(activity)
   end 
 
-  test "#activity service scopes to runs and eliminates rides" do 
+  test "#activity service scopes to runs with max speed > 0.0" do 
     VCR.use_cassette('activities') do
       current_user = create(:user)
       leadville = create(:race)
@@ -102,7 +102,9 @@ class ActivityServiceTest < ActiveSupport::TestCase
 
       activities.each do |activity|
         assert_equal "Run", @service.type(activity)
+        assert @service.max_speed(activity) > 0.0
         refute_equal "Ride", @service.type(activity)
+        refute_equal 0.0, @service.max_speed(activity)
       end
       assert_equal @service.list_athlete_activities.count, @service.count_activity_services
     end
