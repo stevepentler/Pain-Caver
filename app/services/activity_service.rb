@@ -13,8 +13,12 @@ class ActivityService
 
   def list_athlete_activities
     Rails.cache.fetch("workouts-index-#{current_user.id}", expires_in: (0.2).hours) do 
-      client.list_athlete_activities.select {|activity| activity["type"] == "Run"}
+      client.list_athlete_activities.select {|activity| workout_specifications(activity) }
     end
+  end
+
+  def workout_specifications(activity)
+    (activity["type"] == "Run" && activity["average_speed"] != 0.0) 
   end
 
   def count_activity_services
