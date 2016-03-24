@@ -9,13 +9,13 @@
 
 #####Pitch
 
-The most concerning aspect of running can be finding your limits, especially when taking the leap from 26.2 miles to the ultra circuit. Wouldn't it be great if you could workouts/races you have already completed to the races you want to register for?
+The most concerning aspect of running can be testing your limits, especially when taking the leap from 26.2 miles to the trail ultra-marathon circuit. Wouldn't it be great if you could compare workouts/races that you have already completed to the races you want to register for?
 
 #####Solution
 
-*PAINCAVER* is a tool that consumes runners' GPS data and calculates how the workout/race compares to famous races. The weighted calculations are based on distance, elevation, and heartrate. 
+*PAINCAVER* is a tool that consumes runners' GPS data and calculates how each specific workout/race compares to famous races, like the Boston Marathon or the Leadville 100. The weighted calculations are based on distance, elevation gain, max elevation, and average heart rate. 
 
-In addition to the difficulty comparison, this applicationa also maps the exact path of a logged workout on Google Maps, and provides trail recommendations complete with maps and directions. 
+In addition to the difficulty comparison, this application also maps the exact path of a logged workout on Google Maps, and provides local trail recommendations complete with maps and directions. 
 
 #####Integrations
 

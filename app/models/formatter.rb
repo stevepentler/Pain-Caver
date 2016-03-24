@@ -29,6 +29,7 @@ module Formatter
 
   def pace_converter(activity)
     minutes = (60.0 / average_speed(activity)).to_i
+    binding.pry
     seconds = ((60.0 / average_speed(activity) - minutes) * 60).to_i
     format_pace(minutes, seconds)
   end
