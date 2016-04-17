@@ -3,7 +3,6 @@ gem 'strava-api-v3'
 gem 'omniauth-strava'
 gem 'figaro'
 gem 'faraday'
-gem 'mechanize'
 gem 'polylines'
 gem "skylight"
 
@@ -31,7 +30,7 @@ group :development do
   gem 'spring'
 end
 
-group :test do 
+group :test do
   gem 'factory_girl_rails', "~> 4.0"
   gem 'database_cleaner'
   gem 'vcr'
