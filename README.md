@@ -5,7 +5,7 @@
 ##### A personal effort from: 
 [Steve Pentler](https://github.com/stevepentler) 
 
-![](http://g.recordit.co/PdS7yLJURA.gif)
+![](http://g.recordit.co/yj9tgI01v6.gif)
 
 #####Pitch
 
@@ -33,3 +33,6 @@ Rails 4.0, OmniAuth2, Caching, Skylight Performance Metrics, Mechanize/Nokogiri 
 - Presenters: Upon switching to presenters to organize my controllers/views, I forgot to memo-ize a couple instance variables, which destroyed my loading times. Each instance was hitting an API, and caused loading times to jump to 17 seconds!
 
 - Scraping: I received a crash course in scraping with mechanize/nokogiri. I was able to scrape plain html, but the content I wanted was nested under hidden JavaScript tags. I'll get back to scraping once I polish up my JavaScript debugging skills. 
+
+#####Testing:
+- 99.71% covered at 91.1 hits per line
