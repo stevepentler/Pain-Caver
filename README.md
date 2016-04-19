@@ -35,4 +35,5 @@ Rails 4.0, OmniAuth2, Caching, Skylight Performance Metrics, Mechanize/Nokogiri 
 - Scraping: I received a crash course in scraping with mechanize/nokogiri. I was able to scrape plain html, but the content I wanted was nested under hidden JavaScript tags. I'll get back to scraping once I polish up my JavaScript debugging skills. 
 
 #####Testing:
-- 99.71% covered at 91.1 hits per line
+- 99.71% at 90.99 hits/line from SimpleCov
+![](http://i.imgur.com/DXjLuFo.png)
