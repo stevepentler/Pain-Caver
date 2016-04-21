@@ -37,3 +37,23 @@ Rails 4.0, OmniAuth2, Caching, Skylight Performance Metrics, Mechanize/Nokogiri 
 #####Testing:
 - 99.71% at 90.99 hits/line from SimpleCov
 ![](http://i.imgur.com/DXjLuFo.png)
+
+#####Local Installation: 
+
+If you wish to download the project and set it up locally, run the following commands:
+
+```
+$ git clone https://github.com/stevepentler/Pain-Caver.git
+```
+```
+$ bundle
+```
+```
+$ bundle exec figaro install
+``` 
+- This sets up figaro on your local machine. You will need to obtain Strava, Google Maps, and TrailAPI keys and save them in your `application.yml` file.
+```
+$ rails s
+``` 
+
+in a seperate terminal pane to start the actual Rails server
