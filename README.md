@@ -38,7 +38,7 @@ Rails 4.0, OmniAuth2, Caching, Skylight Performance Metrics, Mechanize/Nokogiri 
 - 99.71% at 90.99 hits/line from SimpleCov
 ![](http://i.imgur.com/DXjLuFo.png)
 
-####Local Installation: 
+####To Run this Application Locally: 
 
 If you wish to download the project and set it up locally, run the following commands:
 
@@ -52,6 +52,11 @@ $ bundle
 $ bundle exec figaro install
 ``` 
 - This sets up figaro, a gem that organizes environment variables, on your local machine. You will need to obtain API keys from Strava, Google Maps, and TrailAPI, then save them in your `application.yml` file.
+```
+$ rake db:reset
+```
+- This application utilizes a Postgres database. Ensure that Postgres is running. The `rake db:reset` command is equivalent to `rake db:create`, `rake db:migrate`, and `rake db:seed`.
+
 ```
 $ rails s
 ``` 
