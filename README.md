@@ -57,4 +57,4 @@ $ rails s
 ``` 
 
 - Run this command in a seperate terminal pane to start the actual Rails server
-- visit http://localhost:3000 to see the `application` on your local server
+- visit `http://localhost:3000` to see the application on your local server
