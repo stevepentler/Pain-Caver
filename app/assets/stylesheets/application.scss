@@ -26,6 +26,11 @@
   font-family: 'Titillium Web', sans-serif;
 }
 
+.btn:hover, .btn-large:hover {
+  background-color: #FC4C02;
+  color: white;
+}
+
 .btn-lg {
   font-size: 1.75em;
 }
@@ -68,7 +73,7 @@ nav .brand-logo {
 
 nav ul a {
   font-size: 1.8em;
-  text-shadow: 0 1px black; 
+  text-shadow: 0 1px black;
 }
 
 .edit_user_race {
@@ -126,7 +131,7 @@ nav ul a {
 
 /*show*/
 
-div.col.s10.custom-padding { 
+div.col.s10.custom-padding {
   padding-right: 5rem;
   padding-left: 1rem;
 }

@@ -27,76 +27,82 @@
 }
 
 /* line 30, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+.btn:hover, .btn-large:hover {
+  background-color: #FC4C02;
+  color: white;
+}
+
+/* line 35, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .btn-lg {
   font-size: 1.75em;
 }
 
-/* line 34, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 39, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .grey-shadow {
   text-shadow: 1.5px 1.5px white;
 }
 
-/* line 38, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 43, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .dirt-texture {
   background-image: url(/assets/dirt-7598c5c21cd463acc08e35ef794400e1f2f387bb7d300037c07a9f77001c7194.jpg);
   background-size: cover;
 }
 
 /*Forms*/
-/* line 45, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 50, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 label {
   font-size: 1.2em;
 }
 
-/* line 49, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 54, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 input {
   font-size: 1.5em;
   color: white;
 }
 
-/* line 54, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 59, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .grey-font {
   color: #9E9E9E;
 }
 
 /*Navbar*/
-/* line 59, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 64, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .green-background {
   background-color: #A9B184;
 }
 
-/* line 63, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 68, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 nav .brand-logo {
   font-size: 2.75em;
   text-shadow: 1.5px 1.5 px black;
   padding: 0 30px;
 }
 
-/* line 70, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 75, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 nav ul a {
   font-size: 1.8em;
   text-shadow: 0 1px black;
 }
 
-/* line 75, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 80, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .edit_user_race {
   margin-top: 25px;
 }
 
-/* line 79, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 84, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .new_user_race {
   margin-top: 25px;
 }
 
 /*Home Root Page*/
-/* line 85, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 90, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .anton {
   background-image: url(/assets/Anton-0aaedde6601c298dd31410c3570fa56051f36ad73399bd5708c9554af5115c95.jpg);
   background-size: cover;
   height: 100vh;
 }
 
-/* line 91, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 96, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .opaque {
   background-color: black;
   height: 100vh;
@@ -104,66 +110,66 @@ nav ul a {
   opacity: 0.6;
 }
 
-/* line 99, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 104, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 #home-description {
   font-size: 2em;
 }
 
 /*Dashboard*/
-/* line 107, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 112, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .profile-pic {
   height: 100px;
   width: auto;
 }
 
-/* line 112, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 117, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .dashboard-large {
   font-size: 1.5em;
 }
 
-/* line 116, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 121, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 #bibrave {
   margin-top: 5%;
   max-height: 20em;
   border-radius: 50px;
 }
 
-/* line 122, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 127, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .collapsible-header {
   background-color: #F3F3F3;
   background-repeat: repeat-y;
 }
 
 /*show*/
-/* line 130, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 135, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 div.col.s10.custom-padding {
   padding-right: 5rem;
   padding-left: 1rem;
 }
 
-/* line 135, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 140, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 tbody tr td span {
   font-size: 1.35em;
 }
 
-/* line 139, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 144, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 #range {
   font-size: 0.7em;
 }
 
-/* line 143, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 148, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .background-color {
   background-color: #F3F3F3;
 }
 
-/* line 147, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 152, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 #google-map {
   height: 500px;
   width: 400px;
   text-align: center;
 }
 
-/* line 153, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
+/* line 158, /Users/StevePentler/3projects/pain_caver/app/assets/stylesheets/application.scss */
 .space {
   height: 50px;
 }
