@@ -2,10 +2,10 @@
 
 [LIVE ON HEROKU](https://paincaver-app.herokuapp.com/) || [GITHUB](https://github.com/stevepentler/Pain-Caver) 
 
+#####[See a gif of the production site!](http://g.recordit.co/NSp5fiAbG8.gif)
+
 #### A personal effort from: 
 [Steve Pentler](https://github.com/stevepentler) 
-
-[See a gif of the production site!](http://g.recordit.co/NSp5fiAbG8.gif)
 
 ####Pitch
 
