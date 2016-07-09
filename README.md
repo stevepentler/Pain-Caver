@@ -5,7 +5,7 @@
 #### A personal effort from: 
 [Steve Pentler](https://github.com/stevepentler) 
 
-![](http://g.recordit.co/dpnvUEoQ22.gif)
+[See a gif of the production site!](http://g.recordit.co/NSp5fiAbG8.gif)
 
 ####Pitch
 
